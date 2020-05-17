@@ -1,0 +1,520 @@
+[
+  {
+    "name": "Silver sulfate",
+    "boiling": 1,
+    "melting": 652,
+    "appearance": "Colorless crystals",
+    "formula": "Ag2SO4",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Silver_sulfate.png/160px-Silver_sulfate.png",
+    "color": "colorless",
+    "structure": "crystals"
+  },
+  {
+    "name": "Silver phosphate",
+    "melting": 849,
+    "appearance": "Translucent yellow  becomes opaque or discolors when impure.",
+    "formula": "Ag3PO4",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Fosfore%C4%8Dnan_st%C5%99%C3%ADbrn%C3%BD.PNG/220px-Fosfore%C4%8Dnan_st%C5%99%C3%ADbrn%C3%BD.PNG",
+    "boiling": 700
+  },
+  {
+    "name": "Silver carbonate",
+    "melting": 218,
+    "appearance": "Pale yellow crystals",
+    "formula": "Ag2CO3",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Ag2CO3-bas.png/160px-Ag2CO3-bas.png",
+    "boiling": 700,
+    "color": "pale yellow",
+    "structure": "crystals"
+  },
+  {
+    "name": "Silver oxalate",
+    "boiling": 2,
+    "melting": 961,
+    "appearance": "white powder",
+    "formula": "Ag2C2O4",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Silver_oxalate_resonance.png/220px-Silver_oxalate_resonance.png",
+    "color": "white",
+    "structure": "powder"
+  },
+  {
+    "name": "Silver chloride",
+    "boiling": 1,
+    "melting": 455,
+    "appearance": "White Solid",
+    "formula": "AgCl",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Chlorid_st%C5%99%C3%ADbrn%C3%BD.PNG/220px-Chlorid_st%C5%99%C3%ADbrn%C3%BD.PNG",
+    "color": "white",
+    "structure": "solid"
+  },
+  {
+    "name": "Silver nitrate",
+    "boiling": 440,
+    "melting": 209,
+    "appearance": "colorless solid",
+    "formula": "AgNO3",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Silver-nitrate-2D.svg/160px-Silver-nitrate-2D.svg.png",
+    "color": "colorless",
+    "structure": "solid"
+  },
+  {
+    "name": "Lead(II) sulfate",
+    "melting": 1,
+    "appearance": "white solid",
+    "formula": "PbSO4",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Lead%28II%29_sulfate.jpg/244px-Lead%28II%29_sulfate.jpg",
+    "boiling": 700,
+    "color": "white",
+    "structure": "solid"
+  },
+  {
+    "name": "Lead(II) phosphate",
+    "melting": 1,
+    "appearance": "white powder",
+    "formula": "Pb3(PO4)2",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Yes_check.svg/7px-Yes_check.svg.png",
+    "boiling": 700,
+    "color": "white",
+    "structure": "powder"
+  },
+  {
+    "name": "Cerussite",
+    "formula": "PbCO3",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Cerussite-173897.jpg/260px-Cerussite-173897.jpg",
+    "melting": 700,
+    "boiling": 700
+  },
+  {
+    "name": "Lead(II) chloride",
+    "boiling": 950,
+    "melting": 501,
+    "appearance": "white odorless solid",
+    "formula": "PbCl2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/PbCl2precipiate.jpg/220px-PbCl2precipiate.jpg",
+    "color": "white",
+    "structure": "solid"
+  },
+  {
+    "name": "Lead(II) nitrate",
+    "solubility": "ICSC 1000",
+    "formula": "Pb(NO3)2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/NFPA_704.svg/80px-NFPA_704.svg.png",
+    "boiling": 700
+  },
+  {
+    "name": "Lead(II) acetate",
+    "melting": 280,
+    "appearance": "White powder or colourless, efflorescent crystals",
+    "formula": "Pb(CH3COO)2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/PbAc2_%28jonowo%29.png/150px-PbAc2_%28jonowo%29.png",
+    "color": "white",
+    "structure": "powder"
+  },
+  {
+    "name": "Mercury(II) sulfate",
+    "appearance": "white monoclinic crystals",
+    "formula": "HgSO4",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Kwik%28II%29sulfaat_t.png/120px-Kwik%28II%29sulfaat_t.png",
+    "melting": 700,
+    "boiling": 700,
+    "color": "white",
+    "structure": "crystals"
+  },
+  {
+    "name": "Mercury(II) chloride",
+    "boiling": 304,
+    "melting": 276,
+    "appearance": "colorless or white solid",
+    "formula": "HgCl2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Mercury%28II%29-chloride-xtal-1980-3D-balls.png/220px-Mercury%28II%29-chloride-xtal-1980-3D-balls.png",
+    "color": "white",
+    "structure": "solid"
+  },
+  {
+    "name": "Mercury(II) nitrate",
+    "melting": 79,
+    "appearance": "colorless crystals or white powder",
+    "formula": "Hg(NO3)2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Mercury_nitrate.png/150px-Mercury_nitrate.png",
+    "boiling": 700,
+    "color": "colorless",
+    "structure": "crystals"
+  },
+  {
+    "name": "Mercury(II) acetate",
+    "melting": 179,
+    "appearance": "white-yellow crystals",
+    "formula": "Hg(CH3COO)2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Mercury%28II%29-acetate-from-xtal-1973-2D.png/256px-Mercury%28II%29-acetate-from-xtal-1973-2D.png",
+    "boiling": 700,
+    "color": "pale yellow",
+    "structure": "crystals"
+  },
+  {
+    "name": "Iron(III) sulfate",
+    "melting": 480,
+    "appearance": "grayish-white crystals",
+    "formula": "Fe2(SO4)3",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/S%C3%ADran_%C5%BEelezit%C3%BD.JPG/250px-S%C3%ADran_%C5%BEelezit%C3%BD.JPG",
+    "boiling": 700,
+    "color": "grayish-white",
+    "structure": "crystals"
+  },
+  {
+    "name": "Iron(III) phosphate",
+    "melting": 250,
+    "appearance": "yellow-brown solid",
+    "formula": "FePO4",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Iron%28III%29-phosphate-pentahydrate-sample.jpg/200px-Iron%28III%29-phosphate-pentahydrate-sample.jpg",
+    "boiling": 700,
+    "color": "yellow-brown",
+    "structure": "solid"
+  },
+  {
+    "name": "Iron(III) chloride",
+    "boiling": 316,
+    "melting": 307,
+    "appearance": "Green-black by reflected light; purple-red by transmitted light; yellow solid as hexahydrate; brown as aq. solution",
+    "formula": "FeCl3",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Iron%28III%29_chloride_hexahydrate.jpg/220px-Iron%28III%29_chloride_hexahydrate.jpg",
+    "color": "brown",
+    "structure": "solution"
+  },
+  {
+    "name": "Iron(III) nitrate",
+    "boiling": 125,
+    "melting": 47,
+    "appearance": "Pale violet crystals  hygroscopic",
+    "formula": "Fe(NO3)3",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Ferric_nitrate_nonahydrate.jpg/220px-Ferric_nitrate_nonahydrate.jpg"
+  },
+  {
+    "name": "Aluminium sulfate",
+    "melting": 770,
+    "appearance": "white crystalline solid  hygroscopic",
+    "formula": "Al2(SO4)3",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Aluminium_sulfate.jpg/220px-Aluminium_sulfate.jpg",
+    "boiling": 700
+  },
+  {
+    "name": "Aluminium phosphate",
+    "melting": 1,
+    "appearance": "White, crystalline powder",
+    "formula": "AlPO4",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Fosfore%C4%8Dnan_hlinit%C3%BD.PNG/220px-Fosfore%C4%8Dnan_hlinit%C3%BD.PNG",
+    "color": "white",
+    "structure": "powder"
+  },
+  {
+    "name": "Aluminium chloride",
+    "boiling": 180,
+    "melting": 192,
+    "appearance": "white or pale yellow solid,hygroscopic",
+    "formula": "AlCl3",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Aluminium-trichloride-hexahydrate-white-and-yellow.jpg/150px-Aluminium-trichloride-hexahydrate-white-and-yellow.jpg",
+    "color": "white",
+    "structure": "solid"
+  },
+  {
+    "name": "Aluminium nitrate",
+    "boiling": 150,
+    "melting": 66,
+    "appearance": "White crystals, solid  hygroscopic",
+    "formula": "Al(NO3)3",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Aluminium_nitrate.png/150px-Aluminium_nitrate.png"
+  },
+  {
+    "name": "Chromium(III) sulfate",
+    "boiling": 700,
+    "melting": 90,
+    "appearance": "reddish-brown crystals (anhydrous), purple crystals (hydrated)",
+    "formula": "Cr2(SO4)3",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Chromium%28III%29_sulfate.jpg/220px-Chromium%28III%29_sulfate.jpg",
+    "color": "reddish-brown",
+    "structure": "crystals"
+  },
+  {
+    "name": "Chromium(III) chloride",
+    "boiling": 1,
+    "melting": 1,
+    "appearance": "purple (anhydrous), dark green (hexahydrate)",
+    "formula": "CrCl3",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Chromium%28III%29-chloride-purple-anhydrous-sunlight.jpg/220px-Chromium%28III%29-chloride-purple-anhydrous-sunlight.jpg",
+    "color": "purple",
+    "structure": "crystals"
+  },
+  {
+    "name": "Manganese(II) sulfate",
+    "boiling": 850,
+    "melting": 710,
+    "appearance": "white crystals (anhydrous)  pale pink solid (hydrates)",
+    "formula": "MnSO4",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Manganese%28II%29_sulfate_close-up.jpg/220px-Manganese%28II%29_sulfate_close-up.jpg"
+  },
+  {
+    "name": "Manganese(II) carbonate",
+    "melting": 200,
+    "appearance": "White to faint pink solid",
+    "formula": "MnCO3",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Calcium-carbonate-xtal-3D-SF.png/220px-Calcium-carbonate-xtal-3D-SF.png",
+    "boiling": 700,
+    "color": "white",
+    "structure": "solid"
+  },
+  {
+    "name": "Manganese(II) chloride",
+    "boiling": 1,
+    "melting": 654,
+    "appearance": "pink solid (tetrahydrate)",
+    "formula": "MnCl2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Cis-MnCl2%28H2O%294.png/220px-Cis-MnCl2%28H2O%294.png",
+    "color": "pink",
+    "structure": "solid"
+  },
+  {
+    "name": "Manganese(II) nitrate",
+    "boiling": 100,
+    "melting": 37,
+    "appearance": "white powder",
+    "formula": "Mn(NO3)2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Manganese%28II%29_nitrate.svg/220px-Manganese%28II%29_nitrate.svg.png",
+    "color": "white",
+    "structure": "powder"
+  },
+  {
+    "name": "Manganese(II) acetate",
+    "melting": 210,
+    "appearance": "white crystals (anhydrous)light pink monoclinic crystals (tetrahydrate)",
+    "formula": "Mn(CH3COO)2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Manganese_acetate.png/220px-Manganese_acetate.png",
+    "boiling": 700,
+    "color": "white",
+    "structure": "crystals"
+  },
+  {
+    "name": "Zinc sulfate",
+    "boiling": 740,
+    "melting": 680,
+    "appearance": "white powder",
+    "formula": "ZnSO4",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Zinc_Sulfate.jpg/220px-Zinc_Sulfate.jpg",
+    "color": "white",
+    "structure": "powder"
+  },
+  {
+    "name": "Zinc phosphate",
+    "melting": 900,
+    "appearance": "white solid",
+    "formula": "Zn3(PO4)2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Fosfore%C4%8Dnan_zine%C4%8Dnat%C3%BD.PNG/220px-Fosfore%C4%8Dnan_zine%C4%8Dnat%C3%BD.PNG",
+    "boiling": 700,
+    "color": "white",
+    "structure": "solid"
+  },
+  {
+    "name": "Smithsonite",
+    "formula": "ZnCO3",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Smithsonite-Willemite-cktsu-23a.jpg/260px-Smithsonite-Willemite-cktsu-23a.jpg",
+    "melting": 700,
+    "boiling": 700
+  },
+  {
+    "name": "Zinc chloride",
+    "boiling": 732,
+    "melting": 290,
+    "appearance": "white crystalline solid  hygroscopic and very deliquescent",
+    "formula": "ZnCl2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Zinc_chloride.jpg/220px-Zinc_chloride.jpg"
+  },
+  {
+    "name": "Zinc nitrate",
+    "boiling": 700,
+    "melting": 110,
+    "appearance": "colorless, deliquescent crystals",
+    "formula": "Zn(NO3)2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Zinc_nitrate.png/220px-Zinc_nitrate.png",
+    "color": "colorless",
+    "structure": "crystals"
+  },
+  {
+    "name": "Zinc acetate",
+    "appearance": "White solid (all forms)",
+    "formula": "Zn(CH3COO)2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Zinc_acetate.JPG/220px-Zinc_acetate.JPG",
+    "color": "white",
+    "structure": "solid"
+  },
+  {
+    "name": "Cobalt(II) sulfate",
+    "melting": 735,
+    "appearance": "reddish crystalline (anhydrous, monohydrate)  pink salt (hexahydrate)",
+    "formula": "CoSO4",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Cobaltsulfat.JPG/220px-Cobaltsulfat.JPG",
+    "boiling": 700
+  },
+  {
+    "name": "Cobalt(II) chloride",
+    "boiling": 1,
+    "melting": 726,
+    "appearance": "blue crystals (anhydrous)  violet-blue (dihydrate)   rose red crystals (hexahydrate)",
+    "formula": "CoCl2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Cobaltous_chloride_anhydrous.jpg/110px-Cobaltous_chloride_anhydrous.jpg"
+  },
+  {
+    "name": "Cobalt(II) nitrate",
+    "melting": 100,
+    "appearance": "pale red powder (anhydrous)  red crystalline (hexahydrate)",
+    "formula": "Co(NO3)2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Cobalt%28II%29-nitrate-hexahydrate-sample.jpg/220px-Cobalt%28II%29-nitrate-hexahydrate-sample.jpg"
+  },
+  {
+    "name": "Nickel(II) carbonate",
+    "melting": 205,
+    "appearance": "light green powder",
+    "formula": "NiCO3",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Nickel_carbonate_basic.jpg/220px-Nickel_carbonate_basic.jpg",
+    "boiling": 700,
+    "color": "light green",
+    "structure": "powder"
+  },
+  {
+    "name": "Nickel(II) chloride",
+    "melting": 1,
+    "appearance": "yellow-brown crystals  deliquescent (anhydrous)  green crystals (hexahydrate)",
+    "formula": "NiCl2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Nickel%28II%29-chloride-hexahydrate-sample.jpg/220px-Nickel%28II%29-chloride-hexahydrate-sample.jpg",
+    "boiling": 700
+  },
+  {
+    "name": "Nickel(II) nitrate",
+    "boiling": 136,
+    "melting": 56,
+    "appearance": "emerald green hygroscopic solid",
+    "formula": "Ni(NO3)2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Nickel_nitrate.png/220px-Nickel_nitrate.png",
+    "color": "emerald green",
+    "structure": "solid"
+  },
+  {
+    "name": "Barium carbonate",
+    "boiling": 1,
+    "melting": 811,
+    "appearance": "white crystals",
+    "formula": "BaCO3",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Barium_carbonate.png/150px-Barium_carbonate.png",
+    "color": "white",
+    "structure": "crystals"
+  },
+  {
+    "name": "Barium oxalate",
+    "melting": 400,
+    "formula": "BaC2O4",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Barium_oxalate.png/200px-Barium_oxalate.png",
+    "boiling": 700
+  },
+  {
+    "name": "Barium chloride",
+    "boiling": 1,
+    "melting": 962,
+    "appearance": "White solid",
+    "formula": "BaCl2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Cotunnite_structure.png/220px-Cotunnite_structure.png",
+    "color": "white",
+    "structure": "solid"
+  },
+  {
+    "name": "Barium nitrate",
+    "melting": 592,
+    "appearance": "white, lustrous crystals",
+    "formula": "Ba(NO3)2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Dusi%C4%8Dnan_barnat%C3%BD.JPG/220px-Dusi%C4%8Dnan_barnat%C3%BD.JPG",
+    "boiling": 700,
+    "color": "white",
+    "structure": "crystals"
+  },
+  {
+    "name": "Calcium sulfate",
+    "melting": 1,
+    "appearance": "white solid",
+    "formula": "CaSO4",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/CaSO4.tif/lossless-page1-220px-CaSO4.tif.png",
+    "boiling": 700,
+    "color": "white",
+    "structure": "solid"
+  },
+  {
+    "name": "Tricalcium phosphate",
+    "appearance": "White amorphous powder",
+    "formula": "Ca3(PO4)2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Ca3%28PO4%292_from_crystallography.jpg/220px-Ca3%28PO4%292_from_crystallography.jpg",
+    "boiling": 700,
+    "color": "white",
+    "structure": "powder"
+  },
+  {
+    "name": "Calcium carbonate",
+    "melting": 1,
+    "appearance": "Fine white powder; chalky taste",
+    "formula": "CaCO3",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Calcium_carbonate.png/110px-Calcium_carbonate.png",
+    "color": "white",
+    "structure": "powder"
+  },
+  {
+    "name": "Calcium oxalate",
+    "melting": 200,
+    "appearance": "white solid",
+    "formula": "CaC2O4",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Calcium_oxalate_resonance.png/150px-Calcium_oxalate_resonance.png",
+    "boiling": 700,
+    "color": "white",
+    "structure": "solid"
+  },
+  {
+    "name": "Calcium chloride",
+    "boiling": 1,
+    "melting": 772,
+    "appearance": "White powder, hygroscopic",
+    "formula": "CaCl2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Kristallstruktur_Calciumchlorid.png/160px-Kristallstruktur_Calciumchlorid.png",
+    "color": "white",
+    "structure": "powder"
+  },
+  {
+    "name": "Calcium nitrate",
+    "melting": 561,
+    "appearance": "colorless solid  hygroscopic",
+    "formula": "Ca(NO3)2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Calcium_nitrate.png/150px-Calcium_nitrate.png"
+  },
+  {
+    "name": "Strontium sulfate",
+    "melting": 1,
+    "appearance": "white orthorhombic crystals",
+    "formula": "SrSO4",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Strontium-sulfate-from-xtal-3D-SF.png/120px-Strontium-sulfate-from-xtal-3D-SF.png",
+    "boiling": 700,
+    "color": "white",
+    "structure": "crystals"
+  },
+  {
+    "name": "Strontium chloride",
+    "boiling": 1,
+    "melting": 874,
+    "appearance": "White crystalline solid",
+    "formula": "SrCl2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Strontium_chloride_hexahydrate.jpg/220px-Strontium_chloride_hexahydrate.jpg",
+    "color": "white",
+    "structure": "solid"
+  },
+  {
+    "name": "Strontium nitrate",
+    "boiling": 645,
+    "melting": 570,
+    "appearance": "white crystalline solid",
+    "formula": "Sr(NO3)2",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Strontium_nitrate.png/150px-Strontium_nitrate.png",
+    "color": "white",
+    "structure": "solid"
+  }
+]

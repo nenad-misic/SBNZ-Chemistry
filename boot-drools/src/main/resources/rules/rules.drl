@@ -1,0 +1,31 @@
+package rules
+import java.util.ArrayList
+import com.sbnz.model.Answer
+import com.sbnz.model.ResponseDTO
+
+
+rule "GreenBurningWhitePowder"
+lock-on-active true
+	when
+	    $s : ResponseDTO();
+		$e1 : Answer(getAnswer() == "GreenFire") and
+		$e2 : Answer(getAnswer() == "WhiteSupstance") and
+		$e3 : Answer(getAnswer() == "Powder");
+	then
+	    $s.addSolution("GWP");
+	    update($s);
+	end
+
+rule "RedBurningWhitePowder"
+lock-on-active true
+	when
+	    $s : ResponseDTO();
+		$e1 : Answer(getAnswer() == "RedFire") and
+		$e2 : Answer(getAnswer() == "WhiteSupstance") and
+		$e3 : Answer(getAnswer() == "Powder");
+	then
+	    $s.addSolution("RWP");
+	    update($s);
+	end
+
+

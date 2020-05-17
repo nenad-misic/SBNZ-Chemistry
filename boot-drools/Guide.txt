@@ -1,0 +1,172 @@
+
+https://www.sites.google.com/site/epruveticaki/nastava-hemije/srednja-skola---2-razred/kvalitativna-hemijska-analiza
+
+KATJONI:    Ag+, Pb2+, Hg22+
+            Fe3+, Al3+, Cr3+
+            Mn2+, Zn2+, Co2+, Ni2+
+            Ba2+, Ca2+, Sr2+
+
+ANJONI:     SO42-, PO43-, CO32-, C2O42-, C4H4O62-
+            Cl-, CN-, S2-
+            ClO3-, ClO4-, CH3COO-, N03-
+
+JEDINJENJA:
+            "{"formula":"Ag2SO4","name":"Silver sulfate"}"
+            "{"formula":"Ag3PO4","name":"Silver phosphate"}"
+            "{"formula":"Ag2CO3","name":"Silver carbonate"}"
+            "{"formula":"Ag2C2O4","name":"Silver oxalate"}"
+            "{"formula":"AgCl","name":"Silver chloride"}"
+            "{"formula":"AgNO3","name":"Silver nitrate"}"
+            "{"formula":"PbSO4","name":"Lead(II) sulfate"}"
+            "{"formula":"Pb3(PO4)2","name":"Lead(II) phosphate"}"
+            "{"formula":"PbCO3","name":"Cerussite"}"
+            "{"formula":"PbCl2","name":"Lead(II) chloride"}"
+            "{"formula":"Pb(NO3)2","name":"Lead(II) nitrate"}"
+            "{"formula":"Pb(CH3COO)2","name":"Lead(II) acetate"}"
+            "{"formula":"HgSO4","name":"Mercury(II) sulfate"}"
+            "{"formula":"HgCl2","name":"Mercury(II) chloride"}"
+            "{"formula":"Hg(NO3)2","name":"Mercury(II) nitrate"}"
+            "{"formula":"Hg(CH3COO)2","name":"Mercury(II) acetate"}"
+            "{"formula":"Fe2(SO4)3","name":"Iron(III) sulfate"}"
+            "{"formula":"FePO4","name":"Iron(III) phosphate"}"
+            "{"formula":"FeCl3","name":"Iron(III) chloride"}"
+            "{"formula":"Fe(NO3)3","name":"Iron(III) nitrate"}"
+            "{"formula":"Al2(SO4)3","name":"Aluminium sulfate"}"
+            "{"formula":"AlPO4","name":"Aluminium phosphate"}"
+            "{"formula":"AlCl3","name":"Aluminium chloride"}"
+            "{"formula":"Al(NO3)3","name":"Aluminium nitrate"}"
+            "{"formula":"Cr2(SO4)3","name":"Chromium(III) sulfate"}"
+            "{"formula":"CrCl3","name":"Chromium(III) chloride"}"
+            "{"formula":"MnSO4","name":"Manganese(II) sulfate"}"
+            "{"formula":"MnCO3","name":"Manganese(II) carbonate"}"
+            "{"formula":"MnCl2","name":"Manganese(II) chloride"}"
+            "{"formula":"Mn(NO3)2","name":"Manganese(II) nitrate"}"
+            "{"formula":"Mn(CH3COO)2","name":"Manganese(II) acetate"}"
+            "{"formula":"ZnSO4","name":"Zinc sulfate"}"
+            "{"formula":"Zn3(PO4)2","name":"Zinc phosphate"}"
+            "{"formula":"ZnCO3","name":"Smithsonite"}"
+            "{"formula":"ZnCl2","name":"Zinc chloride"}"
+            "{"formula":"Zn(NO3)2","name":"Zinc nitrate"}"
+            "{"formula":"Zn(CH3COO)2","name":"Zinc acetate"}"
+            "{"formula":"CoSO4","name":"Cobalt(II) sulfate"}"
+            "{"formula":"CoCl2","name":"Cobalt(II) chloride"}"
+            "{"formula":"Co(NO3)2","name":"Cobalt(II) nitrate"}"
+            "{"formula":"NiCO3","name":"Nickel(II) carbonate"}"
+            "{"formula":"NiCl2","name":"Nickel(II) chloride"}"
+            "{"formula":"Ni(NO3)2","name":"Nickel(II) nitrate"}"
+            "{"formula":"BaCO3","name":"Barium carbonate"}"
+            "{"formula":"BaC2O4","name":"Barium oxalate"}"
+            "{"formula":"BaCl2","name":"Barium chloride"}"
+            "{"formula":"Ba(NO3)2","name":"Barium nitrate"}"
+            "{"formula":"CaSO4","name":"Calcium sulfate"}"
+            "{"formula":"Ca3(PO4)2","name":"Tricalcium phosphate"}"
+            "{"formula":"CaCO3","name":"Calcium carbonate"}"
+            "{"formula":"CaC2O4","name":"Calcium oxalate"}"
+            "{"formula":"CaCl2","name":"Calcium chloride"}"
+            "{"formula":"Ca(NO3)2","name":"Calcium nitrate"}"
+            "{"formula":"SrSO4","name":"Strontium sulfate"}"
+            "{"formula":"SrCl2","name":"Strontium chloride"}"
+            "{"formula":"Sr(NO3)2","name":"Strontium nitrate"}"
+
+Appearance:
+            "colorless crystals"
+            "translucent yellow becomes opaque or discolors when impure."
+            "pale yellow crystals"
+            "white powder"
+            "white solid"
+            "colorless solid"
+            "white odorless solid"
+            "white powder or colourless, efflorescent crystals"
+            "white monoclinic crystals"
+            "colorless or white solid"
+            "colorless crystals or white powder"
+            "white-yellow crystals"
+            "grayish-white crystals"
+            "yellow-brown solid"
+            "green-black by reflected light; purple-red by transmitted light; yellow solid as hexahydrate; brown as aq. solution"
+            "pale violet crystals hygroscopic"
+            "white crystalline solid hygroscopic"
+            "white, crystalline powder"
+            "white or pale yellow solid,hygroscopic"
+            "white crystals, solid hygroscopic"
+            "reddish-brown crystals (anhydrous), purple crystals (hydrated)"
+            "purple (anhydrous), dark green (hexahydrate)"
+            "white crystals (anhydrous) pale pink solid (hydrates)"
+            "white to faint pink solid"
+            "pink solid (tetrahydrate)"
+            "white crystals (anhydrous)light pink monoclinic crystals (tetrahydrate)"
+            "white crystalline solid hygroscopic and very deliquescent"
+            "colorless, deliquescent crystals"
+            "white solid (all forms)"
+            "reddish crystalline (anhydrous, monohydrate) pink salt (hexahydrate)"
+            "blue crystals (anhydrous) violet-blue (dihydrate) rose red crystals (hexahydrate)"
+            "pale red powder (anhydrous) red crystalline (hexahydrate)"
+            "light green powder"
+            "yellow-brown crystals deliquescent (anhydrous) green crystals (hexahydrate)"
+            "emerald green hygroscopic solid"
+            "white crystals"
+            "white, lustrous crystals"
+            "white amorphous powder"
+            "fine white powder; chalky taste"
+            "white powder, hygroscopic"
+            "colorless solid hygroscopic"
+            "white orthorhombic crystals"
+            "white crystalline solid"
+
+
+Barijum sulfat je izrazito nerastvorna so.Bojenje plamena se odnosi na rastvorne soli i to najčešće na halogenide (mada to nije pravilo).
+
+Ako bi npr. imao čvrst BaCl2,ili neku drugu rastvornu so, mogao bi da prepoznaš Ba2+ prema svetlo-zelenoj boji plamena.
+
+Ag+ rastvoris u vodi, zatim dodas HCl izvojice se beli sirast talog, videces kako ostavlja trag po zidovima epruvete bas kao sir. Onda talog rastvoris u amonijaku i tada nemas taloga. Zatim dodas azotnu kiselinu u visku sve dok se ne vrati talog. Uvek dokazivanje radi sa malim kolicinama taloga!
+Reakcije:
+Ag+ +Cl- ->Cl
+AgCl+NH3->g(NH3)2]+ +Cl-
+
+Olovo i barijum dokazujes na isti nacin.
+Ba2+ +CrO4 2- =BaCrO4 talog zute boje
+Reakcija se odigrava uz prisustbvo natrijum acetata.
+Ista reakcija je i za olovo. Talog BaCrO4 i PbCrO4 razlikujes tako sto se prvi ne raztvara u natrijum hidroksidu a drugi se rastvara. Opte radis sa mali kolicinama taloga!
+
+Kalcijum dokazujes pomocu oksalata.
+Ca2+ -C2O4 2- ->C2O4
+Dobija se beo kristalast talog.
+
+Dokazivanje gvozdja ti je najlakse. Vrsi se pomocu kalijum-hesacijanofearata(II).Reakcija je sledeca:
+Fe2+ + 4K+ + [Fe(CN)6]4- -> K2Fe[Fe(CN)6] +2K+
+Dobija se kompleksno jedinjenje gvozdje(III)-heksacijanoferat(II) berlinsko plave boje.
+
+Bakar dokazujes sa alkalnim hidroksidima.Talozi se otrovni bakar(II)hidroksid.
+Cu2+ +2OH- ->Cu(OH)2 talog plave boje
+
+Magnezijum
+Dodas prvo malo aminijum-hidroksida,dobijeni talog rastvoris u malo amonijum-hlorida, pa dodas Na2HPO4 i izdvaja se talog MgNH4PO4.
+
+MgNH4PO4 + H+ <=>HPO4 2- + Mg 2= + NH4+
+
+Ziva je isto dosta laka za dokazivanje jer dobijas talog crvene boje.Dokazujes je pomocu kalijum-jodida.
+Hg2+ +2I- ->HgI2
+
+Aluminijum dokazujes pomocu amonijum-hidroksida. Dobija se beo pihtijast talog.
+Al3+ +3NH4OH ->Al(OH)3 + 3NH4+
+Talog se rastvara u HCl.
+
+Amonijum jone dokazujes neslerom. Dobija se kompleks mrke boje. Ne znam kako ovde da ti napisem tu reakciju. Uglavnom, formula neslera je K2[HgI4].
+
+Dokazivanje hlorida je jako jednostavno. Rastvoris ih prvo u vodi dodas AgNO3 dobija se talog srebro-hlorida. I onda isto ides kao kod hlorida. U amonijaku se rastvara a dodatkom azotne kiseline u visku talog se vraca.
+
+Sulfati se dokazuju pomocu barijum-hlorida, talozi se beo barijum-sulfat.
+
+Karbonati su isto prosti za dokazivanje i ja uvek prvo probam dokaz za karbonate i acetate pa ako nije to onda ispitujem dalje.
+Znaci, stavis malo karbonata na sahatno staklo i prelijes sircetnom ili hlorovodonicnom kiselinom, sve jedno je mada je ipak bolje da ides sa hlorovodonicnom jer je ona jaca. I Onda se izdvaja ugljen-dioksid. Prepoznaces ga po mehuricima.
+A acetate dokazujes tako sto u avnu pomesas acetate sa kalijum-hidrogensulfatom. I malo izgnjecis sa onim tuckom. Onda pomirises tucak. Oseca se karakteristican miris sircetne kiseline.
+
+Karbonate dokazujes sa hlorovodonicnom kiselinom. Dobijaju se hloridi, voda i ugljen-dioksid koji ispari.
+
+I,nitrati. Prvo ih rastvoris u vodi zatim dodas gvozdje(II)sulfat, slobodno dodaj malo vise gvozdje(II)sulfata ali opet nemoj da preteras.
+Ovaj drugi deo ogleda treba da radis u kapeli. Malo nakrivis epruvetu i POLAKO dodajes koncentrovanu sumpornu kiselinu niz zidove epruvete. Jako je bitno da to radis polako da bi se izdvojio mrki prsten.
+Reakcija za dokazivanje nitrata je u principu jednostvano jer lako uocis mrki prsten ali moras da budes jako pazljiv.
+
+To je to. Nadam se da ce ti ovo biti od pomoci. Ali ipak treba sve da probas sam da uradis u laboratoriji.
+Inace, na takmicenju ces imati i kvantitativnu analizu, tj. titraciju. Meni je titracija mnogo lepsa i zanimljivija nego kvalitativna analiza ali tu moras da budes jako precizan.
+Ako ima nesto da nije jasno u vezi ovog dokazivanja slobodno pitaj.
