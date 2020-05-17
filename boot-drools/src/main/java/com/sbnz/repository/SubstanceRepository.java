@@ -12,7 +12,7 @@ public class SubstanceRepository {
     public List<Substance> getSubstances() {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            ArrayList<Substance> substances = objectMapper.readValue(new File("db.json"), ArrayList.class);
+            ArrayList<Substance> substances = objectMapper.readValue(new File("db/substances.json"), ArrayList.class);
             return substances;
         } catch (IOException e) {
             e.printStackTrace();

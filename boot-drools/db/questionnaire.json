@@ -1,0 +1,129 @@
+[
+  {
+    "id": 1,
+    "question": "Da li se Vaša supstanca rastvara u vodi?",
+    "answers": [
+      {"text": "Ne, rastvaranjem supstance stvara se talog", "value":"insolubleInWater"},
+      {"text": "Da, i rastvor je bez boje", "value":"colorlessSolutionWithWater"},
+      {"text": "Da, i rastvor nije bezbojan", "value":"colorfulSolutionWithWater"},
+      {"text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog", "value":"impossible"}
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Da li Vaša supstanca pri reakciji sa razblaženom HCl daje talog?",
+    "answers": [
+      {"text": "Ne, ne dobija se talog", "value":"noReactionWithHCl"},
+      {"text": "Da, dobija se talog", "value":"reactionWithHCl"},
+      {"text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog", "value":"impossible"}
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Nakon uvođenja tople vode u stvoreni talog dobija se rastvor?",
+    "answers": [
+      {"text": "Ne, talog je i dalje tu.", "value":"warmWaterInsoluble"},
+      {"text": "Da, talog se u potpunosti rastvorio.", "value":"warmWaterSoluble"},
+      {"text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog", "value":"impossible"}
+    ]
+  },
+  {
+    "id": 4,
+    "question": "U novodobijeni rastvor unesite K2CrO4. Da li je rastvor postao žut?",
+    "answers": [
+      {"text": "Ne, rastvor nije postao žut.", "value":"notYellowWithK2CrO4"},
+      {"text": "Da, rastvor je postao žut.", "value":"yellowWithK2CrO4"},
+      {"text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog", "value":"impossible"}
+    ]
+  },
+  {
+    "id": 5,
+    "question": "U novodobijeni rastvor unesite NH4OH. Da li se stvorio talog sive boje?",
+    "answers": [
+      {"text": "Ne, dobijen je rastvor (bez taloga)", "value":"solubleInNH4OH"},
+      {"text": "Ne, stvorio se talog druge boje", "value":"insolubleInNH4OH"},
+      {"text": "Da, stvorio se talog sive boje", "value":"greyWithNH4OH"},
+      {"text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog", "value":"impossible"}
+    ]
+  },
+  {
+    "id": 6,
+    "question": "U novodobijeni rastvor unesite HNO3 (ili NaOH). Da li se stvorio talog bele boje?",
+    "answers": [
+      {"text": "Ne, nije se stvorio talog bele boje", "value":"notWhiteWithHNO3"},
+      {"text": "Da, stvorio se talog bele boje", "value":"whiteWithHNO3"},
+      {"text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog", "value":"impossible"}
+    ]
+  },
+
+
+
+  {
+    "id": 7,
+    "question": "Da li se Vaša supstanca rastvara u NH4OH (ili HNO3 ili NH4Cl)?",
+    "answers": [
+      {"text": "Ne, došlo je do pojave taloga", "value":"solubleRawInNH4OH"},
+      {"text": "Da, supstanca se rastvorila", "value":"insolubleRawInNH4OH"},
+      {"text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog", "value":"impossible"}
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Opišite talog koji je prethodno dobijen",
+    "answers": [
+      {"text": "Mrkocrveni, pihtijasti talog", "value":"darkRedSedimentFromNH4OH"},
+      {"text": "Beli, pihtijasti talog", "value":"whiteSedimentFromNH4OH"},
+      {"text": "Sivozeleni, pihtijasti talog", "value":"GrayishGreenSedimentFromNH4OH"},
+      {"text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog", "value":"impossible"}
+    ]
+  },
+
+
+  {
+    "id": 9,
+    "question": "Da li se Vaša supstanca rastvara u (NH4)2S?",
+    "answers": [
+      {"text": "Ne, došlo je do pojave taloga", "value":"solubleRawIn(NH4)2S"},
+      {"text": "Da, supstanca se rastvorila", "value":"insolubleRawIn(NH4)2S"},
+      {"text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog", "value":"impossible"}
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Opišite dobijeni talog",
+    "answers": [
+      {"text": "Talog je boje mesa", "value":"solubleRawIn(NH4)2S"},
+      {"text": "Talog je bele boje", "value":"insolubleRawIn(NH4)2S"},
+      {"text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog", "value":"impossible"}
+    ]
+  },
+
+
+  {
+    "id": 11,
+    "question": "Da li se Vaša supstanca rastvara u (NH4)2CO3 na temperaturi 60-70 stepeni?",
+    "answers": [
+      {"text": "Ne, stvorio se talog", "value":"insolubleRawIn(NH4)2CO3"},
+      {"text": "Da, dobija se rastvor, bez taloga", "value":"solubleRawIn(NH4)2CO3"},
+      {"text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog", "value":"impossible"}
+    ]
+  },
+  {
+    "id": 12,
+    "question": "Da li se dobijeni talog rastvara u CH3COOH?",
+    "answers": [
+      {"text": "Ne, stvorio se talog", "value":"insolubleRawIn(NH4)2CO3andCH3COOH"},
+      {"text": "Da, dobija se rastvor, bez taloga", "value":"insolubleRawIn(NH4)2CO3butSolubleInCH3COOH"},
+      {"text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog", "value":"impossible"}
+    ]
+  },
+  {
+    "id": 13,
+    "question": "Da li se dodavanjem K2Cr2O4 (ili K2Cr2O7) u dobijeni rastvor izdvaja žuti talog?",
+    "answers": [
+      {"text": "Ne, nije se stvorio žuti talog", "value":"insolubleRawIn(NH4)2CO3butSolubleInCH3COOHNotYellowWithK2Cr"},
+      {"text": "Da, dobija se žuti talog", "value":"insolubleRawIn(NH4)2CO3butSolubleInCH3COOHYellowWithK2Cr"},
+      {"text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog", "value":"impossible"}
+    ]
+  }
+]

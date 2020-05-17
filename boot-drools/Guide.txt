@@ -3,8 +3,8 @@ https://www.sites.google.com/site/epruveticaki/nastava-hemije/srednja-skola---2-
 
 KATJONI:    Ag+, Pb2+, Hg22+
             Fe3+, Al3+, Cr3+
-            Mn2+, Zn2+, Co2+, Ni2+
-            Ba2+, Ca2+, Sr2+
+            Mn2+, Zn2+
+            Ba2+, Ca2+
 
 ANJONI:     SO42-, PO43-, CO32-, C2O42-, C4H4O62-
             Cl-, CN-, S2-
@@ -113,6 +113,54 @@ Appearance:
             "white orthorhombic crystals"
             "white crystalline solid"
 
+Colors:
+            "colorless"
+            undefined
+            "pale yellow"
+            "white"
+            "grayish-white"
+            "yellow-brown"
+            "brown"
+            "reddish-brown"
+            "purple"
+            "pink"
+
+Structures:
+            "crystals"
+            undefined
+            "powder"
+            "solid"
+            "solution"
+
+Experiments:
+            "insolubleInWater"
+            "colorlessSolutionWithWater"
+            "colorfulSolutionWithWater"
+            "impossible"
+            "noReactionWithHCl"
+            "reactionWithHCl"
+            "warmWaterInsoluble"
+            "warmWaterSoluble"
+            "notYellowWithK2CrO4"
+            "yellowWithK2CrO4"
+            "solubleInNH4OH"
+            "insolubleInNH4OH"
+            "greyWithNH4OH"
+            "notWhiteWithHNO3"
+            "whiteWithHNO3"
+            "solubleRawInNH4OH"
+            "insolubleRawInNH4OH"
+            "darkRedSedimentFromNH4OH"
+            "whiteSedimentFromNH4OH"
+            "GrayishGreenSedimentFromNH4OH"
+            "solubleRawIn(NH4)2S"
+            "insolubleRawIn(NH4)2S"
+            "insolubleRawIn(NH4)2CO3"
+            "solubleRawIn(NH4)2CO3"
+            "insolubleRawIn(NH4)2CO3andCH3COOH"
+            "insolubleRawIn(NH4)2CO3butSolubleInCH3COOH"
+            "insolubleRawIn(NH4)2CO3butSolubleInCH3COOHNotYellowWithK2Cr"
+            "insolubleRawIn(NH4)2CO3butSolubleInCH3COOHYellowWithK2Cr"
 
 Barijum sulfat je izrazito nerastvorna so.Bojenje plamena se odnosi na rastvorne soli i to najčešće na halogenide (mada to nije pravilo).
 

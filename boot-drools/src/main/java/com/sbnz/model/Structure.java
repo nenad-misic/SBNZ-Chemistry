@@ -1,12 +1,12 @@
 package com.sbnz.model;
 
-public class Answer {
+public class Structure {
     private String answer;
 
-    public Answer() {
+    public Structure() {
     }
 
-    public Answer(String answer) {
+    public Structure(String answer) {
         this.answer = answer;
     }
 

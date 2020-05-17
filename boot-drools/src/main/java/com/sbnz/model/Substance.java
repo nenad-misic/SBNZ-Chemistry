@@ -5,15 +5,15 @@ public class Substance {
     private String image;
     private int boiling;
     private int melting;
-    private String appearence;
+    private String appearance;
     private String formula;
 
-    public Substance(String name, String image, int boiling, int melting, String appearence, String formula) {
+    public Substance(String name, String image, int boiling, int melting, String appearance, String formula) {
         this.name = name;
         this.image = image;
         this.boiling = boiling;
         this.melting = melting;
-        this.appearence = appearence;
+        this.appearance = appearance;
         this.formula = formula;
     }
 
@@ -52,12 +52,12 @@ public class Substance {
         this.melting = melting;
     }
 
-    public String getAppearence() {
-        return appearence;
+    public String getAppearance() {
+        return appearance;
     }
 
-    public void setAppearence(String appearence) {
-        this.appearence = appearence;
+    public void setAppearance(String appearance) {
+        this.appearance = appearance;
     }
 
     public String getFormula() {

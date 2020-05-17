@@ -345,57 +345,6 @@
     "structure": "solid"
   },
   {
-    "name": "Cobalt(II) sulfate",
-    "melting": 735,
-    "appearance": "reddish crystalline (anhydrous, monohydrate)  pink salt (hexahydrate)",
-    "formula": "CoSO4",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Cobaltsulfat.JPG/220px-Cobaltsulfat.JPG",
-    "boiling": 700
-  },
-  {
-    "name": "Cobalt(II) chloride",
-    "boiling": 1,
-    "melting": 726,
-    "appearance": "blue crystals (anhydrous)  violet-blue (dihydrate)   rose red crystals (hexahydrate)",
-    "formula": "CoCl2",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Cobaltous_chloride_anhydrous.jpg/110px-Cobaltous_chloride_anhydrous.jpg"
-  },
-  {
-    "name": "Cobalt(II) nitrate",
-    "melting": 100,
-    "appearance": "pale red powder (anhydrous)  red crystalline (hexahydrate)",
-    "formula": "Co(NO3)2",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Cobalt%28II%29-nitrate-hexahydrate-sample.jpg/220px-Cobalt%28II%29-nitrate-hexahydrate-sample.jpg"
-  },
-  {
-    "name": "Nickel(II) carbonate",
-    "melting": 205,
-    "appearance": "light green powder",
-    "formula": "NiCO3",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Nickel_carbonate_basic.jpg/220px-Nickel_carbonate_basic.jpg",
-    "boiling": 700,
-    "color": "light green",
-    "structure": "powder"
-  },
-  {
-    "name": "Nickel(II) chloride",
-    "melting": 1,
-    "appearance": "yellow-brown crystals  deliquescent (anhydrous)  green crystals (hexahydrate)",
-    "formula": "NiCl2",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Nickel%28II%29-chloride-hexahydrate-sample.jpg/220px-Nickel%28II%29-chloride-hexahydrate-sample.jpg",
-    "boiling": 700
-  },
-  {
-    "name": "Nickel(II) nitrate",
-    "boiling": 136,
-    "melting": 56,
-    "appearance": "emerald green hygroscopic solid",
-    "formula": "Ni(NO3)2",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Nickel_nitrate.png/220px-Nickel_nitrate.png",
-    "color": "emerald green",
-    "structure": "solid"
-  },
-  {
     "name": "Barium carbonate",
     "boiling": 1,
     "melting": 811,
@@ -486,35 +435,5 @@
     "appearance": "colorless solid  hygroscopic",
     "formula": "Ca(NO3)2",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Calcium_nitrate.png/150px-Calcium_nitrate.png"
-  },
-  {
-    "name": "Strontium sulfate",
-    "melting": 1,
-    "appearance": "white orthorhombic crystals",
-    "formula": "SrSO4",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Strontium-sulfate-from-xtal-3D-SF.png/120px-Strontium-sulfate-from-xtal-3D-SF.png",
-    "boiling": 700,
-    "color": "white",
-    "structure": "crystals"
-  },
-  {
-    "name": "Strontium chloride",
-    "boiling": 1,
-    "melting": 874,
-    "appearance": "White crystalline solid",
-    "formula": "SrCl2",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Strontium_chloride_hexahydrate.jpg/220px-Strontium_chloride_hexahydrate.jpg",
-    "color": "white",
-    "structure": "solid"
-  },
-  {
-    "name": "Strontium nitrate",
-    "boiling": 645,
-    "melting": 570,
-    "appearance": "white crystalline solid",
-    "formula": "Sr(NO3)2",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Strontium_nitrate.png/150px-Strontium_nitrate.png",
-    "color": "white",
-    "structure": "solid"
   }
 ]

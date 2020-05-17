@@ -1,31 +1,758 @@
 package rules
 import java.util.ArrayList
-import com.sbnz.model.Answer
+import com.sbnz.model.Color
+import com.sbnz.model.Structure
+import com.sbnz.model.Experiment
+import com.sbnz.model.Substance
 import com.sbnz.model.ResponseDTO
 
 
-rule "GreenBurningWhitePowder"
-lock-on-active true
-	when
-	    $s : ResponseDTO();
-		$e1 : Answer(getAnswer() == "GreenFire") and
-		$e2 : Answer(getAnswer() == "WhiteSupstance") and
-		$e3 : Answer(getAnswer() == "Powder");
-	then
-	    $s.addSolution("GWP");
-	    update($s);
-	end
+rule "Silver sulfate - Ag2SO4"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "colorless")
+        Structure(getAnswer() == "crystals")
+        exists Experiment(getCode() == "colorlessSolutionWithWater")
+        exists Experiment(getCode() == "reactionWithHCl")
+        exists Experiment(getCode() == "warmWaterInsoluble")
+        exists Experiment(getCode() == "solubleInNH4OH")
+        exists Experiment(getCode() == "whiteWithHNO3")
 
-rule "RedBurningWhitePowder"
-lock-on-active true
-	when
-	    $s : ResponseDTO();
-		$e1 : Answer(getAnswer() == "RedFire") and
-		$e2 : Answer(getAnswer() == "WhiteSupstance") and
-		$e3 : Answer(getAnswer() == "Powder");
-	then
-	    $s.addSolution("RWP");
-	    update($s);
-	end
+    then
+        $s.addSolution("Silver sulfate - Ag2SO4");
+        update($s);
+    end
 
+rule "Silver phosphate - Ag3PO4"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        exists Experiment(getCode() == "colorlessSolutionWithWater")
+        exists Experiment(getCode() == "reactionWithHCl")
+        exists Experiment(getCode() == "warmWaterInsoluble")
+        exists Experiment(getCode() == "solubleInNH4OH")
+        exists Experiment(getCode() == "whiteWithHNO3")
+
+    then
+        $s.addSolution("Silver phosphate - Ag3PO4");
+        update($s);
+    end
+
+rule "Silver carbonate - Ag2CO3"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "pale yellow")
+        Structure(getAnswer() == "crystals")
+        exists Experiment(getCode() == "colorlessSolutionWithWater")
+        exists Experiment(getCode() == "reactionWithHCl")
+        exists Experiment(getCode() == "warmWaterInsoluble")
+        exists Experiment(getCode() == "solubleInNH4OH")
+        exists Experiment(getCode() == "whiteWithHNO3")
+
+    then
+        $s.addSolution("Silver carbonate - Ag2CO3");
+        update($s);
+    end
+
+rule "Silver oxalate - Ag2C2O4"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "powder")
+        exists Experiment(getCode() == "colorlessSolutionWithWater")
+        exists Experiment(getCode() == "reactionWithHCl")
+        exists Experiment(getCode() == "warmWaterInsoluble")
+        exists Experiment(getCode() == "solubleInNH4OH")
+        exists Experiment(getCode() == "whiteWithHNO3")
+
+    then
+        $s.addSolution("Silver oxalate - Ag2C2O4");
+        update($s);
+    end
+
+rule "Silver chloride - AgCl"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "solid")
+        exists Experiment(getCode() == "colorlessSolutionWithWater")
+        exists Experiment(getCode() == "reactionWithHCl")
+        exists Experiment(getCode() == "warmWaterInsoluble")
+        exists Experiment(getCode() == "solubleInNH4OH")
+        exists Experiment(getCode() == "whiteWithHNO3")
+
+    then
+        $s.addSolution("Silver chloride - AgCl");
+        update($s);
+    end
+
+rule "Silver nitrate - AgNO3"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "colorless")
+        Structure(getAnswer() == "solid")
+        exists Experiment(getCode() == "colorlessSolutionWithWater")
+        exists Experiment(getCode() == "reactionWithHCl")
+        exists Experiment(getCode() == "warmWaterInsoluble")
+        exists Experiment(getCode() == "solubleInNH4OH")
+        exists Experiment(getCode() == "whiteWithHNO3")
+
+    then
+        $s.addSolution("Silver nitrate - AgNO3");
+        update($s);
+    end
+
+rule "Lead(II) sulfate - PbSO4"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "solid")
+        exists Experiment(getCode() == "colorlessSolutionWithWater")
+        exists Experiment(getCode() == "reactionWithHCl")
+        exists Experiment(getCode() == "warmWaterSoluble")
+        exists Experiment(getCode() == "yellowWithK2CrO4")
+
+    then
+        $s.addSolution("Lead(II) sulfate - PbSO4");
+        update($s);
+    end
+
+rule "Lead(II) phosphate - Pb3(PO4)2"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "powder")
+        exists Experiment(getCode() == "colorlessSolutionWithWater")
+        exists Experiment(getCode() == "reactionWithHCl")
+        exists Experiment(getCode() == "warmWaterSoluble")
+        exists Experiment(getCode() == "yellowWithK2CrO4")
+
+    then
+        $s.addSolution("Lead(II) phosphate - Pb3(PO4)2");
+        update($s);
+    end
+
+rule "Cerussite - PbCO3"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        exists Experiment(getCode() == "colorlessSolutionWithWater")
+        exists Experiment(getCode() == "reactionWithHCl")
+        exists Experiment(getCode() == "warmWaterSoluble")
+        exists Experiment(getCode() == "yellowWithK2CrO4")
+
+    then
+        $s.addSolution("Cerussite - PbCO3");
+        update($s);
+    end
+
+rule "Lead(II) chloride - PbCl2"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "solid")
+        exists Experiment(getCode() == "colorlessSolutionWithWater")
+        exists Experiment(getCode() == "reactionWithHCl")
+        exists Experiment(getCode() == "warmWaterSoluble")
+        exists Experiment(getCode() == "yellowWithK2CrO4")
+
+    then
+        $s.addSolution("Lead(II) chloride - PbCl2");
+        update($s);
+    end
+
+rule "Lead(II) nitrate - Pb(NO3)2"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        exists Experiment(getCode() == "colorlessSolutionWithWater")
+        exists Experiment(getCode() == "reactionWithHCl")
+        exists Experiment(getCode() == "warmWaterSoluble")
+        exists Experiment(getCode() == "yellowWithK2CrO4")
+
+    then
+        $s.addSolution("Lead(II) nitrate - Pb(NO3)2");
+        update($s);
+    end
+
+rule "Lead(II) acetate - Pb(CH3COO)2"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "powder")
+        exists Experiment(getCode() == "colorlessSolutionWithWater")
+        exists Experiment(getCode() == "reactionWithHCl")
+        exists Experiment(getCode() == "warmWaterSoluble")
+        exists Experiment(getCode() == "yellowWithK2CrO4")
+
+    then
+        $s.addSolution("Lead(II) acetate - Pb(CH3COO)2");
+        update($s);
+    end
+
+rule "Mercury(II) sulfate - HgSO4"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "crystals")
+        exists Experiment(getCode() == "colorlessSolutionWithWater")
+        exists Experiment(getCode() == "reactionWithHCl")
+        exists Experiment(getCode() == "warmWaterInsoluble")
+        exists Experiment(getCode() == "greyWithNH4OH")
+
+    then
+        $s.addSolution("Mercury(II) sulfate - HgSO4");
+        update($s);
+    end
+
+rule "Mercury(II) chloride - HgCl2"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "solid")
+        exists Experiment(getCode() == "colorlessSolutionWithWater")
+        exists Experiment(getCode() == "reactionWithHCl")
+        exists Experiment(getCode() == "warmWaterInsoluble")
+        exists Experiment(getCode() == "greyWithNH4OH")
+
+    then
+        $s.addSolution("Mercury(II) chloride - HgCl2");
+        update($s);
+    end
+
+rule "Mercury(II) nitrate - Hg(NO3)2"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "colorless")
+        Structure(getAnswer() == "crystals")
+        exists Experiment(getCode() == "colorlessSolutionWithWater")
+        exists Experiment(getCode() == "reactionWithHCl")
+        exists Experiment(getCode() == "warmWaterInsoluble")
+        exists Experiment(getCode() == "greyWithNH4OH")
+
+    then
+        $s.addSolution("Mercury(II) nitrate - Hg(NO3)2");
+        update($s);
+    end
+
+rule "Mercury(II) acetate - Hg(CH3COO)2"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "pale yellow")
+        Structure(getAnswer() == "crystals")
+        exists Experiment(getCode() == "colorlessSolutionWithWater")
+        exists Experiment(getCode() == "reactionWithHCl")
+        exists Experiment(getCode() == "warmWaterInsoluble")
+        exists Experiment(getCode() == "greyWithNH4OH")
+
+    then
+        $s.addSolution("Mercury(II) acetate - Hg(CH3COO)2");
+        update($s);
+    end
+
+rule "Iron(III) sulfate - Fe2(SO4)3"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "grayish-white")
+        Structure(getAnswer() == "crystals")
+        exists Experiment(getCode() == "insolubleRawInNH4OH")
+        exists Experiment(getCode() == "darkRedSedimentFromNH4OH")
+        exists Experiment(getCode() == "noReactionWithHCl")
+
+    then
+        $s.addSolution("Iron(III) sulfate - Fe2(SO4)3");
+        update($s);
+    end
+
+rule "Iron(III) phosphate - FePO4"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "yellow-brown")
+        Structure(getAnswer() == "solid")
+        exists Experiment(getCode() == "insolubleRawInNH4OH")
+        exists Experiment(getCode() == "darkRedSedimentFromNH4OH")
+        exists Experiment(getCode() == "noReactionWithHCl")
+
+    then
+        $s.addSolution("Iron(III) phosphate - FePO4");
+        update($s);
+    end
+
+rule "Iron(III) chloride - FeCl3"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "brown")
+        Structure(getAnswer() == "solution")
+        exists Experiment(getCode() == "insolubleRawInNH4OH")
+        exists Experiment(getCode() == "darkRedSedimentFromNH4OH")
+        exists Experiment(getCode() == "noReactionWithHCl")
+
+    then
+        $s.addSolution("Iron(III) chloride - FeCl3");
+        update($s);
+    end
+
+rule "Iron(III) nitrate - Fe(NO3)3"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        exists Experiment(getCode() == "insolubleRawInNH4OH")
+        exists Experiment(getCode() == "darkRedSedimentFromNH4OH")
+        exists Experiment(getCode() == "noReactionWithHCl")
+
+    then
+        $s.addSolution("Iron(III) nitrate - Fe(NO3)3");
+        update($s);
+    end
+
+rule "Aluminium sulfate - Al2(SO4)3"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        exists Experiment(getCode() == "insolubleRawInNH4OH")
+        exists Experiment(getCode() == "whiteSedimentFromNH4OH")
+        exists Experiment(getCode() == "noReactionWithHCl")
+
+    then
+        $s.addSolution("Aluminium sulfate - Al2(SO4)3");
+        update($s);
+    end
+
+rule "Aluminium phosphate - AlPO4"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "powder")
+        exists Experiment(getCode() == "insolubleRawInNH4OH")
+        exists Experiment(getCode() == "whiteSedimentFromNH4OH")
+        exists Experiment(getCode() == "noReactionWithHCl")
+
+    then
+        $s.addSolution("Aluminium phosphate - AlPO4");
+        update($s);
+    end
+
+rule "Aluminium chloride - AlCl3"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "solid")
+        exists Experiment(getCode() == "insolubleRawInNH4OH")
+        exists Experiment(getCode() == "whiteSedimentFromNH4OH")
+        exists Experiment(getCode() == "noReactionWithHCl")
+
+    then
+        $s.addSolution("Aluminium chloride - AlCl3");
+        update($s);
+    end
+
+rule "Aluminium nitrate - Al(NO3)3"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        exists Experiment(getCode() == "insolubleRawInNH4OH")
+        exists Experiment(getCode() == "whiteSedimentFromNH4OH")
+        exists Experiment(getCode() == "noReactionWithHCl")
+
+    then
+        $s.addSolution("Aluminium nitrate - Al(NO3)3");
+        update($s);
+    end
+
+rule "Chromium(III) sulfate - Cr2(SO4)3"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "reddish-brown")
+        Structure(getAnswer() == "crystals")
+        exists Experiment(getCode() == "insolubleRawInNH4OH")
+        exists Experiment(getCode() == "GrayishGreenSedimentFromNH4OH")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+
+    then
+        $s.addSolution("Chromium(III) sulfate - Cr2(SO4)3");
+        update($s);
+    end
+
+rule "Chromium(III) chloride - CrCl3"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "purple")
+        Structure(getAnswer() == "crystals")
+        exists Experiment(getCode() == "insolubleRawInNH4OH")
+        exists Experiment(getCode() == "GrayishGreenSedimentFromNH4OH")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+
+    then
+        $s.addSolution("Chromium(III) chloride - CrCl3");
+        update($s);
+    end
+
+rule "Manganese(II) sulfate - MnSO4"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2S")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2SmeatColoredSediment")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+        exists Experiment(getCode() == "solubleRawIn(NH4)2S")
+
+    then
+        $s.addSolution("Manganese(II) sulfate - MnSO4");
+        update($s);
+    end
+
+rule "Manganese(II) carbonate - MnCO3"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "solid")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2S")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2SmeatColoredSediment")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+        exists Experiment(getCode() == "solubleRawIn(NH4)2S")
+
+    then
+        $s.addSolution("Manganese(II) carbonate - MnCO3");
+        update($s);
+    end
+
+rule "Manganese(II) chloride - MnCl2"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "pink")
+        Structure(getAnswer() == "solid")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2S")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2SmeatColoredSediment")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+        exists Experiment(getCode() == "solubleRawIn(NH4)2S")
+
+    then
+        $s.addSolution("Manganese(II) chloride - MnCl2");
+        update($s);
+    end
+
+rule "Manganese(II) nitrate - Mn(NO3)2"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "powder")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2S")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2SmeatColoredSediment")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+        exists Experiment(getCode() == "solubleRawIn(NH4)2S")
+
+    then
+        $s.addSolution("Manganese(II) nitrate - Mn(NO3)2");
+        update($s);
+    end
+
+rule "Manganese(II) acetate - Mn(CH3COO)2"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "crystals")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2S")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2SmeatColoredSediment")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+        exists Experiment(getCode() == "solubleRawIn(NH4)2S")
+
+    then
+        $s.addSolution("Manganese(II) acetate - Mn(CH3COO)2");
+        update($s);
+    end
+
+rule "Zinc sulfate - ZnSO4"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "powder")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2S")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2SwhiteSediment")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+        exists Experiment(getCode() == "solubleRawIn(NH4)2S")
+
+    then
+        $s.addSolution("Zinc sulfate - ZnSO4");
+        update($s);
+    end
+
+rule "Zinc phosphate - Zn3(PO4)2"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "solid")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2S")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2SwhiteSediment")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+        exists Experiment(getCode() == "solubleRawIn(NH4)2S")
+
+    then
+        $s.addSolution("Zinc phosphate - Zn3(PO4)2");
+        update($s);
+    end
+
+rule "Smithsonite - ZnCO3"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2S")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2SwhiteSediment")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+        exists Experiment(getCode() == "solubleRawIn(NH4)2S")
+
+    then
+        $s.addSolution("Smithsonite - ZnCO3");
+        update($s);
+    end
+
+rule "Zinc chloride - ZnCl2"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2S")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2SwhiteSediment")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+        exists Experiment(getCode() == "solubleRawIn(NH4)2S")
+
+    then
+        $s.addSolution("Zinc chloride - ZnCl2");
+        update($s);
+    end
+
+rule "Zinc nitrate - Zn(NO3)2"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "colorless")
+        Structure(getAnswer() == "crystals")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2S")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2SwhiteSediment")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+        exists Experiment(getCode() == "solubleRawIn(NH4)2S")
+
+    then
+        $s.addSolution("Zinc nitrate - Zn(NO3)2");
+        update($s);
+    end
+
+rule "Zinc acetate - Zn(CH3COO)2"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "solid")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2S")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2SwhiteSediment")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+        exists Experiment(getCode() == "solubleRawIn(NH4)2S")
+
+    then
+        $s.addSolution("Zinc acetate - Zn(CH3COO)2");
+        update($s);
+    end
+
+rule "Barium carbonate - BaCO3"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "crystals")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOH")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOHYellowWithK2Cr")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+
+    then
+        $s.addSolution("Barium carbonate - BaCO3");
+        update($s);
+    end
+
+rule "Barium oxalate - BaC2O4"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOH")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOHYellowWithK2Cr")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+
+    then
+        $s.addSolution("Barium oxalate - BaC2O4");
+        update($s);
+    end
+
+rule "Barium chloride - BaCl2"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "solid")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOH")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOHYellowWithK2Cr")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+
+    then
+        $s.addSolution("Barium chloride - BaCl2");
+        update($s);
+    end
+
+rule "Barium nitrate - Ba(NO3)2"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "crystals")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOH")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOHYellowWithK2Cr")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+
+    then
+        $s.addSolution("Barium nitrate - Ba(NO3)2");
+        update($s);
+    end
+
+rule "Calcium sulfate - CaSO4"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "solid")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOH")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOHNotYellowWithK2Cr")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+
+    then
+        $s.addSolution("Calcium sulfate - CaSO4");
+        update($s);
+    end
+
+rule "Tricalcium phosphate - Ca3(PO4)2"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "powder")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOH")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOHNotYellowWithK2Cr")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+
+    then
+        $s.addSolution("Tricalcium phosphate - Ca3(PO4)2");
+        update($s);
+    end
+
+rule "Calcium carbonate - CaCO3"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "powder")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOH")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOHNotYellowWithK2Cr")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+
+    then
+        $s.addSolution("Calcium carbonate - CaCO3");
+        update($s);
+    end
+
+rule "Calcium oxalate - CaC2O4"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "solid")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOH")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOHNotYellowWithK2Cr")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+
+    then
+        $s.addSolution("Calcium oxalate - CaC2O4");
+        update($s);
+    end
+
+rule "Calcium chloride - CaCl2"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        Color(getAnswer() == "white")
+        Structure(getAnswer() == "powder")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOH")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOHNotYellowWithK2Cr")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+
+    then
+        $s.addSolution("Calcium chloride - CaCl2");
+        update($s);
+    end
+
+rule "Calcium nitrate - Ca(NO3)2"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOH")
+        exists Experiment(getCode() == "insolubleRawIn(NH4)2CO3butSolubleInCH3COOHNotYellowWithK2Cr")
+        exists Experiment(getCode() == "noReactionWithHCl")
+        exists Experiment(getCode() == "solubleRawInNH4OH")
+
+    then
+        $s.addSolution("Calcium nitrate - Ca(NO3)2");
+        update($s);
+    end
 
