@@ -1,9 +1,7 @@
 package com.sbnz.service;
 
-import com.sbnz.model.Color;
-import com.sbnz.model.Experiment;
-import com.sbnz.model.ResponseDTO;
-import com.sbnz.model.Structure;
+import com.sbnz.model.*;
+import com.sbnz.repository.QuestionRepository;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,25 +14,44 @@ public class AnalysisService {
     private final KieContainer kieContainer;
 
     @Autowired
+    private QuestionRepository questionRepository;
+
+
+    @Autowired
     public AnalysisService(KieContainer kieContainer) {
         this.kieContainer = kieContainer;
     }
 
-    public ResponseDTO analise(List<Color> colors, List<Structure> structures, List<Experiment> experiments) {
+    public ResponseDTO analise(List<Color> colors, List<Structure> structures, List<Experiment> experiments, PreviousQuestion previousQuestion) {
         ResponseDTO responseDTO = new ResponseDTO();
-        KieSession kieSession = kieContainer.newKieSession("rulesSession");
-        kieSession.insert(responseDTO);
+
+        KieSession kieSessionSubstance = kieContainer.newKieSession("substanceRulesSession");
+        kieSessionSubstance.insert(responseDTO);
         for (Color c : colors){
-            kieSession.insert(c);
+            kieSessionSubstance.insert(c);
         }
         for (Structure s : structures){
-            kieSession.insert(s);
+            kieSessionSubstance.insert(s);
         }
         for (Experiment e : experiments){
-            kieSession.insert(e);
+            kieSessionSubstance.insert(e);
         }
-        kieSession.fireAllRules();
-        kieSession.dispose();
+        kieSessionSubstance.fireAllRules();
+        kieSessionSubstance.dispose();
+
+        if(responseDTO.getSolutions().size() <= 1) {
+            return responseDTO;
+        }
+
+        KieSession kieSessionQuestion = kieContainer.newKieSession("questionRulesSession");
+        kieSessionQuestion.insert(responseDTO);
+        kieSessionQuestion.insert(previousQuestion);
+        kieSessionQuestion.fireAllRules();
+        kieSessionQuestion.dispose();
+
+        if (responseDTO.getQuestionId() != 0) {
+            responseDTO.setQuestion(questionRepository.getQuestionById(responseDTO.getQuestionId()));
+        }
         return responseDTO;
     }
 

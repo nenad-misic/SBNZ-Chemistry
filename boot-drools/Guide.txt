@@ -154,6 +154,8 @@ Experiments:
             "whiteSedimentFromNH4OH"
             "GrayishGreenSedimentFromNH4OH"
             "solubleRawIn(NH4)2S"
+            "insolubleRawIn(NH4)2SmeatColoredSediment",
+            "insolubleRawIn(NH4)2SwhiteSediment",
             "insolubleRawIn(NH4)2S"
             "insolubleRawIn(NH4)2CO3"
             "solubleRawIn(NH4)2CO3"

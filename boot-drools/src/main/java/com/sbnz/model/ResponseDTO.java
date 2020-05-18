@@ -4,23 +4,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ResponseDTO {
-    private String question;
+    private int questionId;
+    private Question question;
     private List<String> solutions;
 
     public ResponseDTO() {
         this.solutions = new ArrayList<String>();
     }
 
-    public ResponseDTO(String question, List<String> solutions) {
+    public ResponseDTO(Question question, List<String> solutions, int questionId) {
         this.question = question;
         this.solutions = solutions;
+        this.questionId = questionId;
     }
 
-    public String getQuestion() {
+    public int getQuestionId() {
+        return questionId;
+    }
+
+    public void setQuestionId(int questionId) {
+        this.questionId = questionId;
+    }
+
+    public Question getQuestion() {
         return question;
     }
 
-    public void setQuestion(String question) {
+    public void setQuestion(Question question) {
         this.question = question;
     }
 

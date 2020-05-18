@@ -7,6 +7,7 @@ public class SubstanceInfo {
     List<Color> colors;
     List<Structure> structures;
     List<Experiment> experiments;
+    PreviousQuestion previousQuestion;
 
     public SubstanceInfo() {
         this.colors = new ArrayList<>();
@@ -14,10 +15,11 @@ public class SubstanceInfo {
         this.experiments = new ArrayList<>();
     }
 
-    public SubstanceInfo(List<Color> colors, List<Structure> structures, List<Experiment> experiments) {
+    public SubstanceInfo(List<Color> colors, List<Structure> structures, List<Experiment> experiments, PreviousQuestion previousQuestion) {
         this.colors = colors;
         this.structures = structures;
         this.experiments = experiments;
+        this.previousQuestion = previousQuestion;
     }
 
     public List<Color> getColors() {
@@ -42,5 +44,13 @@ public class SubstanceInfo {
 
     public void setExperiments(List<Experiment> experiments) {
         this.experiments = experiments;
+    }
+
+    public PreviousQuestion getPreviousQuestion() {
+        return previousQuestion;
+    }
+
+    public void setPreviousQuestion(PreviousQuestion previousQuestion) {
+        this.previousQuestion = previousQuestion;
     }
 }

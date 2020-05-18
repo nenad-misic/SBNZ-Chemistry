@@ -14,7 +14,7 @@ public class AnalisysController {
 
     @RequestMapping(value = "/analise", method = RequestMethod.POST, produces = "application/json")
     public ResponseDTO analise(@RequestBody SubstanceInfo substanceInfo) {
-        return service.analise(substanceInfo.getColors(), substanceInfo.getStructures(), substanceInfo.getExperiments());
+        return service.analise(substanceInfo.getColors(), substanceInfo.getStructures(), substanceInfo.getExperiments(), substanceInfo.getPreviousQuestion());
 
     }
 
