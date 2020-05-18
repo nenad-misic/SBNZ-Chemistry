@@ -1,6 +1,10 @@
-# SBNZ-Chemistry
+<h1 align="center">SBNZ-Chemistry</h1>
 
-# Video snimci:
+<p align="center">
+  <img src="https://i.imgur.com/IyZUpJG.png" width="250" height="250" />
+</p>
+
+## Video snimci:
   Jedna supstanca pronađena: https://drive.google.com/open?id=1jAdsJ42KZAY4n0ns50HuRGRZG2E9a6wo
   
   Pronađeno 6 ili manje supstanci koje odgovaraju odgovorima korisnika: https://drive.google.com/open?id=1VbH84tck6kr63def9FmIqOs6IZ3QPEhp
@@ -9,7 +13,7 @@
   
   Ni jedna supstanca ne odgovara odgovorima korisnika: https://drive.google.com/open?id=1EpPKKZe_CydGHFVvS4nQ7XfcSjAxlihM
 
-# Opis projekta
+## Opis projekta
 Moja ideja za projekat iz predmeta “Sistemi bazirani na znanju” je implementacija rule-based sistema
 koji bi služio kao ekspertska pomoć pri kvalitativnoj hemijskoj analizi supstanci.
 
@@ -21,7 +25,7 @@ se sastoji ispitivani uzorak naziva se kvalitativna analitička hemija.
 Uzimajući u obzir da je ovo egzaktna nauka, sa tačno određenim metodama rada, moguće je to znanje
 digitalizovati i kreirati sistem sposoban da delom automatizuje neke od procesa koje ova oblast koristi.
 
-# Motivacija
+## Motivacija
 Analitička hemija je oblast hemije koja zauzima veoma značajno mesto u svim granama hemije i
 svakodnevnog života uopšte. Analiza je osnovna metoda istraživanja, pa je analitička hemija prisutna u
 svim hemijskim istraživanjima, ali i u istraživanjima u ostalim prirodnim, pa čak i humanističkim
@@ -33,7 +37,7 @@ kontroli životne i radne sredine.
 Značaj ovakvog sistema direktno proizilazi iz značaja same nauke, a polje primene je, kao što vidimo, vrlo
 široko
 
-# Pregled problema
+## Pregled problema
 S obzirom da je ovo jedna vrlo kompleksna i velika naučna oblast, pokušaj digitalizacije celokupnog
 znanja i procesa bio bi preambiciozan. Zato ću pokušati da realizujem samo mali podskup neorganskih
 jedinjenja koji se mogu dokazati unutar uzorka i time pokazati da je pristup ovom problemu preko rulebased sistema izvodljiv.
@@ -44,7 +48,7 @@ porediti se sa takvim sistemima.
 S druge strane, kreiranjem rule-based sistema dobiće se lako proširiva arhitektura pa će se jednostavnim
 dodavanjem novih pravila širiti i spektar mogućnosti.
   
-# Metodologija rada
+## Metodologija rada
 Tradicionalna kvalitativna hemijska analiza sastoji se od niza metoda koje se primenjuju nad uzorkom da
 bi se utvrdio sastav datog uzorka. Te metode se mogu podeliti na fizičke i hemijske. Primeri fizičkih
 metoda su ispitivanje tačke topljenja, tačke ključanja, gustine, boje, mirisa, dok se hemijske svode na
@@ -67,7 +71,7 @@ na osnovu kojih se može zaključiti vrsta supstance. Takođe, za supstance koje
 implementiram analizu, iz literature ili sa interneta bih prikupio informacije o fizičkim svojstvima koja bi
 se takođe tretirala kao znanje.
 
-# Primer rezonovanja
+## Primer rezonovanja
 Korisnik ispred sebe ima, recimo, srebro nitrat (AgNO3), kristalnu supstancu bele boje, bez mirisa.
 Popunjava formu kako bi uneo informacije o fizičkim karakteristikama u sistem, kao što su boja,
 struktura, tačka topljenja, rastvorljivost u vodi, itd.
@@ -93,7 +97,7 @@ dodavanje sumporne kiseline (H2SO4), očekujemo pojavu braon prstena unutar novo
 Dokazivanjem da se u našem uzorku nalaze katjoni srebra kao i anjoni nitrata, sistem obaveštava
 korisnika da njegov uzorak predstavlja srebro nitrat.
 
-# Pravila za određivanje supstance
+## Pravila za određivanje supstance
 Pravila za određivanje supstance podeljena su u tri grupe:
 * Pravila određivanja katjona (Ag+, Pb2+, Hg22+, Fe3+, Al3+, Cr3+, Mn2+, Zn2+, Ba2+, Ca2+)
 * Pravila određivanja anjona (SO4, PO4, CO3, C2O4, Cl, NO3, CH3COO)
@@ -127,7 +131,7 @@ State dijagram modelovan po ugledu na pravila:
 * Levo - dijagram stanja za pronalaženje katjona
 * Desno - dijagram stanja za pronalaženje anjona
 
-# Pravila za određivanje sledećeg pitanja
+## Pravila za određivanje sledećeg pitanja
 Odabir narednog pitanja je takođe prepušten rezoneru i pitanja koja korisnik dobija zavise od toga kakve odgovore daje.
 
 Pokušao sam da što verodostojnije modelujem dijagram stanja koji opisuje jedan proces u analitičkoj hemiji, i na osnovu njega implementiram rezoner.
