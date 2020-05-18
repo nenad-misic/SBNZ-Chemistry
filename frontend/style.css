@@ -1,0 +1,35 @@
+.h100 {
+    height: 90vh;
+    margin: 5vh 0;
+}
+
+div {
+    text-align: center;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.answer {
+    transition: 0.3s;
+}
+.answer:hover {
+    background-color: #272B30;
+}
+
+.border-2 {
+    border-width:2px !important;
+}
+
+.answer * {
+    pointer-events: none;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.qc {
+    max-height: 80vh;
+}
