@@ -1,6 +1,47 @@
 (async () => {
     let url = 'http://localhost:8080/analise';
 
+    const capitalize = (s) => {
+        if (typeof s !== 'string') return ''
+        return s.charAt(0).toUpperCase() + s.slice(1)
+    }
+
+    let colors = [
+        "colorless",
+        "pale yellow",
+        "white",
+        "grayish-white",
+        "yellow-brown",
+        "brown",
+        "reddish-brown",
+        "purple",
+        "pink"
+    ];
+
+    let boje = {
+        "colorless": "bezbojno",
+        "pale yellow": "svetlo žuto",
+        "white": "belo",
+        "grayish-white": "sivo-belo",
+        "yellow-brown": "žuto-braon",
+        "brown": "braon",
+        "reddish-brown": "crveno-braon",
+        "purple": "ljubičasto",
+        "pink": "roze"
+    }
+    let structures = [
+        "crystals",
+        "powder",
+        "solid",
+        "solution"
+    ];
+
+    let strukture = {
+        "crystals": "kristalno",
+        "powder": "praškasto",
+        "solid": "čvrsto",
+        "solution": "rastvor"
+    }
 
     let properties = {
         "previousQuestion": {
@@ -96,6 +137,7 @@
     }
     
     function changeQuestion(question, solutions) {
+        $('#row').remove();
         $('.answer').remove();
         $('.question').remove();
         if(question) {
@@ -123,5 +165,55 @@
         
     }
     
-    changeQuestion(question, solutions);
+
+    async function checkColor() {
+        $('.substance').remove();
+        solutions.forEach(s => $('#possible-substances').append(`<li class="substance list-group-item my-2 mx-5 border">${s}</li>`))
+        
+        $('#row').remove();
+        $('.answer').remove();
+        $('.question').remove();
+        $('#question-container').append(`<h2 class="question">Odaberite boju Vaše supstance:</h2>`)
+        $('#answer-container').append('<div id="row" class="row"></div>');
+        colors.forEach(e => $('#row').append(`<div class="col-4"><div class="answer border border-2 rounded p-3 mx-2 my-3 h75" id="${e}"> <h4>${capitalize(boje[e])}</h4></div></div>`))
+        $('#row').append(`<div class="offset-4 col-4"><div class="unknown-answer border p-3 mx-2 my-3 border-2 rounded h75 text-white bg-danger" id="unknown-color"> <h4>Preskoči</h4></div></div>`)
+        $('.answer').on('click', async (e) => {
+            properties.colors = [e.target.id];
+            let data = (await axios.post(url, properties)).data;
+            solutions = data.solutions;
+            checkStructure();
+        });
+        $('#unknown-color').on('click', async (e) => {
+            let data = (await axios.post(url, properties)).data;
+            solutions = data.solutions;
+            checkStructure();
+        });
+    }
+
+    async function checkStructure() {
+        $('.substance').remove();
+        solutions.forEach(s => $('#possible-substances').append(`<li class="substance list-group-item my-2 mx-5 border">${s}</li>`))
+        
+        $('#row').remove();
+        $('.answer').remove();
+        $('.question').remove();
+        $('#question-container').append(`<h2 class="question">Odaberite strukturu Vaše supstance:</h2>`)
+        $('#answer-container').append('<div id="row" class="row"></div>');
+        structures.forEach(e => $('#row').append(`<div class="col-4"><div class="answer border  border-2 rounded p-3 mx-2 my-3 h75" id="${e}"> <h4>${capitalize(strukture[e])}</h4></div></div>`))
+        $('#row').append(`<div class="offset-4 col-4"><div class="unkown-answer border p-3 mx-2 my-3 border-2 rounded h75 text-white bg-danger" id="unknown-structure"> <h4>Preskoči</h4></div></div>`)
+        
+        $('.answer').on('click', async (e) => {
+            properties.structures = [e.target.id]
+            let data = (await axios.post(url, properties)).data;
+            solutions = data.solutions;
+            changeQuestion(question, solutions);
+        });
+        $('#unknown-structure').on('click', async (e) => {
+            let data = (await axios.post(url, properties)).data;
+            solutions = data.solutions;
+            changeQuestion(question, solutions);
+        });
+    }
+
+    checkColor();
 })();

@@ -1,5 +1,187 @@
 {
-  "cation": [
+  "questions": [
+    {
+      "id": 14,
+      "question": "U eprivetu sipati malo ispitivanog rastvora, zakiseliti ga razblaženom HCl (lakmus) i dodati 5 kapi BaCl2. Da li se pojavio beli talog?",
+      "answers": [
+        {
+          "text": "Ne, nije se stvorio talog",
+          "value": "noWhiteSedimentInBaCl2",
+          "id": 1
+        },
+        {
+          "text": "Da, dobija se beli talog",
+          "value": "whiteSedimentInBaCl2",
+          "id": 2
+        },
+        {
+          "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+          "value": "impossible",
+          "id": 3
+        }
+      ],
+      "nextQuestions": [
+        15,
+        0,
+        15
+      ]
+    },
+    {
+      "id": 15,
+      "question": "U eprivetu sipati malo ispitivanog rastvora, zakiseliti ga sa 1-2 kapi konc. HNO3 (lakmus) i dodati (NH4)2MoO4 u višku. Da li se pojavio žuti talog?",
+      "answers": [
+        {
+          "text": "Ne, nije se stvorio žuti talog",
+          "value": "noYellowSedimentInNH42MoO4",
+          "id": 1
+        },
+        {
+          "text": "Da, dobija se žuti talog",
+          "value": "yellowSedimentInNH42MoO4",
+          "id": 2
+        },
+        {
+          "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+          "value": "impossible",
+          "id": 3
+        }
+      ],
+      "nextQuestions": [
+        16,
+        0,
+        16
+      ]
+    },
+    {
+      "id": 16,
+      "question": "U eprivetu sipati malo ispitivanog rastvora, zakiseliti ga sa 10 kapi mineralne kiseline (lakmus) i izdvojeni gas uvoditi u epruvetu sa Ba(OH)2. Da li je došlo do burnog izdvajanja gasa i zamućenja?",
+      "answers": [
+        {
+          "text": "Ne, nije došlo do burnog izdvajanja gasa i zamućenja",
+          "value": "noGasInBaOH2",
+          "id": 1
+        },
+        {
+          "text": "Da, došlo je do burnog izdvajanja gasa i zamućenja",
+          "value": "gasInBaOH2",
+          "id": 2
+        },
+        {
+          "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+          "value": "impossible",
+          "id": 3
+        }
+      ],
+      "nextQuestions": [
+        17,
+        0,
+        17
+      ]
+    },
+    {
+      "id": 17,
+      "question": "U eprivetu sipati malo ispitivanog rastvora u kapima dodavati rastvor CaCl2. Da li je došlo do izdvajanja belog kristalnog taloga?",
+      "answers": [
+        {
+          "text": "Ne, nije došlo do izdvajanja belog kristalnog taloga",
+          "value": "noCrystalSedimentInCaCl2",
+          "id": 1
+        },
+        {
+          "text": "Da, došlo je do izdvajanja belog kristalnog taloga",
+          "value": "crystalSedimentInCaCl2",
+          "id": 2
+        },
+        {
+          "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+          "value": "impossible",
+          "id": 3
+        }
+      ],
+      "nextQuestions": [
+        18,
+        0,
+        18
+      ]
+    },
+    {
+      "id": 18,
+      "question": "U epruvetu sa uzorkom dodati azotnu kiselinu do kisele reakcije i nekoliko kapi AgNO3. Da li se stvorio beo sirast talog?",
+      "answers": [
+        {
+          "text": "Ne, nije došlo do izdvajanja beo sirast talog",
+          "value": "noCheesySedimentInNH4OH",
+          "id": 1
+        },
+        {
+          "text": "Da, došlo je do izdvajanja beo sirast talog",
+          "value": "cheesySedimentInNH4OH",
+          "id": 2
+        },
+        {
+          "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+          "value": "impossible",
+          "id": 3
+        }
+      ],
+      "nextQuestions": [
+        19,
+        0,
+        19
+      ]
+    },
+    {
+      "id": 19,
+      "question": "Rastvor za analizu zakiseliti sa razbl. H2SO4 i dodati čvrsti FeSO4 dok se ne nagradi zasićen rastvor. Dobro ga promućkati pa u rastvor pažljivo, niz zid epruvete lagano sipati konc. H2SO4. Da li je došlo do pojave prstena koji se gradi između dva sloja?",
+      "answers": [
+        {
+          "text": "Ne, nije došlo do pojave prstena",
+          "value": "noRingInH2SO4",
+          "id": 1
+        },
+        {
+          "text": "Da, došlo je do pojave prstena",
+          "value": "ringInH2SO4",
+          "id": 2
+        },
+        {
+          "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+          "value": "impossible",
+          "id": 3
+        }
+      ],
+      "nextQuestions": [
+        20,
+        0,
+        20
+      ]
+    },
+    {
+      "id": 20,
+      "question": "U epruvetu sa ispitivanim rastvorom dodati razblaženu H2SO4 i zagrevati. Da li se oseća miris nalik na sirće?",
+      "answers": [
+        {
+          "text": "Ne, ne oseća se miris.",
+          "value": "noVinegarSmellInH2SO4",
+          "id": 1
+        },
+        {
+          "text": "Da, oseća se miris.",
+          "value": "vinegarSmellInH2SO4",
+          "id": 2
+        },
+        {
+          "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+          "value": "impossible",
+          "id": 3
+        }
+      ],
+      "nextQuestions": [
+        0,
+        0,
+        0
+      ]
+    },
     {
       "id": 1,
       "question": "Da li se Vaša supstanca rastvara u vodi?",
@@ -24,6 +206,12 @@
           "value": "impossible",
           "id": 4
         }
+      ],
+      "nextQuestions": [
+        7,
+        2,
+        7,
+        2
       ]
     },
     {
@@ -45,6 +233,11 @@
           "value": "impossible",
           "id": 3
         }
+      ],
+      "nextQuestions": [
+        7,
+        3,
+        3
       ]
     },
     {
@@ -66,6 +259,11 @@
           "value": "impossible",
           "id": 3
         }
+      ],
+      "nextQuestions": [
+        5,
+        4,
+        5
       ]
     },
     {
@@ -87,6 +285,11 @@
           "value": "impossible",
           "id": 3
         }
+      ],
+      "nextQuestions": [
+        7,
+        14,
+        7
       ]
     },
     {
@@ -113,6 +316,12 @@
           "value": "impossible",
           "id": 4
         }
+      ],
+      "nextQuestions": [
+        6,
+        7,
+        14,
+        6
       ]
     },
     {
@@ -134,6 +343,11 @@
           "value": "impossible",
           "id": 3
         }
+      ],
+      "nextQuestions": [
+        7,
+        14,
+        7
       ]
     },
     {
@@ -155,6 +369,11 @@
           "value": "impossible",
           "id": 3
         }
+      ],
+      "nextQuestions": [
+        8,
+        9,
+        9
       ]
     },
     {
@@ -181,6 +400,12 @@
           "value": "impossible",
           "id": 4
         }
+      ],
+      "nextQuestions": [
+        14,
+        14,
+        14,
+        9
       ]
     },
     {
@@ -202,6 +427,11 @@
           "value": "impossible",
           "id": 3
         }
+      ],
+      "nextQuestions": [
+        11,
+        10,
+        11
       ]
     },
     {
@@ -223,6 +453,11 @@
           "value": "impossible",
           "id": 3
         }
+      ],
+      "nextQuestions": [
+        14,
+        14,
+        11
       ]
     },
     {
@@ -244,6 +479,11 @@
           "value": "impossible",
           "id": 3
         }
+      ],
+      "nextQuestions": [
+        14,
+        12,
+        14
       ]
     },
     {
@@ -265,6 +505,11 @@
           "value": "impossible",
           "id": 3
         }
+      ],
+      "nextQuestions": [
+        13,
+        14,
+        14
       ]
     },
     {
@@ -286,155 +531,11 @@
           "value": "impossible",
           "id": 3
         }
-      ]
-    }
-  ],
-  "anion": [
-    {
-      "id": 14,
-      "question": "U eprivetu sipati malo ispitivanog rastvora, zakiseliti ga razblaženom HCl (lakmus) i dodati 5 kapi BaCl2. Da li se pojavio beli talog?",
-      "answers": [
-        {
-          "text": "Ne, nije se stvorio talog",
-          "value": "noWhiteSedimentInBaCl2",
-          "id": 1
-        },
-        {
-          "text": "Da, dobija se beli talog",
-          "value": "whiteSedimentInBaCl2",
-          "id": 2
-        },
-        {
-          "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
-          "value": "impossible",
-          "id": 3
-        }
-      ]
-    },
-    {
-      "id": 15,
-      "question": "U eprivetu sipati malo ispitivanog rastvora, zakiseliti ga sa 1-2 kapi konc. HNO3 (lakmus) i dodati (NH4)2MoO4 u višku. Da li se pojavio žuti talog?",
-      "answers": [
-        {
-          "text": "Ne, nije se stvorio žuti talog",
-          "value": "noYellowSedimentInNH42MoO4",
-          "id": 1
-        },
-        {
-          "text": "Da, dobija se žuti talog",
-          "value": "yellowSedimentInNH42MoO4",
-          "id": 2
-        },
-        {
-          "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
-          "value": "impossible",
-          "id": 3
-        }
-      ]
-    },
-    {
-      "id": 16,
-      "question": "U eprivetu sipati malo ispitivanog rastvora, zakiseliti ga sa 10 kapi mineralne kiseline (lakmus) i izdvojeni gas uvoditi u epruvetu sa Ba(OH)2. Da li je došlo do burnog izdvajanja gasa i zamućenja?",
-      "answers": [
-        {
-          "text": "Ne, nije došlo do burnog izdvajanja gasa i zamućenja",
-          "value": "noGasInBaOH2",
-          "id": 1
-        },
-        {
-          "text": "Da, došlo je do burnog izdvajanja gasa i zamućenja",
-          "value": "gasInBaOH2",
-          "id": 2
-        },
-        {
-          "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
-          "value": "impossible",
-          "id": 3
-        }
-      ]
-    },
-    {
-      "id": 17,
-      "question": "U eprivetu sipati malo ispitivanog rastvora u kapima dodavati rastvor CaCl2. Da li je došlo do izdvajanja belog kristalnog taloga?",
-      "answers": [
-        {
-          "text": "Ne, nije došlo do izdvajanja belog kristalnog taloga",
-          "value": "noCrystalSedimentInCaCl2",
-          "id": 1
-        },
-        {
-          "text": "Da, došlo je do izdvajanja belog kristalnog taloga",
-          "value": "crystalSedimentInCaCl2",
-          "id": 2
-        },
-        {
-          "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
-          "value": "impossible",
-          "id": 3
-        }
-      ]
-    },
-    {
-      "id": 18,
-      "question": "U epruvetu sa uzorkom dodati azotnu kiselinu do kisele reakcije i nekoliko kapi AgNO3. Da li se stvorio beo sirast talog?",
-      "answers": [
-        {
-          "text": "Ne, nije došlo do izdvajanja beo sirast talog",
-          "value": "noCheesySedimentInNH4OH",
-          "id": 1
-        },
-        {
-          "text": "Da, došlo je do izdvajanja beo sirast talog",
-          "value": "cheesySedimentInNH4OH",
-          "id": 2
-        },
-        {
-          "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
-          "value": "impossible",
-          "id": 3
-        }
-      ]
-    },
-    {
-      "id": 19,
-      "question": "Rastvor za analizu zakiseliti sa razbl. H2SO4 i dodati čvrsti FeSO4 dok se ne nagradi zasićen rastvor. Dobro ga promućkati pa u rastvor pažljivo, niz zid epruvete lagano sipati konc. H2SO4. Da li je došlo do pojave prstena koji se gradi između dva sloja?",
-      "answers": [
-        {
-          "text": "Ne, nije došlo do pojave prstena",
-          "value": "noRingInH2SO4",
-          "id": 1
-        },
-        {
-          "text": "Da, došlo je do pojave prstena",
-          "value": "ringInH2SO4",
-          "id": 2
-        },
-        {
-          "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
-          "value": "impossible",
-          "id": 3
-        }
-      ]
-    },
-    {
-      "id": 20,
-      "question": "U epruvetu sa ispitivanim rastvorom dodati razblaženu H2SO4 i zagrevati. Da li se oseća miris nalik na sirće?",
-      "answers": [
-        {
-          "text": "Ne, ne oseća se miris.",
-          "value": "noVinegarSmellInH2SO4",
-          "id": 1
-        },
-        {
-          "text": "Da, oseća se miris.",
-          "value": "vinegarSmellInH2SO4",
-          "id": 2
-        },
-        {
-          "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
-          "value": "impossible",
-          "id": 3
-        }
+      ],
+      "nextQuestions": [
+        14,
+        14,
+        14
       ]
     }
   ]

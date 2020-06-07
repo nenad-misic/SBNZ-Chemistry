@@ -11,7 +11,7 @@ div {
     cursor: pointer;
 }
 
-.answer {
+.answer, .unknown-answer {
     transition: 0.3s;
 }
 .answer:hover {
@@ -32,4 +32,12 @@ div {
 
 .qc {
     max-height: 80vh;
+}
+
+.h75 {
+    height: 75%;
+}
+
+.bg-danger:hover {
+    background-color: #ca403c !important;
 }

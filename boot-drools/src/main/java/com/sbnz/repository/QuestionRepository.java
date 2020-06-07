@@ -13,13 +13,10 @@ public class QuestionRepository {
     public Question getQuestionById(int id) {
         Questionnaire questionnaire = this.getQuestionnaire();
 
-        for (Question q : questionnaire.getCation()){
+        for (Question q : questionnaire.getQuestions()){
             if (q.getId() == id) return q;
         }
 
-        for (Question q : questionnaire.getAnion()){
-            if (q.getId() == id) return q;
-        }
         return null;
     }
 

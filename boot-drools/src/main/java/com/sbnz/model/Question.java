@@ -6,14 +6,16 @@ public class Question {
     private int id;
     private String question;
     private List<Answer> answers;
+    private List<Integer> nextQuestions;
 
     public Question() {
     }
 
-    public Question(int id, String question, List<Answer> answers) {
+    public Question(int id, String question, List<Answer> answers, List<Integer> nextQuestions) {
         this.id = id;
         this.question = question;
         this.answers = answers;
+        this.nextQuestions = nextQuestions;
     }
 
     public int getId() {
@@ -38,5 +40,13 @@ public class Question {
 
     public void setAnswers(List<Answer> answers) {
         this.answers = answers;
+    }
+
+    public List<Integer> getNextQuestions() {
+        return nextQuestions;
+    }
+
+    public void setNextQuestions(List<Integer> nextQuestions) {
+        this.nextQuestions = nextQuestions;
     }
 }

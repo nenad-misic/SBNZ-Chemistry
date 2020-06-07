@@ -24,6 +24,7 @@ public class AnalysisService {
 
     public ResponseDTO analise(List<Color> colors, List<Structure> structures, List<Experiment> experiments, PreviousQuestion previousQuestion) {
         ResponseDTO responseDTO = new ResponseDTO();
+        Questionnaire questionnaire = questionRepository.getQuestionnaire();
 
         KieSession kieSessionSubstance = kieContainer.newKieSession("substanceRulesSession");
         kieSessionSubstance.insert(responseDTO);
@@ -43,9 +44,11 @@ public class AnalysisService {
             return responseDTO;
         }
 
+
         KieSession kieSessionQuestion = kieContainer.newKieSession("questionRulesSession");
         kieSessionQuestion.insert(responseDTO);
         kieSessionQuestion.insert(previousQuestion);
+        kieSessionQuestion.insert(questionnaire);
         kieSessionQuestion.fireAllRules();
         kieSessionQuestion.dispose();
 
