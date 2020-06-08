@@ -1,0 +1,36 @@
+package questionRules
+import java.util.ArrayList
+import com.sbnz.model.Color
+import com.sbnz.model.Structure
+import com.sbnz.model.Experiment
+import com.sbnz.model.Substance
+import com.sbnz.model.ResponseDTO
+import com.sbnz.model.Cation
+import com.sbnz.model.Anion
+import com.sbnz.model.Questionnaire
+import com.sbnz.model.PreviousQuestion
+
+rule "First Question"
+    when
+        $s : ResponseDTO();
+        $previousQuestion : PreviousQuestion(questionId == 0);
+    then
+        System.out.println("First Question");
+        $s.setQuestionId(1);
+    end
+
+rule "Other questions"
+    when
+        $s : ResponseDTO();
+        $previousQuestion : PreviousQuestion(questionId != 0);
+        $questionnaire : Questionnaire();
+    then
+        $s.setQuestion(
+            $questionnaire.getQuestionById(
+                $questionnaire
+                    .getQuestionById($previousQuestion.getQuestionId())
+                    .getNextQuestions()
+                    .get($previousQuestion.getAnswerId()-1)
+            )
+        );
+    end
