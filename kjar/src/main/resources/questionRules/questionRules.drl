@@ -24,7 +24,7 @@ rule "Other questions"
         $s : ResponseDTO();
         $previousQuestion : PreviousQuestion(questionId != 0);
         $questionnaire : Questionnaire();
-    then
+    then        
         $s.setQuestion(
             $questionnaire.getQuestionById(
                 $questionnaire

@@ -2294,3 +2294,1452 @@ rule "Question 20 Answer 3"
         $s.setQuestionId(0);
     end
 `
+
+drls = `
+
+
+package substanceRules
+import java.util.ArrayList
+import com.sbnz.model.Color
+import com.sbnz.model.Structure
+import com.sbnz.model.Experiment
+import com.sbnz.model.Substance
+import com.sbnz.model.ResponseDTO
+import com.sbnz.model.Cation
+import com.sbnz.model.CationGroup
+import com.sbnz.model.Anion
+import java.util.List
+import java.util.Arrays
+
+
+// ------------------ CATION-GROUPS ------------------------
+rule "Group1"
+    lock-on-active true
+    when
+        allNeededExperimentsPresent(Arrays.asList("colorlessSolutionWithWater", "reactionWithHCl");)
+    then
+        System.out.println("Group1");
+        insert(new CationGroup("1"));
+    end
+rule "Group2"
+    lock-on-active true
+    when
+        allNeededExperimentsPresent(Arrays.asList("insolubleRawInNH4OH", "noReactionWithHCl");)
+    then
+        System.out.println("Group2");
+        insert(new CationGroup("2"));
+    end
+
+rule "Group3"
+    lock-on-active true
+    when
+        allNeededExperimentsPresent(Arrays.asList("noReactionWithHCl", "solubleRawInNH4OH", "solubleRawIn(NH4)2S");)
+    then
+        System.out.println("Group3");
+        insert(new CationGroup("3"));
+    end
+rule "Group4"
+    lock-on-active true
+    when
+        allNeededExperimentsPresent(Arrays.asList("insolubleRawIn(NH4)2CO3", "insolubleRawIn(NH4)2CO3butSolubleInCH3COOH", "noReactionWithHCl", "solubleRawInNH4OH");)
+    then
+        System.out.println("Group4");
+        insert(new CationGroup("4"));
+    end
+
+
+// ------------------ CATIONS ------------------------
+rule "Silver"
+    no-loop
+    when
+        $s : ResponseDTO();
+        exists CationGroup(code == "1");
+        allNeededExperimentsPresent(Arrays.asList("warmWaterInsoluble", "solubleInNH4OH", "whiteWithHNO3");)
+    then
+        System.out.println("Silver");
+        insert(new Cation("Silver"));
+    end
+
+rule "Lead"
+    no-loop
+    when
+        $s : ResponseDTO();
+        exists CationGroup(code == "1");
+        allNeededExperimentsPresent(Arrays.asList("warmWaterSoluble", "yellowWithK2CrO4");)
+    then
+        System.out.println("Lead");
+        insert(new Cation("Lead"));
+    end
+
+rule "Mercury"
+    no-loop
+    when
+        $s : ResponseDTO();
+        exists CationGroup(code == "1");
+        allNeededExperimentsPresent(Arrays.asList("warmWaterInsoluble", "greyWithNH4OH");)
+    then
+        System.out.println("Mercury");
+        insert(new Cation("Mercury"));
+    end
+
+rule "Iron"
+    no-loop
+    when
+        $s : ResponseDTO();
+        exists CationGroup(code == "2");
+        allNeededExperimentsPresent(Arrays.asList("darkRedSedimentFromNH4OH");)
+    then
+        System.out.println("Iron");
+        insert(new Cation("Iron"));
+    end
+
+rule "Aluminium"
+    no-loop
+    when
+        $s : ResponseDTO();
+        exists CationGroup(code == "2");
+        allNeededExperimentsPresent(Arrays.asList("whiteSedimentFromNH4OH");)
+    then
+        System.out.println("Aluminium");
+        insert(new Cation("Aluminium"));
+    end
+
+rule "Chromium"
+    no-loop
+    when
+        $s : ResponseDTO();
+        exists CationGroup(code == "2");
+        allNeededExperimentsPresent(Arrays.asList("GrayishGreenSedimentFromNH4OH");)
+    then
+        System.out.println("Chromium");
+        insert(new Cation("Chromium"));
+    end
+
+rule "Manganese"
+    no-loop
+    when
+        $s : ResponseDTO();
+        exists CationGroup(code == "3");
+        allNeededExperimentsPresent(Arrays.asList("insolubleRawIn(NH4)2SmeatColoredSediment");)
+    then
+        System.out.println("Manganese");
+        insert(new Cation("Manganese"));
+    end
+
+rule "Zinc"
+    no-loop
+    when
+        $s : ResponseDTO();
+        exists CationGroup(code == "3");
+        allNeededExperimentsPresent(Arrays.asList("insolubleRawIn(NH4)2SwhiteSediment");)
+    then
+        System.out.println("Zinc");
+        insert(new Cation("Zinc"));
+    end
+
+rule "Barium"
+    no-loop
+    when
+        $s : ResponseDTO();
+        exists CationGroup(code == "4");
+        allNeededExperimentsPresent(Arrays.asList("insolubleRawIn(NH4)2CO3butSolubleInCH3COOHYellowWithK2Cr");)
+    then
+        System.out.println("Barium");
+        insert(new Cation("Barium"));
+    end
+
+rule "Calcium"
+    no-loop
+    when
+        $s : ResponseDTO();
+        exists CationGroup(code == "4");
+        allNeededExperimentsPresent(Arrays.asList("insolubleRawIn(NH4)2CO3butSolubleInCH3COOHNotYellowWithK2Cr");)
+    then
+        System.out.println("Calcium");
+        insert(new Cation("Calcium"));
+    end
+// ------------------ ANIONS ------------------------
+rule "SO4"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        allNeededExperimentsPresent(Arrays.asList("noYellowSedimentInNH42MoO4", "noGasInBaOH2", "noCrystalSedimentInCaCl2", "whiteSedimentInBaCl2", "noRingInH2SO4", "noVinegarSmellInH2SO4");)
+    then
+        System.out.println("SO4");
+        insert(new Anion("SO4"));
+    end
+
+rule "PO4"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        allNeededExperimentsPresent(Arrays.asList("noWhiteSedimentInBaCl2", "noGasInBaOH2", "noCrystalSedimentInCaCl2", "yellowSedimentInNH42MoO4", "noRingInH2SO4", "noVinegarSmellInH2SO4");)
+    then
+        System.out.println("PO4");
+        insert(new Anion("PO4"));
+    end
+
+rule "CO3"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        allNeededExperimentsPresent(Arrays.asList("noWhiteSedimentInBaCl2", "noYellowSedimentInNH42MoO4", "noCrystalSedimentInCaCl2", "gasInBaOH2", "noRingInH2SO4", "noVinegarSmellInH2SO4");)
+    then
+        System.out.println("CO3");
+        insert(new Anion("CO3"));
+    end
+
+rule "C2O4"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        allNeededExperimentsPresent(Arrays.asList("noWhiteSedimentInBaCl2", "noYellowSedimentInNH42MoO4", "noGasInBaOH2", "crystalSedimentInCaCl2", "noRingInH2SO4", "noVinegarSmellInH2SO4");)
+    then
+        System.out.println("C2O4");
+        insert(new Anion("C2O4"));
+    end
+
+rule "Cl"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        allNeededExperimentsPresent(Arrays.asList("cheesySedimentInNH4OH", "noRingInH2SO4", "noVinegarSmellInH2SO4", "noYellowSedimentInNH42MoO4", "noGasInBaOH2", "noCrystalSedimentInCaCl2", "noWhiteSedimentInBaCl2");)
+    then
+        System.out.println("Cl");
+        insert(new Anion("Cl"));
+    end
+
+rule "NO3"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        allNeededExperimentsPresent(Arrays.asList("noCheesySedimentInNH4OH", "noVinegarSmellInH2SO4", "ringInH2SO4", "noYellowSedimentInNH42MoO4", "noGasInBaOH2", "noCrystalSedimentInCaCl2", "noWhiteSedimentInBaCl2");)
+    then
+        System.out.println("NO3");
+        insert(new Anion("NO3"));
+    end
+
+rule "CH3COO"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        allNeededExperimentsPresent(Arrays.asList("noCheesySedimentInNH4OH", "vinegarSmellInH2SO4", "noRingInH2SO4", "noYellowSedimentInNH42MoO4", "noGasInBaOH2", "noCrystalSedimentInCaCl2", "noWhiteSedimentInBaCl2");)
+    then
+        System.out.println("CH3COO");
+        insert(new Anion("CH3COO"));
+    end
+    // ------------------ SUBSTANCES ------------------------
+
+
+rule "Silver sulfate - Ag2SO4"
+    when
+        $s : ResponseDTO();
+        Color(answer == "colorless")
+        Structure(answer == "crystals")
+        exists Cation(element == "Silver")
+        exists Anion(element == "SO4")
+
+    then
+        System.out.println("Silver sulfate - Ag2SO4");
+        $s.addSolution("Silver sulfate - Ag2SO4");
+
+    end
+
+rule "Silver phosphate - Ag3PO4"
+    when
+        $s : ResponseDTO();
+        Color(answer == "brown")
+        Structure(answer == "powder")
+        exists Cation(element == "Silver")
+        exists Anion(element == "PO4")
+
+    then
+        System.out.println("Silver phosphate - Ag3PO4");
+        $s.addSolution("Silver phosphate - Ag3PO4");
+
+    end
+
+rule "Silver carbonate - Ag2CO3"
+    when
+        $s : ResponseDTO();
+        Color(answer == "pale yellow")
+        Structure(answer == "crystals")
+        exists Cation(element == "Silver")
+        exists Anion(element == "CO3")
+
+    then
+        System.out.println("Silver carbonate - Ag2CO3");
+        $s.addSolution("Silver carbonate - Ag2CO3");
+
+    end
+
+rule "Silver oxalate - Ag2C2O4"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Silver")
+        exists Anion(element == "C2O4")
+
+    then
+        System.out.println("Silver oxalate - Ag2C2O4");
+        $s.addSolution("Silver oxalate - Ag2C2O4");
+
+    end
+
+rule "Silver chloride - AgCl"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Silver")
+        exists Anion(element == "Cl")
+
+    then
+        System.out.println("Silver chloride - AgCl");
+        $s.addSolution("Silver chloride - AgCl");
+
+    end
+
+rule "Silver nitrate - AgNO3"
+    when
+        $s : ResponseDTO();
+        Color(answer == "colorless")
+        Structure(answer == "solid")
+        exists Cation(element == "Silver")
+        exists Anion(element == "NO3")
+
+    then
+        System.out.println("Silver nitrate - AgNO3");
+        $s.addSolution("Silver nitrate - AgNO3");
+
+    end
+
+rule "Lead(II) sulfate - PbSO4"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Lead")
+        exists Anion(element == "SO4")
+
+    then
+        System.out.println("Lead(II) sulfate - PbSO4");
+        $s.addSolution("Lead(II) sulfate - PbSO4");
+
+    end
+
+rule "Lead(II) phosphate - Pb3(PO4)2"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Lead")
+        exists Anion(element == "PO4")
+
+    then
+        System.out.println("Lead(II) phosphate - Pb3(PO4)2");
+        $s.addSolution("Lead(II) phosphate - Pb3(PO4)2");
+
+    end
+
+rule "Cerussite - PbCO3"
+    when
+        $s : ResponseDTO();
+        Color(answer == "colorless")
+        Structure(answer == "crystals")
+        exists Cation(element == "Lead")
+        exists Anion(element == "CO3")
+
+    then
+        System.out.println("Cerussite - PbCO3");
+        $s.addSolution("Cerussite - PbCO3");
+
+    end
+
+rule "Lead(II) chloride - PbCl2"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Lead")
+        exists Anion(element == "Cl")
+
+    then
+        System.out.println("Lead(II) chloride - PbCl2");
+        $s.addSolution("Lead(II) chloride - PbCl2");
+
+    end
+
+rule "Lead(II) nitrate - Pb(NO3)2"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Lead")
+        exists Anion(element == "NO3")
+
+    then
+        System.out.println("Lead(II) nitrate - Pb(NO3)2");
+        $s.addSolution("Lead(II) nitrate - Pb(NO3)2");
+
+    end
+
+rule "Lead(II) acetate - Pb(CH3COO)2"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Lead")
+        exists Anion(element == "CH3COO")
+
+    then
+        System.out.println("Lead(II) acetate - Pb(CH3COO)2");
+        $s.addSolution("Lead(II) acetate - Pb(CH3COO)2");
+
+    end
+
+rule "Mercury(II) sulfate - HgSO4"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "crystals")
+        exists Cation(element == "Mercury")
+        exists Anion(element == "SO4")
+
+    then
+        System.out.println("Mercury(II) sulfate - HgSO4");
+        $s.addSolution("Mercury(II) sulfate - HgSO4");
+
+    end
+
+rule "Mercury(II) chloride - HgCl2"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Mercury")
+        exists Anion(element == "Cl")
+
+    then
+        System.out.println("Mercury(II) chloride - HgCl2");
+        $s.addSolution("Mercury(II) chloride - HgCl2");
+
+    end
+
+rule "Mercury(II) nitrate - Hg(NO3)2"
+    when
+        $s : ResponseDTO();
+        Color(answer == "colorless")
+        Structure(answer == "crystals")
+        exists Cation(element == "Mercury")
+        exists Anion(element == "NO3")
+
+    then
+        System.out.println("Mercury(II) nitrate - Hg(NO3)2");
+        $s.addSolution("Mercury(II) nitrate - Hg(NO3)2");
+
+    end
+
+rule "Mercury(II) acetate - Hg(CH3COO)2"
+    when
+        $s : ResponseDTO();
+        Color(answer == "pale yellow")
+        Structure(answer == "crystals")
+        exists Cation(element == "Mercury")
+        exists Anion(element == "CH3COO")
+
+    then
+        System.out.println("Mercury(II) acetate - Hg(CH3COO)2");
+        $s.addSolution("Mercury(II) acetate - Hg(CH3COO)2");
+
+    end
+
+rule "Iron(III) sulfate - Fe2(SO4)3"
+    when
+        $s : ResponseDTO();
+        Color(answer == "grayish-white")
+        Structure(answer == "crystals")
+        exists Cation(element == "Iron")
+        exists Anion(element == "SO4")
+
+    then
+        System.out.println("Iron(III) sulfate - Fe2(SO4)3");
+        $s.addSolution("Iron(III) sulfate - Fe2(SO4)3");
+
+    end
+
+rule "Iron(III) phosphate - FePO4"
+    when
+        $s : ResponseDTO();
+        Color(answer == "yellow-brown")
+        Structure(answer == "solid")
+        exists Cation(element == "Iron")
+        exists Anion(element == "PO4")
+
+    then
+        System.out.println("Iron(III) phosphate - FePO4");
+        $s.addSolution("Iron(III) phosphate - FePO4");
+
+    end
+
+rule "Iron(III) chloride - FeCl3"
+    when
+        $s : ResponseDTO();
+        Color(answer == "brown")
+        Structure(answer == "solution")
+        exists Cation(element == "Iron")
+        exists Anion(element == "Cl")
+
+    then
+        System.out.println("Iron(III) chloride - FeCl3");
+        $s.addSolution("Iron(III) chloride - FeCl3");
+
+    end
+
+rule "Iron(III) nitrate - Fe(NO3)3"
+    when
+        $s : ResponseDTO();
+        Color(answer == "yellow")
+        Structure(answer == "crystals")
+        exists Cation(element == "Iron")
+        exists Anion(element == "NO3")
+
+    then
+        System.out.println("Iron(III) nitrate - Fe(NO3)3");
+        $s.addSolution("Iron(III) nitrate - Fe(NO3)3");
+
+    end
+
+rule "Aluminium sulfate - Al2(SO4)3"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "crystals")
+        exists Cation(element == "Aluminium")
+        exists Anion(element == "SO4")
+
+    then
+        System.out.println("Aluminium sulfate - Al2(SO4)3");
+        $s.addSolution("Aluminium sulfate - Al2(SO4)3");
+
+    end
+
+rule "Aluminium phosphate - AlPO4"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Aluminium")
+        exists Anion(element == "PO4")
+
+    then
+        System.out.println("Aluminium phosphate - AlPO4");
+        $s.addSolution("Aluminium phosphate - AlPO4");
+
+    end
+
+rule "Aluminium chloride - AlCl3"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Aluminium")
+        exists Anion(element == "Cl")
+
+    then
+        System.out.println("Aluminium chloride - AlCl3");
+        $s.addSolution("Aluminium chloride - AlCl3");
+
+    end
+
+rule "Aluminium nitrate - Al(NO3)3"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "crystals")
+        exists Cation(element == "Aluminium")
+        exists Anion(element == "NO3")
+
+    then
+        System.out.println("Aluminium nitrate - Al(NO3)3");
+        $s.addSolution("Aluminium nitrate - Al(NO3)3");
+
+    end
+
+rule "Chromium(III) sulfate - Cr2(SO4)3"
+    when
+        $s : ResponseDTO();
+        Color(answer == "reddish-brown")
+        Structure(answer == "crystals")
+        exists Cation(element == "Chromium")
+        exists Anion(element == "SO4")
+
+    then
+        System.out.println("Chromium(III) sulfate - Cr2(SO4)3");
+        $s.addSolution("Chromium(III) sulfate - Cr2(SO4)3");
+
+    end
+
+rule "Chromium(III) chloride - CrCl3"
+    when
+        $s : ResponseDTO();
+        Color(answer == "purple")
+        Structure(answer == "crystals")
+        exists Cation(element == "Chromium")
+        exists Anion(element == "Cl")
+
+    then
+        System.out.println("Chromium(III) chloride - CrCl3");
+        $s.addSolution("Chromium(III) chloride - CrCl3");
+
+    end
+
+rule "Manganese(II) sulfate - MnSO4"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Manganese")
+        exists Anion(element == "SO4")
+
+    then
+        System.out.println("Manganese(II) sulfate - MnSO4");
+        $s.addSolution("Manganese(II) sulfate - MnSO4");
+
+    end
+
+rule "Manganese(II) carbonate - MnCO3"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Manganese")
+        exists Anion(element == "CO3")
+
+    then
+        System.out.println("Manganese(II) carbonate - MnCO3");
+        $s.addSolution("Manganese(II) carbonate - MnCO3");
+
+    end
+
+rule "Manganese(II) chloride - MnCl2"
+    when
+        $s : ResponseDTO();
+        Color(answer == "pink")
+        Structure(answer == "solid")
+        exists Cation(element == "Manganese")
+        exists Anion(element == "Cl")
+
+    then
+        System.out.println("Manganese(II) chloride - MnCl2");
+        $s.addSolution("Manganese(II) chloride - MnCl2");
+
+    end
+
+rule "Manganese(II) nitrate - Mn(NO3)2"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Manganese")
+        exists Anion(element == "NO3")
+
+    then
+        System.out.println("Manganese(II) nitrate - Mn(NO3)2");
+        $s.addSolution("Manganese(II) nitrate - Mn(NO3)2");
+
+    end
+
+rule "Manganese(II) acetate - Mn(CH3COO)2"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "crystals")
+        exists Cation(element == "Manganese")
+        exists Anion(element == "CH3COO")
+
+    then
+        System.out.println("Manganese(II) acetate - Mn(CH3COO)2");
+        $s.addSolution("Manganese(II) acetate - Mn(CH3COO)2");
+
+    end
+
+rule "Zinc sulfate - ZnSO4"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Zinc")
+        exists Anion(element == "SO4")
+
+    then
+        System.out.println("Zinc sulfate - ZnSO4");
+        $s.addSolution("Zinc sulfate - ZnSO4");
+
+    end
+
+rule "Zinc phosphate - Zn3(PO4)2"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Zinc")
+        exists Anion(element == "PO4")
+
+    then
+        System.out.println("Zinc phosphate - Zn3(PO4)2");
+        $s.addSolution("Zinc phosphate - Zn3(PO4)2");
+
+    end
+
+rule "Smithsonite - ZnCO3"
+    when
+        $s : ResponseDTO();
+        Color(answer == "colorless")
+        Structure(answer == "crystal")
+        exists Cation(element == "Zinc")
+        exists Anion(element == "CO3")
+
+    then
+        System.out.println("Smithsonite - ZnCO3");
+        $s.addSolution("Smithsonite - ZnCO3");
+
+    end
+
+rule "Zinc chloride - ZnCl2"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Zinc")
+        exists Anion(element == "Cl")
+
+    then
+        System.out.println("Zinc chloride - ZnCl2");
+        $s.addSolution("Zinc chloride - ZnCl2");
+
+    end
+
+rule "Zinc nitrate - Zn(NO3)2"
+    when
+        $s : ResponseDTO();
+        Color(answer == "colorless")
+        Structure(answer == "crystals")
+        exists Cation(element == "Zinc")
+        exists Anion(element == "NO3")
+
+    then
+        System.out.println("Zinc nitrate - Zn(NO3)2");
+        $s.addSolution("Zinc nitrate - Zn(NO3)2");
+
+    end
+
+rule "Zinc acetate - Zn(CH3COO)2"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Zinc")
+        exists Anion(element == "CH3COO")
+
+    then
+        System.out.println("Zinc acetate - Zn(CH3COO)2");
+        $s.addSolution("Zinc acetate - Zn(CH3COO)2");
+
+    end
+
+rule "Barium carbonate - BaCO3"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "crystals")
+        exists Cation(element == "Barium")
+        exists Anion(element == "CO3")
+
+    then
+        System.out.println("Barium carbonate - BaCO3");
+        $s.addSolution("Barium carbonate - BaCO3");
+
+    end
+
+rule "Barium oxalate - BaC2O4"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Barium")
+        exists Anion(element == "CO3")
+
+    then
+        System.out.println("Barium oxalate - BaC2O4");
+        $s.addSolution("Barium oxalate - BaC2O4");
+
+    end
+
+rule "Barium chloride - BaCl2"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Barium")
+        exists Anion(element == "CO3")
+
+    then
+        System.out.println("Barium chloride - BaCl2");
+        $s.addSolution("Barium chloride - BaCl2");
+
+    end
+
+rule "Barium nitrate - Ba(NO3)2"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "crystals")
+        exists Cation(element == "Barium")
+        exists Anion(element == "NO3")
+
+    then
+        System.out.println("Barium nitrate - Ba(NO3)2");
+        $s.addSolution("Barium nitrate - Ba(NO3)2");
+
+    end
+
+rule "Calcium sulfate - CaSO4"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Calcium")
+        exists Anion(element == "SO4")
+
+    then
+        System.out.println("Calcium sulfate - CaSO4");
+        $s.addSolution("Calcium sulfate - CaSO4");
+
+    end
+
+rule "Tricalcium phosphate - Ca3(PO4)2"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Calcium")
+        exists Anion(element == "PO4")
+
+    then
+        System.out.println("Tricalcium phosphate - Ca3(PO4)2");
+        $s.addSolution("Tricalcium phosphate - Ca3(PO4)2");
+
+    end
+
+rule "Calcium carbonate - CaCO3"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Calcium")
+        exists Anion(element == "CO3")
+
+    then
+        System.out.println("Calcium carbonate - CaCO3");
+        $s.addSolution("Calcium carbonate - CaCO3");
+
+    end
+
+rule "Calcium oxalate - CaC2O4"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Calcium")
+        exists Anion(element == "C2O4")
+
+    then
+        System.out.println("Calcium oxalate - CaC2O4");
+        $s.addSolution("Calcium oxalate - CaC2O4");
+
+    end
+
+rule "Calcium chloride - CaCl2"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Calcium")
+        exists Anion(element == "Cl")
+
+    then
+        System.out.println("Calcium chloride - CaCl2");
+        $s.addSolution("Calcium chloride - CaCl2");
+
+    end
+
+rule "Calcium nitrate - Ca(NO3)2"
+    when
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Calcium")
+        exists Anion(element == "NO3")
+
+    then
+        System.out.println("Calcium nitrate - Ca(NO3)2");
+        $s.addSolution("Calcium nitrate - Ca(NO3)2");
+
+    end
+
+// ------------------ QUERIES --------------------------
+query "allNeededExperimentsPresent"  (List experiments)
+    $allExperiments : List() from collect(Experiment())
+    $n: Number(intValue >= experiments.size()) from accumulate (
+            Experiment(experiments.contains(code))
+            from $allExperiments,
+            init(int count = 0;),
+            action(count += 1;)
+            result(count)
+    )
+end`
+
+var qn = {
+    "questions": [
+      {
+        "id": 14,
+        "question": "U eprivetu sipati malo ispitivanog rastvora, zakiseliti ga razblaženom HCl (lakmus) i dodati 5 kapi BaCl2. Da li se pojavio beli talog?",
+        "answers": [
+          {
+            "text": "Ne, nije se stvorio talog",
+            "value": "noWhiteSedimentInBaCl2",
+            "id": 1
+          },
+          {
+            "text": "Da, dobija se beli talog",
+            "value": "whiteSedimentInBaCl2",
+            "id": 2
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 3
+          }
+        ],
+        "nextQuestions": [
+          15,
+          0,
+          15
+        ]
+      },
+      {
+        "id": 15,
+        "question": "U eprivetu sipati malo ispitivanog rastvora, zakiseliti ga sa 1-2 kapi konc. HNO3 (lakmus) i dodati (NH4)2MoO4 u višku. Da li se pojavio žuti talog?",
+        "answers": [
+          {
+            "text": "Ne, nije se stvorio žuti talog",
+            "value": "noYellowSedimentInNH42MoO4",
+            "id": 1
+          },
+          {
+            "text": "Da, dobija se žuti talog",
+            "value": "yellowSedimentInNH42MoO4",
+            "id": 2
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 3
+          }
+        ],
+        "nextQuestions": [
+          16,
+          0,
+          16
+        ]
+      },
+      {
+        "id": 16,
+        "question": "U eprivetu sipati malo ispitivanog rastvora, zakiseliti ga sa 10 kapi mineralne kiseline (lakmus) i izdvojeni gas uvoditi u epruvetu sa Ba(OH)2. Da li je došlo do burnog izdvajanja gasa i zamućenja?",
+        "answers": [
+          {
+            "text": "Ne, nije došlo do burnog izdvajanja gasa i zamućenja",
+            "value": "noGasInBaOH2",
+            "id": 1
+          },
+          {
+            "text": "Da, došlo je do burnog izdvajanja gasa i zamućenja",
+            "value": "gasInBaOH2",
+            "id": 2
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 3
+          }
+        ],
+        "nextQuestions": [
+          17,
+          0,
+          17
+        ]
+      },
+      {
+        "id": 17,
+        "question": "U eprivetu sipati malo ispitivanog rastvora u kapima dodavati rastvor CaCl2. Da li je došlo do izdvajanja belog kristalnog taloga?",
+        "answers": [
+          {
+            "text": "Ne, nije došlo do izdvajanja belog kristalnog taloga",
+            "value": "noCrystalSedimentInCaCl2",
+            "id": 1
+          },
+          {
+            "text": "Da, došlo je do izdvajanja belog kristalnog taloga",
+            "value": "crystalSedimentInCaCl2",
+            "id": 2
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 3
+          }
+        ],
+        "nextQuestions": [
+          18,
+          0,
+          18
+        ]
+      },
+      {
+        "id": 18,
+        "question": "U epruvetu sa uzorkom dodati azotnu kiselinu do kisele reakcije i nekoliko kapi AgNO3. Da li se stvorio beo sirast talog?",
+        "answers": [
+          {
+            "text": "Ne, nije došlo do izdvajanja beo sirast talog",
+            "value": "noCheesySedimentInNH4OH",
+            "id": 1
+          },
+          {
+            "text": "Da, došlo je do izdvajanja beo sirast talog",
+            "value": "cheesySedimentInNH4OH",
+            "id": 2
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 3
+          }
+        ],
+        "nextQuestions": [
+          19,
+          0,
+          19
+        ]
+      },
+      {
+        "id": 19,
+        "question": "Rastvor za analizu zakiseliti sa razbl. H2SO4 i dodati čvrsti FeSO4 dok se ne nagradi zasićen rastvor. Dobro ga promućkati pa u rastvor pažljivo, niz zid epruvete lagano sipati konc. H2SO4. Da li je došlo do pojave prstena koji se gradi između dva sloja?",
+        "answers": [
+          {
+            "text": "Ne, nije došlo do pojave prstena",
+            "value": "noRingInH2SO4",
+            "id": 1
+          },
+          {
+            "text": "Da, došlo je do pojave prstena",
+            "value": "ringInH2SO4",
+            "id": 2
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 3
+          }
+        ],
+        "nextQuestions": [
+          20,
+          0,
+          20
+        ]
+      },
+      {
+        "id": 20,
+        "question": "U epruvetu sa ispitivanim rastvorom dodati razblaženu H2SO4 i zagrevati. Da li se oseća miris nalik na sirće?",
+        "answers": [
+          {
+            "text": "Ne, ne oseća se miris.",
+            "value": "noVinegarSmellInH2SO4",
+            "id": 1
+          },
+          {
+            "text": "Da, oseća se miris.",
+            "value": "vinegarSmellInH2SO4",
+            "id": 2
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 3
+          }
+        ],
+        "nextQuestions": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": 1,
+        "question": "Da li se Vaša supstanca rastvara u vodi?",
+        "answers": [
+          {
+            "text": "Ne, rastvaranjem supstance stvara se talog",
+            "value": "insolubleInWater",
+            "id": 1
+          },
+          {
+            "text": "Da, i rastvor je bez boje",
+            "value": "colorlessSolutionWithWater",
+            "id": 2
+          },
+          {
+            "text": "Da, i rastvor nije bezbojan",
+            "value": "colorfulSolutionWithWater",
+            "id": 3
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 4
+          }
+        ],
+        "nextQuestions": [
+          7,
+          2,
+          7,
+          2
+        ]
+      },
+      {
+        "id": 2,
+        "question": "Da li Vaša supstanca pri reakciji sa razblaženom HCl daje talog?",
+        "answers": [
+          {
+            "text": "Ne, ne dobija se talog",
+            "value": "noReactionWithHCl",
+            "id": 1
+          },
+          {
+            "text": "Da, dobija se talog",
+            "value": "reactionWithHCl",
+            "id": 2
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 3
+          }
+        ],
+        "nextQuestions": [
+          7,
+          3,
+          3
+        ]
+      },
+      {
+        "id": 3,
+        "question": "Nakon uvođenja tople vode u stvoreni talog dobija se rastvor?",
+        "answers": [
+          {
+            "text": "Ne, talog je i dalje tu.",
+            "value": "warmWaterInsoluble",
+            "id": 1
+          },
+          {
+            "text": "Da, talog se u potpunosti rastvorio.",
+            "value": "warmWaterSoluble",
+            "id": 2
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 3
+          }
+        ],
+        "nextQuestions": [
+          5,
+          4,
+          5
+        ]
+      },
+      {
+        "id": 4,
+        "question": "U novodobijeni rastvor unesite K2CrO4. Da li je rastvor postao žut?",
+        "answers": [
+          {
+            "text": "Ne, rastvor nije postao žut.",
+            "value": "notYellowWithK2CrO4",
+            "id": 1
+          },
+          {
+            "text": "Da, rastvor je postao žut.",
+            "value": "yellowWithK2CrO4",
+            "id": 2
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 3
+          }
+        ],
+        "nextQuestions": [
+          7,
+          14,
+          7
+        ]
+      },
+      {
+        "id": 5,
+        "question": "U novodobijeni rastvor unesite NH4OH. Da li se stvorio talog sive boje?",
+        "answers": [
+          {
+            "text": "Ne, dobijen je rastvor (bez taloga)",
+            "value": "solubleInNH4OH",
+            "id": 1
+          },
+          {
+            "text": "Ne, stvorio se talog druge boje",
+            "value": "insolubleInNH4OH",
+            "id": 2
+          },
+          {
+            "text": "Da, stvorio se talog sive boje",
+            "value": "greyWithNH4OH",
+            "id": 3
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 4
+          }
+        ],
+        "nextQuestions": [
+          6,
+          7,
+          14,
+          6
+        ]
+      },
+      {
+        "id": 6,
+        "question": "U novodobijeni rastvor unesite HNO3 (ili NaOH). Da li se stvorio talog bele boje?",
+        "answers": [
+          {
+            "text": "Ne, nije se stvorio talog bele boje",
+            "value": "notWhiteWithHNO3",
+            "id": 1
+          },
+          {
+            "text": "Da, stvorio se talog bele boje",
+            "value": "whiteWithHNO3",
+            "id": 2
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 3
+          }
+        ],
+        "nextQuestions": [
+          7,
+          14,
+          7
+        ]
+      },
+      {
+        "id": 7,
+        "question": "Da li se Vaša supstanca rastvara u NH4OH (ili HNO3 ili NH4Cl)?",
+        "answers": [
+          {
+            "text": "Ne, došlo je do pojave taloga",
+            "value": "solubleRawInNH4OH",
+            "id": 1
+          },
+          {
+            "text": "Da, supstanca se rastvorila",
+            "value": "insolubleRawInNH4OH",
+            "id": 2
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 3
+          }
+        ],
+        "nextQuestions": [
+          8,
+          9,
+          9
+        ]
+      },
+      {
+        "id": 8,
+        "question": "Opišite talog koji je prethodno dobijen",
+        "answers": [
+          {
+            "text": "Mrkocrveni, pihtijasti talog",
+            "value": "darkRedSedimentFromNH4OH",
+            "id": 1
+          },
+          {
+            "text": "Beli, pihtijasti talog",
+            "value": "whiteSedimentFromNH4OH",
+            "id": 2
+          },
+          {
+            "text": "Sivozeleni, pihtijasti talog",
+            "value": "GrayishGreenSedimentFromNH4OH",
+            "id": 3
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 4
+          }
+        ],
+        "nextQuestions": [
+          14,
+          14,
+          14,
+          9
+        ]
+      },
+      {
+        "id": 9,
+        "question": "Da li se Vaša supstanca rastvara u (NH4)2S?",
+        "answers": [
+          {
+            "text": "Ne, došlo je do pojave taloga",
+            "value": "solubleRawIn(NH4)2S",
+            "id": 1
+          },
+          {
+            "text": "Da, supstanca se rastvorila",
+            "value": "insolubleRawIn(NH4)2S",
+            "id": 2
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 3
+          }
+        ],
+        "nextQuestions": [
+          11,
+          10,
+          11
+        ]
+      },
+      {
+        "id": 10,
+        "question": "Opišite dobijeni talog",
+        "answers": [
+          {
+            "text": "Talog je boje mesa",
+            "value": "solubleRawIn(NH4)2S",
+            "id": 1
+          },
+          {
+            "text": "Talog je bele boje",
+            "value": "insolubleRawIn(NH4)2S",
+            "id": 2
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 3
+          }
+        ],
+        "nextQuestions": [
+          14,
+          14,
+          11
+        ]
+      },
+      {
+        "id": 11,
+        "question": "Da li se Vaša supstanca rastvara u (NH4)2CO3 na temperaturi 60-70 stepeni?",
+        "answers": [
+          {
+            "text": "Ne, stvorio se talog",
+            "value": "insolubleRawIn(NH4)2CO3",
+            "id": 1
+          },
+          {
+            "text": "Da, dobija se rastvor, bez taloga",
+            "value": "solubleRawIn(NH4)2CO3",
+            "id": 2
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 3
+          }
+        ],
+        "nextQuestions": [
+          14,
+          12,
+          14
+        ]
+      },
+      {
+        "id": 12,
+        "question": "Da li se dobijeni talog rastvara u CH3COOH?",
+        "answers": [
+          {
+            "text": "Ne, stvorio se talog",
+            "value": "insolubleRawIn(NH4)2CO3andCH3COOH",
+            "id": 1
+          },
+          {
+            "text": "Da, dobija se rastvor, bez taloga",
+            "value": "insolubleRawIn(NH4)2CO3butSolubleInCH3COOH",
+            "id": 2
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 3
+          }
+        ],
+        "nextQuestions": [
+          13,
+          14,
+          14
+        ]
+      },
+      {
+        "id": 13,
+        "question": "Da li se dodavanjem K2Cr2O4 (ili K2Cr2O7) u dobijeni rastvor izdvaja žuti talog?",
+        "answers": [
+          {
+            "text": "Ne, nije se stvorio žuti talog",
+            "value": "insolubleRawIn(NH4)2CO3butSolubleInCH3COOHNotYellowWithK2Cr",
+            "id": 1
+          },
+          {
+            "text": "Da, dobija se žuti talog",
+            "value": "insolubleRawIn(NH4)2CO3butSolubleInCH3COOHYellowWithK2Cr",
+            "id": 2
+          },
+          {
+            "text": "Nisam u mogućnosti da izvedem ovaj eksperiment ili ništa od ponuđenog",
+            "value": "impossible",
+            "id": 3
+          }
+        ],
+        "nextQuestions": [
+          14,
+          14,
+          14
+        ]
+      }
+    ]
+  }

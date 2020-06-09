@@ -26,7 +26,7 @@ rule "Group1"
 rule "Group2"
     lock-on-active true
     when
-        allNeededExperimentsPresent(Arrays.asList("insolubleRawInNH4OH");)
+        allNeededExperimentsPresent(Arrays.asList("insolubleRawInNH4OH", "noReactionWithHCl");)
     then
         System.out.println("Group2");
         insert(new CationGroup("2"));
@@ -35,7 +35,7 @@ rule "Group2"
 rule "Group3"
     lock-on-active true
     when
-        allNeededExperimentsPresent(Arrays.asList("insolubleRawIn(NH4)2S");)
+        allNeededExperimentsPresent(Arrays.asList("noReactionWithHCl", "solubleRawInNH4OH", "solubleRawIn(NH4)2S");)
     then
         System.out.println("Group3");
         insert(new CationGroup("3"));
@@ -43,7 +43,7 @@ rule "Group3"
 rule "Group4"
     lock-on-active true
     when
-        allNeededExperimentsPresent(Arrays.asList("insolubleRawIn(NH4)2CO3");)
+        allNeededExperimentsPresent(Arrays.asList("insolubleRawIn(NH4)2CO3", "insolubleRawIn(NH4)2CO3butSolubleInCH3COOH", "noReactionWithHCl", "solubleRawInNH4OH");)
     then
         System.out.println("Group4");
         insert(new CationGroup("4"));
@@ -89,7 +89,7 @@ rule "Iron"
     when
         $s : ResponseDTO();
         exists CationGroup(code == "2");
-        allNeededExperimentsPresent(Arrays.asList("darkRedSedimentFromNH4OH", "noReactionWithHCl");)
+        allNeededExperimentsPresent(Arrays.asList("darkRedSedimentFromNH4OH");)
     then
         System.out.println("Iron");
         insert(new Cation("Iron"));
@@ -100,7 +100,7 @@ rule "Aluminium"
     when
         $s : ResponseDTO();
         exists CationGroup(code == "2");
-        allNeededExperimentsPresent(Arrays.asList("whiteSedimentFromNH4OH", "noReactionWithHCl");)
+        allNeededExperimentsPresent(Arrays.asList("whiteSedimentFromNH4OH");)
     then
         System.out.println("Aluminium");
         insert(new Cation("Aluminium"));
@@ -111,7 +111,7 @@ rule "Chromium"
     when
         $s : ResponseDTO();
         exists CationGroup(code == "2");
-        allNeededExperimentsPresent(Arrays.asList("GrayishGreenSedimentFromNH4OH", "noReactionWithHCl", "solubleRawInNH4OH");)
+        allNeededExperimentsPresent(Arrays.asList("GrayishGreenSedimentFromNH4OH");)
     then
         System.out.println("Chromium");
         insert(new Cation("Chromium"));
@@ -122,7 +122,7 @@ rule "Manganese"
     when
         $s : ResponseDTO();
         exists CationGroup(code == "3");
-        allNeededExperimentsPresent(Arrays.asList("insolubleRawIn(NH4)2SmeatColoredSediment", "noReactionWithHCl", "solubleRawInNH4OH", "solubleRawIn(NH4)2S");)
+        allNeededExperimentsPresent(Arrays.asList("insolubleRawIn(NH4)2SmeatColoredSediment");)
     then
         System.out.println("Manganese");
         insert(new Cation("Manganese"));
@@ -133,7 +133,7 @@ rule "Zinc"
     when
         $s : ResponseDTO();
         exists CationGroup(code == "3");
-        allNeededExperimentsPresent(Arrays.asList("insolubleRawIn(NH4)2SwhiteSediment", "noReactionWithHCl", "solubleRawInNH4OH", "solubleRawIn(NH4)2S");)
+        allNeededExperimentsPresent(Arrays.asList("insolubleRawIn(NH4)2SwhiteSediment");)
     then
         System.out.println("Zinc");
         insert(new Cation("Zinc"));
@@ -144,7 +144,7 @@ rule "Barium"
     when
         $s : ResponseDTO();
         exists CationGroup(code == "4");
-        allNeededExperimentsPresent(Arrays.asList("insolubleRawIn(NH4)2CO3butSolubleInCH3COOH", "insolubleRawIn(NH4)2CO3butSolubleInCH3COOHYellowWithK2Cr", "noReactionWithHCl", "solubleRawInNH4OH");)
+        allNeededExperimentsPresent(Arrays.asList("insolubleRawIn(NH4)2CO3butSolubleInCH3COOHYellowWithK2Cr");)
     then
         System.out.println("Barium");
         insert(new Cation("Barium"));
@@ -155,7 +155,7 @@ rule "Calcium"
     when
         $s : ResponseDTO();
         exists CationGroup(code == "4");
-        allNeededExperimentsPresent(Arrays.asList("insolubleRawIn(NH4)2CO3butSolubleInCH3COOH", "insolubleRawIn(NH4)2CO3butSolubleInCH3COOHNotYellowWithK2Cr", "noReactionWithHCl", "solubleRawInNH4OH");)
+        allNeededExperimentsPresent(Arrays.asList("insolubleRawIn(NH4)2CO3butSolubleInCH3COOHNotYellowWithK2Cr");)
     then
         System.out.println("Calcium");
         insert(new Cation("Calcium"));
