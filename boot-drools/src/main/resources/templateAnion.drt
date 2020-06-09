@@ -1,0 +1,15 @@
+template header
+name
+allNeededExperiments
+
+template "anions"
+rule "@{name}"
+    lock-on-active true
+    when
+        $s : ResponseDTO();
+        allNeededExperimentsPresent(Arrays.asList(@{allNeededExperiments});)
+    then
+        System.out.println("@{name}");
+        insert(new Anion("@{name}"));
+    end
+end template

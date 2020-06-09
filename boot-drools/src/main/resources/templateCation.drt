@@ -1,0 +1,17 @@
+template header
+number
+name
+allNeededExperiments
+
+template "cations"
+rule "@{name}"
+    no-loop
+    when
+        $s : ResponseDTO();
+        exists CationGroup(code == "@{number}");
+        allNeededExperimentsPresent(Arrays.asList(@{allNeededExperiments});)
+    then
+        System.out.println("@{name}");
+        insert(new Cation("@{name}"));
+    end
+end template

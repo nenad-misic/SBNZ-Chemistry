@@ -1,0 +1,39 @@
+.h90 {
+    height: 80vh;
+    margin: 5vh 0;
+}
+
+.tc {
+    text-align: center;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.editor {
+    text-align: left;
+    width: 100%;
+    height: 85%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.moveright {
+    margin-left: 20px;
+    margin-right: -20px;
+}
+
+.moveleft {
+    margin-right: 20px;
+    margin-left: -20px;
+}
+
+.scrollable {
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+
+.exic {
+    width: 10px;
+    height: 10px;
+}

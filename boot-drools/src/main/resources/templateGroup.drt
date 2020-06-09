@@ -1,0 +1,14 @@
+template header
+number
+allNeededExperiments
+
+template "groups"
+rule "Group@{number}"
+    lock-on-active true
+    when
+        allNeededExperimentsPresent(Arrays.asList(@{allNeededExperiments}))
+    then
+        System.out.println("Group@{number}");
+        insert(new CationGroup("@{number}"));
+    end
+end template

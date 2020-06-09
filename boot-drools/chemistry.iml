@@ -105,7 +105,6 @@
     <orderEntry type="library" name="Maven: org.apache.maven:maven-core:3.3.9" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-repository-metadata:3.3.9" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-interpolation:1.21" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-component-annotations:1.6" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-model:3.3.9" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-model-builder:3.3.9" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-builder-support:3.3.9" level="project" />
@@ -172,5 +171,7 @@
     <orderEntry type="library" name="Maven: xmlpull:xmlpull:1.1.3.1" level="project" />
     <orderEntry type="library" name="Maven: xpp3:xpp3_min:1.1.4c" level="project" />
     <orderEntry type="library" name="Maven: com.sbnzkjar:sbnzkjar:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven.shared:maven-invoker:2.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-component-annotations:1.5.5" level="project" />
   </component>
 </module>

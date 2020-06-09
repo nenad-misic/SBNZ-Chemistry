@@ -1,0 +1,22 @@
+template header
+color
+structure
+cation
+anion
+name
+
+template "substances"
+rule "@{name}"
+    when
+        $s : ResponseDTO();
+        Color(answer == "@{color}")
+        Structure(answer == "@{structure}")
+        exists Cation(element == "@{cation}")
+        exists Anion(element == "@{anion}")
+
+    then
+        System.out.println("@{name}");
+        $s.addSolution("@{name}");
+
+    end
+end template
