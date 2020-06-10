@@ -4,15 +4,6 @@
   <img src="https://i.imgur.com/IyZUpJG.png" width="250" height="250" />
 </p>
 
-## Video snimci:
-  Jedna supstanca pronađena: https://drive.google.com/open?id=1jAdsJ42KZAY4n0ns50HuRGRZG2E9a6wo
-  
-  Pronađeno 6 ili manje supstanci koje odgovaraju odgovorima korisnika: https://drive.google.com/open?id=1VbH84tck6kr63def9FmIqOs6IZ3QPEhp
- 
-  Pronađeno više od 6 supstanci: https://drive.google.com/open?id=16hXoZ-VvuEY1G_laQyUSkYkYX46vhrUf
-  
-  Ni jedna supstanca ne odgovara odgovorima korisnika: https://drive.google.com/open?id=1EpPKKZe_CydGHFVvS4nQ7XfcSjAxlihM
-
 ## Opis projekta
 Moja ideja za projekat iz predmeta “Sistemi bazirani na znanju” je implementacija rule-based sistema
 koji bi služio kao ekspertska pomoć pri kvalitativnoj hemijskoj analizi supstanci.
@@ -25,29 +16,32 @@ se sastoji ispitivani uzorak naziva se kvalitativna analitička hemija.
 Uzimajući u obzir da je ovo egzaktna nauka, sa tačno određenim metodama rada, moguće je to znanje
 digitalizovati i kreirati sistem sposoban da delom automatizuje neke od procesa koje ova oblast koristi.
 
-## Motivacija
-Analitička hemija je oblast hemije koja zauzima veoma značajno mesto u svim granama hemije i
-svakodnevnog života uopšte. Analiza je osnovna metoda istraživanja, pa je analitička hemija prisutna u
-svim hemijskim istraživanjima, ali i u istraživanjima u ostalim prirodnim, pa čak i humanističkim
-naukama. U svakodnevnom životu analitička hemija ima veliki značaj u materijalnoj proizvodnji u
-hemijskoj, farmaceutskoj, prehrambenoj i tekstilnoj industriji, u metalurgiji, rudarstvu, poljoprivredi itd.
-Veoma važnu ulogu analitička hemija ima u zdravstvenoj zaštiti, medicinskoj dijagnostici i terapiji kao i u
-kontroli životne i radne sredine.
+## KT2 - Promene
+* <b>Forward-chaining u 3 nivoa</b>
+* <b>Liste i query-ji umesto pristupanja po string kodovima</b>
+* <b>Generičko pravilo za određivanje sledećeg pitanja za korisnika</b>
+* <b>Integracija sa springom i dinamičko povlačenje pravila</b>
+* <b>Drools template za dodavanje korisničkih pravila</b>
+* <b>Rich edit komponenta za ručno pisanje drl pravila</b>
+* <b>Kompletno istestirani rezoneri i sve moguće putanje</b>
 
-Značaj ovakvog sistema direktno proizilazi iz značaja same nauke, a polje primene je, kao što vidimo, vrlo
-široko
+Za kontrolnu tačku dva sam napravio nekoliko promena u samoj arhitekturi projekta.
+Pravila za određivanje supstance su sada organizovane u četiri, umesto u tri grupe, i time je donekle povećana kompleksnost projekta jer sada postoji forward-chaining na 3 nivoa.
+Takođe, upućena mi je primedba da je možda elegantnije rešenje implementirati rezonovanje preko lista i query-ja umesto pristupanja objektima po string kodovima, pa sam i taj deo implementirao.
+Pristupanje atributima se u prvoj verziji vršilo putem getera, dok je sada sve prebačeno na korišćenje direktnih atributa (jer drools pruža tu mogućnost).
+Još jedna zamerka je bila da Q&A pravila nisu imala preteranog smisla jer su sva bila ista, a bilo ih je jako puno, pa je taj deo smanjen sa skoro 70 na samo dva pravila.
 
-## Pregled problema
-S obzirom da je ovo jedna vrlo kompleksna i velika naučna oblast, pokušaj digitalizacije celokupnog
-znanja i procesa bio bi preambiciozan. Zato ću pokušati da realizujem samo mali podskup neorganskih
-jedinjenja koji se mogu dokazati unutar uzorka i time pokazati da je pristup ovom problemu preko rulebased sistema izvodljiv.
+Što se tiče ostalih funkcionalnosti, za ovu kontrolnu tačku implementirao sam integraciju sa springom i dinamičko učitavanje dependency-ja sa pravilima na svakih 10 sekundi. Takođe, prilikom korisničkog menjanja pravila dolazi do pozivanja clean install procedura i dependency se automatski povlači nakon toga, tako da nije potrebno restartovati server.
+Što se tiče korisničkog dodavanja novih pravila, postoji deo implementiran preko drools template-a gde je korisnik u mogućnosti putem checkbox mehanizma isključi i uključi postojeća jedinjenja, katjone i anjone kao i da doda potpuno nove i izabere njihove atribute (na osnovu kojih će sistem napraviti novo pravilo).
+Ukoliko template ne daje dovoljnu fleksibilnost, implementirana je i textedit komponenta u kojoj korisnik može da unese svoja pravila u drl formatu i pošalje ih na server. Ta pravila biće konkatenirana na kraj drl datoteke, nakon što se templejt iskompajlira.
 
-Postoje komercijalna rešenja, poput QualX2 softvera koji rešavaju sličan problem, ali nema smisla
-porediti se sa takvim sistemima.
+Što se testiranja tiče, unit testovima sam istestirao sve moguće putanje kroz rezoner, kako za jedinjenja tako i za Q&A deo.
 
-S druge strane, kreiranjem rule-based sistema dobiće se lako proširiva arhitektura pa će se jednostavnim
-dodavanjem novih pravila širiti i spektar mogućnosti.
-  
+## Opis forward-chaining u 3 nivoa
+Prvi nivo predstavlja pronalaženje grupe na osnovu rezultata eksperimenata. Ukoliko se leva strana nekog pravila ispuni, doći će do dodavanja novog objekta u radnu memoriju i to će okinuti drugi niz pravila. Pravila za katjone očekuju postojanje objekta grupe, pa ako određeni katjon pripada grupi koja se pre toga ispunila, i takođe ispunjava neke specifičnije eksperimente, dodaće se i on u memoriju. Nakon toga dolazi do potencijalne aktivacije pravila za jedinjenja koja očekuju postojanje katjona u radnoj memoriji, ali takođe i postojanje anjona koje se paralelno aktiviralo, kao i posebna fizička svojstva koja je korisnik uneo.
+Na ovaj način, da bi se došlo do jedinjenja, rezoner mora proći kroz tri aktivacije pravila i samim tim je postignut forward-chaining od tri nivoa.
+
+
 ## Metodologija rada
 Tradicionalna kvalitativna hemijska analiza sastoji se od niza metoda koje se primenjuju nad uzorkom da
 bi se utvrdio sastav datog uzorka. Te metode se mogu podeliti na fizičke i hemijske. Primeri fizičkih
@@ -71,59 +65,22 @@ na osnovu kojih se može zaključiti vrsta supstance. Takođe, za supstance koje
 implementiram analizu, iz literature ili sa interneta bih prikupio informacije o fizičkim svojstvima koja bi
 se takođe tretirala kao znanje.
 
-## Primer rezonovanja
-Korisnik ispred sebe ima, recimo, srebro nitrat (AgNO3), kristalnu supstancu bele boje, bez mirisa.
-Popunjava formu kako bi uneo informacije o fizičkim karakteristikama u sistem, kao što su boja,
-struktura, tačka topljenja, rastvorljivost u vodi, itd.
-
-Nakon toga sistem postavlja pitanja o ponašanju nakon mešanja sa određenim supstancama iz
-laboratorije. Recimo, od korisnika zahteva da mali deo uzorka pomeša sa razblaženom hlorovodoničnom
-kiselinom i upituje da li se stvorio talog.
-
-Ukoliko jeste, a trebalo bi da jeste, znamo da se u uzorku nalazi neki od metala iz prve analitičke grupe.
-U suprotnom, dobijanjem rastvora bez taloga, znamo da uzorak ne sadrži pomenute metale, pa se
-nastavlja sa reakcijama da se utvrdi iz koje grupe su metali.
-
-Pošto je uspešno utvrđeno da su u uzorku prisutni joni metala iz prve grupe, uz pomoć par hemijskih
-reakcija, lako se dokazuje o kom tačno metalu je reč (preskočićemo hemijske reakcije da bi se smanjila
-kompleksnost opisa).
-
-Nakon uspešnog određivanja metala (katjona), prelazi se na analizu i dokazivanje prisustva određenih
-anjona. Postoji tačno određen šablon reakcija koje se primenjuju da bi se dokazalo o kom se tačno
-anjonu radi, pa bi sistem redom korisniku postavljao upite o ponašanju uzorka u određenim uslovima.
-
-Primenom reakcije na nitrate, koja podrazumeva uvođenje uzorka u gvožđe-2-sulfat (FeSO4) i postepeno
-dodavanje sumporne kiseline (H2SO4), očekujemo pojavu braon prstena unutar novodobijenog rastvora.
-Dokazivanjem da se u našem uzorku nalaze katjoni srebra kao i anjoni nitrata, sistem obaveštava
-korisnika da njegov uzorak predstavlja srebro nitrat.
-
 ## Pravila za određivanje supstance
-Pravila za određivanje supstance podeljena su u tri grupe:
+Pravila za određivanje supstance podeljena su u četiri grupe:
+* Pravila određivanja grupe katjona (Grupa1 - Ag+, Pb2+, Hg22+; Grupa2 - Fe3+, Al3+, Cr3+; Grupa3 - Mn2+, Zn2+; Grupa4 - Ba2+, Ca2+)
 * Pravila određivanja katjona (Ag+, Pb2+, Hg22+, Fe3+, Al3+, Cr3+, Mn2+, Zn2+, Ba2+, Ca2+)
 * Pravila određivanja anjona (SO4, PO4, CO3, C2O4, Cl, NO3, CH3COO)
-* Pravila određivanja soli na osnovu prisustva katjona i anjona.
+* Pravila određivanja soli na osnovu prisustva katjona i anjona (i fizičkih karakteristika).
 
-Prve dve grupe su jako slične i svode se na posmatranje prisustva određenih eksperimentalnih rezultata (Experiment.class)
+Neki koncizan opis pravila bi bio sledeći:
 
-Inicijalno, u sistemu postoje svi rezultati eksperimenata prisutni, pa je moguće da se ispred korisnika nalazi bilo koja supstanca.
-Kako korisnik daje odgovore na pitanja, tako se svi ostali odgovori na to pitanje, osim datog, brišu iz činjenica.
-Recimo, ako je u pitanju rastvorljivost supstance u vodi, inicijalno se u memoriji nalaze i solubleInWater i insolubleInWater eksperimenti. Ukoliko korisnik da odgovor da se njegova supstanca rastvara u vodi, insolubleInWater eksperiment će biti izbačen iz memorije. Ukoliko korisnik odabere odgovor da nije u stanju da izvrši eksperiment, svi odgovori će ostati u memoriji (u ovom primeru, pretpostavićemo da je supstanca možda rastvorljiva a možda ne).
+Pravila za određivanje grupe katjona očekuju da u radnoj memoriji postoje objekti tipa Experiment, svaka grupa različite. Nakon aktivacije ove grupe pravila, doći će do potencijalne aktivacije pravila iz grupe katjona.
 
-Jedan primer je (za dokazivanje jona Ag+), rezoner očekuje da u sesiji postoje 5 eksperimenata sa određenim nazivima (colorlessSolutionWithWater, colorlessSolutionWithWater, warmWaterInsoluble, solubleInNH4OH, whiteWithHNO3). Svi ostali su slični, samo sa drugim skupom pravila. Ukoliko se pravilo ispuni, u memoriju će se dodati objekat tima Cation.class (ili Anion.class) sa odgovarajućim nazivom (u ovom slučaju "Silver").
+Pravila za određivanja katjona očekuju da u radnoj memoriji postoje objekti tipa Experiment, ali takođe i tačno jedan objekat tipa Group. Ova pravila aktiviraju se tek u drugom prolazu rezonera kroz pravila. Aktivacija ove grupe pravila potencijalno izaziva aktivaciju pravila za određivanje soli.
 
-Treća grupa uzima u obzir prisustvo jednog katjona i jednog anjona, ali i fizičke karakteristike date supstance, pa je primer sledeći:
+Pravila za određivanje anjona očekuju da u radnoj memoriji postoje objekti tipa Experiment i ova grupa pravila se aktivira zajedno sa prvom grupom pravila. Aktivacija ovog tipa pravila neophodna je za aktivaciju pravila za određivanja soli.
 
-Za dokazivanje soli Ca3(PO4)2, potrebno je da u memoriji postoje objekti:
-* Color.class sa nazivom "white"
-* Structure.class sa nazivom "powder"
-* Anion.class sa nazivom "PO4"
-* Cation.class sa nazivom "Calcium"
-
-Ispunjenje ovog pravila dovešće do dodavanja supstance Ca3(PO4)2 u memoriju, i lista svih dodatih supstanci će kasnije biti vraćena klijentu za prikaz.
-
-
-Pravila su analizirana sa prezentacija na web sajtu: https://www.sites.google.com/site/epruveticaki/nastava-hemije/srednja-skola---2-razred/kvalitativna-hemijska-analiza
-
+Pravila za određivanje soli je grupa pravila koja se poslednja aktivira i koja zapravo daje output iz programa. Ova pravila očekuju da u memoriji postoje objekti tipa Color i Structure koje korisnik unosi, ali i objekti tipa Cation i Anion koji se u memoriji pojavljuju nakon rezonovanja.
 State dijagram modelovan po ugledu na pravila:
 
 ![State diagram 1](https://i.imgur.com/RtubTe1.png)
