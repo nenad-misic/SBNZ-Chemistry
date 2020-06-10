@@ -11,22 +11,22 @@ var config = {
 }
 
 cationGroups.split('\n\n').filter(e=>e.trim() !== '').map(e => {
-    let experiments = e.split('allNeededExperimentsPresent(Arrays.asList(')[1].split(');)')[0].split(',').map(x=>x.trim().replace('"', '').replace('"', ''));
+    let allNeededExperiments = e.split('allNeededExperimentsPresent(Arrays.asList(')[1].split(');)')[0].split(',').map(x=>x.trim().replace('"', '').replace('"', '')).map(x=>`"${x}"`).join(', ');
     let number = e.split('insert(new CationGroup("')[1].split('"));')[0];
-    config.groups.push({experiments, number, enabled: true});
+    config.groups.push({allNeededExperiments, number, enabled: true});
 })
 
 cations.split('\n\n').filter(e => e.trim() !== '').map(e => {
-    let experiments = e.split('allNeededExperimentsPresent(Arrays.asList(')[1].split(');)')[0].split(',').map(x=>x.trim().replace('"', '').replace('"', ''));
+    let allNeededExperiments = e.split('allNeededExperimentsPresent(Arrays.asList(')[1].split(');)')[0].split(',').map(x=>x.trim().replace('"', '').replace('"', '')).map(x=>`"${x}"`).join(', ');
     let number = e.split('exists CationGroup(code == "')[1].split('");')[0];
     let name = e.split('insert(new Cation("')[1].split('"));')[0];
-    config.cations.push({experiments, number, name, enabled: true});
+    config.cations.push({allNeededExperiments, number, name, enabled: true});
 })
 
 anions.split('\n\n').filter(e => e.trim() !== '').map(e => {
-    let experiments = e.split('allNeededExperimentsPresent(Arrays.asList(')[1].split(');)')[0].split(',').map(x=>x.trim().replace('"', '').replace('"', ''));
+    let allNeededExperiments = e.split('allNeededExperimentsPresent(Arrays.asList(')[1].split(');)')[0].split(',').map(x=>x.trim().replace('"', '').replace('"', '')).map(x=>`"${x}"`).join(', ');
     let name = e.split('insert(new Anion("')[1].split('"));')[0];
-    config.anions.push({experiments, name, enabled: true});
+    config.anions.push({allNeededExperiments, name, enabled: true});
 })
 
 substances.split('\n\n').filter(e => e.trim() !== '').map(e => {

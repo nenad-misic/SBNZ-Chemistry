@@ -6,7 +6,7 @@ template "groups"
 rule "Group@{number}"
     lock-on-active true
     when
-        allNeededExperimentsPresent(Arrays.asList(@{allNeededExperiments}))
+        allNeededExperimentsPresent(Arrays.asList(@{allNeededExperiments});)
     then
         System.out.println("Group@{number}");
         insert(new CationGroup("@{number}"));

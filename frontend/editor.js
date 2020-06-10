@@ -9,7 +9,7 @@ let proxy = URL.createObjectURL(new Blob([`
 `], { type: 'text/javascript' }));
 
 require(["vs/editor/editor.main"], function () {
-	let editor = monaco.editor.create(document.getElementById('editor'), {
+	window.editor = monaco.editor.create(document.getElementById('editor'), {
 		value: '// Write your drl rules here...',
 		language: 'java',
 		theme: 'vs-dark'

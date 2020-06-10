@@ -6,8 +6,6 @@ import com.sbnz.service.RuleManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 public class AnalisysController {
     @Autowired
@@ -24,13 +22,19 @@ public class AnalisysController {
     }
 
     @CrossOrigin(origins = "*")
-    @RequestMapping(value = "/shit", method = RequestMethod.GET, produces = "application/json")
-    public ResponseDTO shit() {
-        System.out.println(
-        rmservice.applyTemplate("test"));
+    @RequestMapping(value = "/config", method = RequestMethod.GET, produces = "application/json")
+    public Config getConfig() {
+        return rmservice.getConfig();
+    }
 
-        return new ResponseDTO();
+    @CrossOrigin(origins = "*")
+    @RequestMapping(value = "/config", method = RequestMethod.POST, produces = "application/json")
+    public MessageDTO analise(@RequestBody Config config) {
+        rmservice.setConfig(config);
+        return new MessageDTO("Success");
 
     }
+
+
 
 }

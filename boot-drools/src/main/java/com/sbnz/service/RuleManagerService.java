@@ -1,16 +1,14 @@
 package com.sbnz.service;
 
 import com.sbnz.model.*;
+import com.sbnz.repository.ConfigRepository;
 import org.apache.maven.shared.invoker.*;
 import org.drools.template.ObjectDataCompiler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.*;
 
 @Service
@@ -19,12 +17,18 @@ public class RuleManagerService {
     @Autowired
     private Environment env;
 
+    @Autowired
+    private ConfigRepository configRepository;
+
     public Config getConfig(){
-        
+        return configRepository.getConfig();
     }
 
-    public Config setConfig() {
-
+    public void setConfig(Config config) {
+        configRepository.setConfig(config);
+        String drl = applyTemplate();
+        overwriteDRLFile(drl);
+        invokeCleanInstallKjar();
     }
 
     public void invokeCleanInstallKjar(){
@@ -44,57 +48,62 @@ public class RuleManagerService {
         }
     }
 
-    public String applyTemplate(String test){
+    public String applyTemplate(){
         ObjectDataCompiler objectDataCompiler = new ObjectDataCompiler();
+        Config config = configRepository.getConfig();
+        String groups = generateGroups(config.getGroups(), objectDataCompiler);
+        String cations = generateCations(config.getCations(), objectDataCompiler);
+        String anions = generateAnions(config.getAnions(), objectDataCompiler);
+        String substances = generateSubstances(config.getSubstances(), objectDataCompiler);
+        String userRules = config.getUserRules();
 
-        String groups = generateGroups(objectDataCompiler);
-        String cations = generateCations(objectDataCompiler);
-        String anions = generateAnions(objectDataCompiler);
-        String substances = generateSubstances(objectDataCompiler);
-
-        return formatDRL(groups, cations, anions, substances);
+        return formatDRL(groups, cations, anions, substances, userRules);
     }
 
 
-    private String generateSubstances(ObjectDataCompiler objectDataCompiler) {
+    private String generateSubstances(List<TemplateSubstance> substances, ObjectDataCompiler objectDataCompiler) {
         InputStream templateStreamSubstance = this.loadTemplate("templateSubstance.drt");
 
         ArrayList<Object> argsListSubstance = new ArrayList<>();
-        argsListSubstance.add(new TemplateSubstance("colorless", "crystals", "Silver", "SO4", "Silver sulfate - Ag2SO4"));
-        argsListSubstance.add(new TemplateSubstance("colorless", "solid", "Silver", "NO3", "Silver nitrate - AgNO3"));
-
+        for(TemplateSubstance s : substances){
+            if (s.isEnabled())
+                argsListSubstance.add(s);
+        }
         return objectDataCompiler.compile(argsListSubstance, templateStreamSubstance);
     }
 
 
-    private String generateAnions(ObjectDataCompiler objectDataCompiler) {
+    private String generateAnions(List<TemplateAnion> anions, ObjectDataCompiler objectDataCompiler) {
         InputStream templateStreamAnion = this.loadTemplate("templateAnion.drt");
 
         ArrayList<Object> argsListAnion = new ArrayList<>();
-        argsListAnion.add(new TemplateAnion("SO4", "\"noYellowSedimentInNH42MoO4\", \"noGasInBaOH2\", \"noCrystalSedimentInCaCl2\", \"whiteSedimentInBaCl2\", \"noRingInH2SO4\", \"noVinegarSmellInH2SO4\""));
-        argsListAnion.add(new TemplateAnion("PO4", "\"noWhiteSedimentInBaCl2\", \"noGasInBaOH2\", \"noCrystalSedimentInCaCl2\", \"yellowSedimentInNH42MoO4\", \"noRingInH2SO4\", \"noVinegarSmellInH2SO4\""));
-
+        for(TemplateAnion a : anions){
+            if (a.isEnabled())
+                argsListAnion.add(a);
+        }
         return objectDataCompiler.compile(argsListAnion, templateStreamAnion);
     }
 
-    private String generateCations(ObjectDataCompiler objectDataCompiler) {
+    private String generateCations(List<TemplateCation> cations, ObjectDataCompiler objectDataCompiler) {
         InputStream templateStreamCation = this.loadTemplate("templateCation.drt");
 
         ArrayList<Object> argsListCation = new ArrayList<>();
-        argsListCation.add(new TemplateCation(1, "Silver", "\"warmWaterInsoluble\", \"solubleInNH4OH\", \"whiteWithHNO3\""));
-        argsListCation.add(new TemplateCation(2, "Iron", "\"darkRedSedimentFromNH4OH\""));
+        for(TemplateCation c : cations){
+            if (c.isEnabled())
+                argsListCation.add(c);
+        }
 
         return objectDataCompiler.compile(argsListCation, templateStreamCation);
     }
 
-    private String generateGroups(ObjectDataCompiler objectDataCompiler){
+    private String generateGroups(List<TemplateGroup> groups, ObjectDataCompiler objectDataCompiler){
         InputStream templateStreamGroup = this.loadTemplate("templateGroup.drt");
 
         ArrayList<Object> argsListGroup = new ArrayList<>();
-        argsListGroup.add(new TemplateGroup(4, "\"insolubleRawIn(NH4)2CO3\", \"insolubleRawIn(NH4)2CO3butSolubleInCH3COOH\", \"noReactionWithHCl\", \"solubleRawInNH4OH\""));
-        argsListGroup.add(new TemplateGroup(3, "\"noReactionWithHCl\", \"solubleRawInNH4OH\", \"solubleRawIn(NH4)2S\""));
-        argsListGroup.add(new TemplateGroup(2, "\"insolubleRawInNH4OH\", \"noReactionWithHCl\""));
-        argsListGroup.add(new TemplateGroup(1, "\"colorlessSolutionWithWater\", \"reactionWithHCl\""));
+        for(TemplateGroup g : groups){
+            if (g.isEnabled())
+                argsListGroup.add(g);
+        }
 
         return objectDataCompiler.compile(argsListGroup, templateStreamGroup);
     }
@@ -109,7 +118,7 @@ public class RuleManagerService {
         return null;
     }
 
-    private String formatDRL(String groups, String cations, String anions, String substances) {
+    private String formatDRL(String groups, String cations, String anions, String substances, String userRules) {
         return "\n" +
                 "package substanceRules\n" +
                 "import java.util.ArrayList\n" +
@@ -131,6 +140,8 @@ public class RuleManagerService {
                 anions +
                 "\n\n//---------- SUBSTANCES -------------" +
                 substances +
+                "\n\n//---------- USER DEFINED RULES -------------" +
+                userRules +
                 "\n\n//------------------ QUERIES --------------------------\n" +
                 "query \"allNeededExperimentsPresent\"  (List experiments)\n" +
                 "    $allExperiments : List() from collect(Experiment())\n" +
@@ -143,5 +154,19 @@ public class RuleManagerService {
                 "    )\n" +
                 "end"
                 ;
+    }
+
+    private void overwriteDRLFile(String drl){
+        File fold=new File(System.getProperty("user.dir") + "/../kjar/src/main/resources/substanceRules/substanceRules.drl");
+        fold.delete();
+        File fnew=new File(System.getProperty("user.dir") + "/../kjar/src/main/resources/substanceRules/substanceRules.drl");
+
+        try {
+            FileWriter f2 = new FileWriter(fnew, false);
+            f2.write(drl);
+            f2.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

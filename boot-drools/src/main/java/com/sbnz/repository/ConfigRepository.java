@@ -4,10 +4,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sbnz.model.Config;
 import com.sbnz.model.Question;
 import com.sbnz.model.Questionnaire;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
 
+@Component
 public class ConfigRepository {
    public Config getConfig() {
         ObjectMapper objectMapper = new ObjectMapper();
@@ -23,7 +25,7 @@ public class ConfigRepository {
    public void setConfig(Config config){
        ObjectMapper objectMapper = new ObjectMapper();
        try {
-           objectMapper.writeValue(new File("db/config.json"), Config.class);
+           objectMapper.writeValue(new File("db/config.json"), config);
        } catch (IOException e) {
            e.printStackTrace();
        }
