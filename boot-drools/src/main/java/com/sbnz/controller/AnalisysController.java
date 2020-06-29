@@ -29,7 +29,7 @@ public class AnalisysController {
 
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/config", method = RequestMethod.POST, produces = "application/json")
-    public MessageDTO analise(@RequestBody Config config) {
+    public MessageDTO setConfig(@RequestBody Config config) {
         rmservice.setConfig(config);
         return new MessageDTO("Success");
 

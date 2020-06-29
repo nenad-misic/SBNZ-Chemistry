@@ -1,0 +1,44 @@
+package suspiciousBehaviourCEP
+import com.sbnz.model.AuthInfoWithClientIP
+
+
+declare window LatestAuth
+    AuthInfoWithClientIP() over window:length(1)
+end
+
+declare window TimeAuth
+    AuthInfoWithClientIP() over window:time(10s)
+end
+
+
+
+rule "Too many login attempts with same email"
+salience($total)
+    when
+        $email1: AuthInfoWithClientIP($email: email, checked == false) from window LatestAuth
+        $total: Number(intValue >= 3) from accumulate(
+            $email2: AuthInfoWithClientIP(
+                email.equals($email)
+            ) from window TimeAuth,
+            count($email2)
+        )
+    then
+        System.out.println("Too many login attempts with same email");
+        modify($email1) {setChecked(true);}
+    end
+
+
+rule "Too many login attempts from same machine"
+salience($total)
+    when
+        $ip1: AuthInfoWithClientIP($ip: ip, checked == false) from window LatestAuth
+        $total: Number(intValue >= 3) from accumulate(
+            $ip2: AuthInfoWithClientIP(
+                ip.equals($ip)
+            ) from window TimeAuth,
+            count($ip2)
+        )
+    then
+        System.out.println("Too many login attempts from same machine");
+        modify($ip1) {setChecked(true);}
+    end

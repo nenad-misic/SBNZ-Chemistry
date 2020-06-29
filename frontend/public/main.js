@@ -1,6 +1,20 @@
 (async () => {
     let url = 'http://localhost:8080/analise';
 
+    let getHeaders = () => {
+        let token = localStorage.getItem('auth')?localStorage.getItem('auth'):''
+        return {headers: {"X-Auth-Token": token}};
+    }
+
+    let isLoggedIn = () => {
+        return localStorage.getItem('auth')?true:false
+    }
+
+
+    if(!isLoggedIn()){
+        window.location.href = '/login.html'
+    }
+
     const capitalize = (s) => {
         if (typeof s !== 'string') return ''
         return s.charAt(0).toUpperCase() + s.slice(1)
@@ -113,7 +127,7 @@
         ]
     }
     
-    let data = (await axios.post(url, properties)).data;
+    let data = (await axios.post(url, properties, getHeaders())).data;
     let question = data.question;
     let solutions = data.solutions;
     
@@ -129,7 +143,7 @@
             properties.experiments.push(answeredValue);
         }
     
-        let data = (await axios.post(url, properties)).data;
+        let data = (await axios.post(url, properties, getHeaders())).data;
     
         question = data.question;
         solutions = data.solutions;
@@ -179,12 +193,12 @@
         $('#row').append(`<div class="offset-4 col-4"><div class="unknown-answer border p-3 mx-2 my-3 border-2 rounded h75 text-white bg-danger" id="unknown-color"> <h4>Preskoči</h4></div></div>`)
         $('.answer').on('click', async (e) => {
             properties.colors = [e.target.id];
-            let data = (await axios.post(url, properties)).data;
+            let data = (await axios.post(url, properties, getHeaders())).data;
             solutions = data.solutions;
             checkStructure();
         });
         $('#unknown-color').on('click', async (e) => {
-            let data = (await axios.post(url, properties)).data;
+            let data = (await axios.post(url, properties, getHeaders())).data;
             solutions = data.solutions;
             checkStructure();
         });
@@ -204,16 +218,21 @@
         
         $('.answer').on('click', async (e) => {
             properties.structures = [e.target.id]
-            let data = (await axios.post(url, properties)).data;
+            let data = (await axios.post(url, properties, getHeaders())).data;
             solutions = data.solutions;
             changeQuestion(question, solutions);
         });
         $('#unknown-structure').on('click', async (e) => {
-            let data = (await axios.post(url, properties)).data;
+            let data = (await axios.post(url, properties, getHeaders())).data;
             solutions = data.solutions;
             changeQuestion(question, solutions);
         });
     }
 
     checkColor();
+
+
+    document.querySelector('#logout').addEventListener('click', () => {
+        window.location.href = '/login.html'
+    })
 })();

@@ -3,7 +3,7 @@ var cations = withoutImport.split('// ------------------ ANIONS ----------------
 var anions = withoutImport.split('// ------------------ ANIONS ------------------------')[1].split('// ------------------ SUBSTANCES ------------------------')[0]
 var sub = withoutImport.split('// ------------------ ANIONS ------------------------')[1].split('// ------------------ SUBSTANCES ------------------------')[1]
 
-
+debugger;
 var anion_rules = anions.split('\n\n').filter(e => e!='');
 var an = anion_rules.map(e => {
     let old = e.split('$s : ResponseDTO();')[1].split('then')[0]
@@ -39,7 +39,18 @@ document.getElementById('code-container').innerHTML = `
     // ------------------ ANIONS ------------------------
     ${an}
     // ------------------ SUBSTANCES ------------------------
-    ${sub}
+    ${sub.split('\n\n').map(e => {
+        if(e != ''){
+        let name = e.split('rule')[1].split('\n')[0]
+        
+        return `
+rule${name}
+salience $previous
+    when
+        countPreviousOfName(${name}, $previous;)
+    ${e.split('when')[1]}
+`;}
+    }).join('\n\n')}
     // ------------------ QUERIES --------------------------
     query "allNeededExperimentsPresent"  (List experiments)
         $allExperiments : List() from collect(Experiment())

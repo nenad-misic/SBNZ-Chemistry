@@ -10,4 +10,8 @@
         <ksession name="questionRulesSession" />
     </kbase>
 
+    <kbase name="suspiciousBehaviourCEP" packages="suspiciousBehaviourCEP">
+        <ksession name="suspiciousBehaviourCEPSession" />
+    </kbase>
+
 </kmodule>
