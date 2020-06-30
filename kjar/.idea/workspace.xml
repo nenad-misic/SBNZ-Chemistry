@@ -2,151 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8f459b8-20c2-4bf3-80b5-23fb2c164163" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../boot-drools/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_3_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_3_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_3_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_3_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/db/users.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/Utility/HttpReqRespUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/controller/SecurityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/model/AuthInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/model/AuthInfoWithClientIP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/model/AuthenticationDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/model/PreviousSubstance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/model/SecurityResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/model/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/model/UserEntityList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/security/AuthenticationTokenFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/security/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/security/TokenUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/service/SecurityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/service/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/suspiciousBehaviourCEP/suspiciousBehaviourCEP.drl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../boot-drools/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-drools/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../boot-drools/chemistry.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-drools/chemistry.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../boot-drools/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-drools/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/controller/AnalisysController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/controller/AnalisysController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/service/AnalysisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/service/AnalysisService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/editor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/HELP-US-OUT.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/animated.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/bordered-pulled.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/core.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/fixed-width.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/font-awesome.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/icons.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/larger.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/list.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/mixins.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/path.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/rotated-flipped.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/screen-reader.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/stacked.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/variables.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_animated.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_bordered-pulled.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_core.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_fixed-width.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_larger.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_list.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_path.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_rotated-flipped.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_screen-reader.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_stacked.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/font-awesome.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/generator.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/generator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/generator2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/generatorqa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/generatortests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-cave-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-cave-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-cave-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-cave-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-dune-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-dune-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-dune-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-dune-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-estuary-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-estuary-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-estuary-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-estuary-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-forest-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-forest-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-forest-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-forest-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-heath-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-heath-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-heath-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-heath-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-lakeside-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-lakeside-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-lakeside-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-lakeside-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-plateau-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-plateau-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-plateau-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-plateau-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-savanna-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-savanna-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-savanna-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-savanna-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-seaside-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-seaside-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-seaside-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-seaside-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-sulphurpool-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-sulphurpool-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-sulphurpool-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-sulphurpool-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/github-v2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/github-v2.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/github.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/github.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/hemisu-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/hemisu-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/hemisu-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/hemisu-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow-night-blue.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow-night-blue.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow-night-bright.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow-night-bright.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow-night-eighties.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow-night-eighties.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow-night.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow-night.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tranquil-heart.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tranquil-heart.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/vibrant-ink.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/vibrant-ink.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/ruleManagement.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/ruleManagement.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/ruleManagement.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-drools/db/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-drools/db/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-drools/db/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-drools/db/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/controller/SecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/controller/SecurityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/model/AuthInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/model/AuthInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/model/AuthInfoWithClientIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/model/AuthInfoWithClientIP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/service/RuleManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-drools/src/main/java/com/sbnz/service/RuleManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-drools/src/main/resources/templateSubstance.drt" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-drools/src/main/resources/templateSubstance.drt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/ruleManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/ruleManagement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/ruleManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/ruleManagement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/kmodule.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/kmodule.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/substanceRules/substanceRules.drl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/substanceRules/substanceRules.drl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/suspiciousBehaviourCEP/suspiciousBehaviourCEP.drl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/suspiciousBehaviourCEP/suspiciousBehaviourCEP.drl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -157,55 +32,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/kmodule.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="53" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/suspiciousBehaviourCEP/suspiciousBehaviourCEP.drl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+            <state relative-caret-position="153">
+              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/substanceRules/substanceRules.drl">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/suspiciousBehaviourCEP/suspiciousBehaviourCEP.drl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="1015" column="8" lean-forward="true" selection-start-line="1015" selection-start-column="8" selection-end-line="1015" selection-end-column="8" />
-              <folding>
-                <element signature="e#388#694#0" />
-                <element signature="e#696#952#0" />
-                <element signature="e#954#1189#0" />
-                <element signature="e#1191#1431#0" />
-                <element signature="e#1471#1785#0" />
-                <element signature="e#1787#2095#0" />
-                <element signature="e#2097#2377#0" />
-                <element signature="e#2379#2680#0" />
-                <element signature="e#2682#2969#0" />
-                <element signature="e#2971#3254#0" />
-                <element signature="e#3256#3526#0" />
-                <element signature="e#3528#3818#0" />
-                <element signature="e#3820#4102#0" />
-                <element signature="e#4104#4409#0" />
-                <element signature="e#4448#4833#0" />
-                <element signature="e#4835#5211#0" />
-                <element signature="e#5213#5586#0" />
-                <element signature="e#5588#5940#0" />
-                <element signature="e#5942#6291#0" />
-                <element signature="e#6293#6642#0" />
-                <element signature="e#6644#6993#0" />
-                <element signature="e#24032#24395#0" />
-                <element signature="e#24397#24779#0" />
-              </folding>
+            <state relative-caret-position="556">
+              <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -219,6 +60,9 @@
       <find>AgCl</find>
       <find>allNeededExperimentsPresent</find>
       <find>$occurrences</find>
+      <find>nitrite</find>
+      <find>SKR</find>
+      <find>group5</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -229,9 +73,11 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/questionRules/questionRules.drl" />
+        <option value="$PROJECT_DIR$/src/main/resources/suspiciousBehaviourCEPLogin/suspiciousBehaviourCEP.drl" />
+        <option value="$PROJECT_DIR$/src/main/resources/suspiciousBehaviourCEPRegister/suspiciousBehaviourCEPRegister.drl" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/kmodule.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/suspiciousBehaviourCEP/suspiciousBehaviourCEP.drl" />
         <option value="$PROJECT_DIR$/src/main/resources/substanceRules/substanceRules.drl" />
+        <option value="$PROJECT_DIR$/src/main/resources/suspiciousBehaviourCEP/suspiciousBehaviourCEP.drl" />
       </list>
     </option>
   </component>
@@ -262,7 +108,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -272,6 +118,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -325,20 +173,26 @@
               <item name="kjar" type="b2602c69:ProjectViewProjectNode" />
               <item name="kjar" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="suspiciousBehaviourCEP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kjar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kjar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1593474918598" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1593545219659" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -368,16 +222,16 @@
       <workItem from="1591568789442" duration="1360000" />
       <workItem from="1591637538233" duration="6486000" />
       <workItem from="1591657249926" duration="602000" />
-      <workItem from="1593450904853" duration="9213000" />
+      <workItem from="1593450904853" duration="9359000" />
+      <workItem from="1593524738291" duration="6968000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20730000" />
+    <option name="totallyTimeSpent" value="27844000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1546875" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -388,7 +242,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.43979058" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43979058" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -416,13 +270,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/questionRules/questionRules.drl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/kmodule.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="53" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -430,42 +277,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/suspiciousBehaviourCEP/suspiciousBehaviourCEP.drl">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/suspiciousBehaviourCEPRegister/suspiciousBehaviourCEPRegister.drl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+        <state>
+          <caret selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/kmodule.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/substanceRules/substanceRules.drl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="1015" column="8" lean-forward="true" selection-start-line="1015" selection-start-column="8" selection-end-line="1015" selection-end-column="8" />
-          <folding>
-            <element signature="e#388#694#0" />
-            <element signature="e#696#952#0" />
-            <element signature="e#954#1189#0" />
-            <element signature="e#1191#1431#0" />
-            <element signature="e#1471#1785#0" />
-            <element signature="e#1787#2095#0" />
-            <element signature="e#2097#2377#0" />
-            <element signature="e#2379#2680#0" />
-            <element signature="e#2682#2969#0" />
-            <element signature="e#2971#3254#0" />
-            <element signature="e#3256#3526#0" />
-            <element signature="e#3528#3818#0" />
-            <element signature="e#3820#4102#0" />
-            <element signature="e#4104#4409#0" />
-            <element signature="e#4448#4833#0" />
-            <element signature="e#4835#5211#0" />
-            <element signature="e#5213#5586#0" />
-            <element signature="e#5588#5940#0" />
-            <element signature="e#5942#6291#0" />
-            <element signature="e#6293#6642#0" />
-            <element signature="e#6644#6993#0" />
-            <element signature="e#24032#24395#0" />
-            <element signature="e#24397#24779#0" />
-          </folding>
+        <state relative-caret-position="159">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/suspiciousBehaviourCEP/suspiciousBehaviourCEP.drl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
         </state>
       </provider>
     </entry>

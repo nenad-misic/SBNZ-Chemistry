@@ -2,151 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9552661a-f445-430d-97f2-1343c15642a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_3_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_3_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_3_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_3_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/users.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/Utility/HttpReqRespUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/controller/SecurityController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfoWithClientIP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthenticationDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/model/PreviousSubstance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/model/SecurityResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/model/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/model/UserEntityList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/security/AuthenticationTokenFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/security/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/security/TokenUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/service/SecurityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/service/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../kjar/src/main/resources/suspiciousBehaviourCEP/suspiciousBehaviourCEP.drl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chemistry.iml" beforeDir="false" afterPath="$PROJECT_DIR$/chemistry.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sbnz/controller/AnalisysController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/controller/AnalisysController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sbnz/service/AnalysisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/service/AnalysisService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/editor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/HELP-US-OUT.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/animated.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/bordered-pulled.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/core.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/fixed-width.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/font-awesome.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/icons.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/larger.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/list.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/mixins.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/path.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/rotated-flipped.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/screen-reader.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/stacked.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/less/variables.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_animated.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_bordered-pulled.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_core.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_fixed-width.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_larger.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_list.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_path.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_rotated-flipped.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_screen-reader.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_stacked.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/font-awesome-4.7.0/scss/font-awesome.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/generator.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/generator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/generator2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/generatorqa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/generatortests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-cave-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-cave-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-cave-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-cave-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-dune-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-dune-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-dune-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-dune-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-estuary-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-estuary-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-estuary-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-estuary-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-forest-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-forest-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-forest-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-forest-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-heath-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-heath-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-heath-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-heath-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-lakeside-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-lakeside-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-lakeside-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-lakeside-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-plateau-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-plateau-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-plateau-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-plateau-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-savanna-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-savanna-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-savanna-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-savanna-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-seaside-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-seaside-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-seaside-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-seaside-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-sulphurpool-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-sulphurpool-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-sulphurpool-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/atelier-sulphurpool-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/github-v2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/github-v2.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/github.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/github.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/hemisu-dark.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/hemisu-dark.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/hemisu-light.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/hemisu-light.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow-night-blue.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow-night-blue.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow-night-bright.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow-night-bright.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow-night-eighties.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow-night-eighties.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow-night.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow-night.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tomorrow.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tranquil-heart.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/tranquil-heart.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/vibrant-ink.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/generator/theme/vibrant-ink.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/ruleManagement.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/ruleManagement.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/ruleManagement.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/db/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/db/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sbnz/controller/SecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/controller/SecurityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfoWithClientIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfoWithClientIP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sbnz/service/RuleManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/service/RuleManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templateSubstance.drt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templateSubstance.drt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/ruleManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/ruleManagement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/ruleManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/ruleManagement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../kjar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kjar/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../kjar/src/main/resources/META-INF/kmodule.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kjar/src/main/resources/META-INF/kmodule.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../kjar/src/main/resources/substanceRules/substanceRules.drl" beforeDir="false" afterPath="$PROJECT_DIR$/../kjar/src/main/resources/substanceRules/substanceRules.drl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kjar/src/main/resources/suspiciousBehaviourCEP/suspiciousBehaviourCEP.drl" beforeDir="false" afterPath="$PROJECT_DIR$/../kjar/src/main/resources/suspiciousBehaviourCEP/suspiciousBehaviourCEP.drl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -157,25 +32,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/service/AnalysisService.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/controller/SecurityController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+            <state relative-caret-position="212">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1335#1336#0" expanded="true" />
+                <element signature="e#1388#1389#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/users.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="96" selection-start-column="96" selection-end-column="96" />
-            </state>
-          </provider>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/config.json">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -214,7 +87,13 @@
       <find>experiments</find>
       <find>enabled&quot;:false</find>
       <find>asList</find>
+      <find>silver ch</find>
+      <find>sess</find>
+      <find>Sess</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -222,7 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/sbnz/repository/QuestionRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/model/SubstanceInfo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/questionRules/questionRules.drl" />
         <option value="$PROJECT_DIR$/src/main/java/CORS.java" />
@@ -247,15 +125,11 @@
         <option value="$PROJECT_DIR$/db/config.json" />
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/repository/ConfigRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sbnz/service/RuleManagerService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templateGroup.drt" />
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/controller/AnalisysController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/Utility/HttpReqRespUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/model/Structure.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/model/SecurityResponseDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfoWithClientIP.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sbnz/service/SecurityService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/security/AuthenticationTokenFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/security/TokenUtils.java" />
@@ -269,12 +143,22 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/model/UserEntityList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/security/SecurityConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/db/users.json" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sbnz/controller/SecurityController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/model/PreviousSubstance.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/service/AnalysisService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sbnz/service/SecurityService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfoWithClientIP.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfo.java" />
+        <option value="$PROJECT_DIR$/db/users.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/templateSubstance.drt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sbnz/service/RuleManagerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sbnz/controller/SecurityController.java" />
       </list>
     </option>
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -296,7 +180,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -431,7 +315,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1593474918516" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1593545219559" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -572,7 +456,8 @@
       <workItem from="1591657056571" duration="848000" />
       <workItem from="1591697163087" duration="4306000" />
       <workItem from="1591710332726" duration="26347000" />
-      <workItem from="1593450890705" duration="18437000" />
+      <workItem from="1593450890705" duration="18438000" />
+      <workItem from="1593524718932" duration="7690000" />
     </task>
     <servers />
   </component>
@@ -609,13 +494,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84073000" />
+    <option name="totallyTimeSpent" value="91764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22291666" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22291666" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -626,15 +510,15 @@
       <window_info anchor="bottom" id="Duplicate detector" order="0" weight="0.32984293" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32565445" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.4953125" visible="true" weight="0.3277487" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49479166" weight="0.3277487" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.496875" weight="0.39790577" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49947917" weight="0.32984293" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5046875" side_tool="true" visible="true" weight="0.3277487" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5052083" side_tool="true" visible="true" weight="0.3277487" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49947917" weight="0.3277487" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
@@ -676,12 +560,6 @@
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/sbnz/controller/SecurityController.java</url>
-          <line>59</line>
-          <properties />
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -691,19 +569,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/service/RuleManagerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="37" column="38" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templateAnion.drt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templateCation.drt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -771,39 +636,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfoWithClientIP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-            <element signature="e#752#753#0" expanded="true" />
-            <element signature="e#851#852#0" expanded="true" />
-            <element signature="e#882#883#0" expanded="true" />
-            <element signature="e#931#932#0" expanded="true" />
-            <element signature="e#971#972#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/repository/ConfigRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="30" column="8" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="30" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/controller/UserController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthenticationDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -837,20 +670,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/model/UserList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-          <folding>
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#219#220#0" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/model/UserList.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.3.2.RELEASE/spring-security-core-5.3.2.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetails.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -862,18 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="313" selection-start-line="313" selection-end-line="313" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -897,16 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/repository/SubstanceRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/model/SecurityResponseDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -924,42 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/service/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#163#164#0" expanded="true" />
-            <element signature="e#244#245#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/model/UserEntityList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
-          <folding>
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#207#208#0" expanded="true" />
-            <element signature="e#235#236#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#326#327#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/service/SecurityService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -992,18 +754,6 @@
           <caret line="17" column="25" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1064,38 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/controller/SecurityController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="46" column="19" lean-forward="true" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1335#1336#0" expanded="true" />
-            <element signature="e#1388#1389#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/controller/AnalisysController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/model/Substance.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1144,29 +862,171 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <element signature="e#288#289#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#598#599#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/service/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#776#777#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/service/SecurityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/service/AnalysisService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/model/UserEntityList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#252#253#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="17" column="102" selection-start-line="17" selection-start-column="102" selection-end-line="17" selection-end-column="102" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/repository/SubstanceRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templateSubstance.drt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        <state relative-caret-position="238">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfoWithClientIP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
+            <element signature="e#1131#1132#0" expanded="true" />
+            <element signature="e#1174#1175#0" expanded="true" />
+            <element signature="e#1208#1209#0" expanded="true" />
+            <element signature="e#1350#1351#0" expanded="true" />
+            <element signature="e#1397#1398#0" expanded="true" />
+            <element signature="e#1435#1436#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/service/RuleManagerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="122" column="32" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/controller/AnalisysController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/repository/ConfigRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/users.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="96" selection-start-column="96" selection-end-column="96" />
+          <caret column="101" selection-start-column="101" selection-end-column="101" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/service/AnalysisService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/controller/SecurityController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+        <state relative-caret-position="212">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1335#1336#0" expanded="true" />
+            <element signature="e#1388#1389#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/config.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">

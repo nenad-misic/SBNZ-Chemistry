@@ -1,5 +1,6 @@
 package suspiciousBehaviourCEP
 import com.sbnz.model.AuthInfoWithClientIP
+import com.sbnz.model.SecurityResponseDTO
 
 
 declare window LatestAuth
@@ -7,7 +8,7 @@ declare window LatestAuth
 end
 
 declare window TimeAuth
-    AuthInfoWithClientIP() over window:time(10s)
+    AuthInfoWithClientIP() over window:time(45s)
 end
 
 
@@ -15,7 +16,8 @@ end
 rule "Too many login attempts with same email"
 salience($total)
     when
-        $email1: AuthInfoWithClientIP($email: email, checked == false) from window LatestAuth
+        $srd: SecurityResponseDTO();
+        $email1: AuthInfoWithClientIP($email: email, checked == false, login == true) from window LatestAuth
         $total: Number(intValue >= 3) from accumulate(
             $email2: AuthInfoWithClientIP(
                 email.equals($email)
@@ -24,6 +26,8 @@ salience($total)
         )
     then
         System.out.println("Too many login attempts with same email");
+        $srd.setMessage("Too many login attempts with same email");
+        $srd.setCode(400);
         modify($email1) {setChecked(true);}
     end
 
@@ -31,7 +35,8 @@ salience($total)
 rule "Too many login attempts from same machine"
 salience($total)
     when
-        $ip1: AuthInfoWithClientIP($ip: ip, checked == false) from window LatestAuth
+        $srd: SecurityResponseDTO();
+        $ip1: AuthInfoWithClientIP($ip: ip, checked == false, login == true) from window LatestAuth
         $total: Number(intValue >= 3) from accumulate(
             $ip2: AuthInfoWithClientIP(
                 ip.equals($ip)
@@ -40,5 +45,44 @@ salience($total)
         )
     then
         System.out.println("Too many login attempts from same machine");
+        $srd.setMessage("Too many login attempts from same machine");
+        $srd.setCode(401);
+        modify($ip1) {setChecked(true);}
+    end
+
+
+rule "Too many registration attempts from same machine - captcha"
+salience(4)
+    when
+        $srd: SecurityResponseDTO();
+        $ip1: AuthInfoWithClientIP($ip: ip, checked == false, login == false, captcha == false) from window LatestAuth
+        $total: Number(intValue >= 2) from accumulate(
+            $ip2: AuthInfoWithClientIP(
+                ip.equals($ip)
+            ) from window TimeAuth,
+            count($ip2)
+        )
+    then
+        System.out.println("Too many registration attempts from same machine - captcha");
+        $srd.setMessage("Too many registration attempts from same machine - captcha");
+        $srd.setCode(402);
+        modify($ip1) {setChecked(true);}
+    end
+
+rule "Too many registration attempts from same machine - forbid further registrations"
+salience($total)
+    when
+        $srd: SecurityResponseDTO();
+        $ip1: AuthInfoWithClientIP($ip: ip, checked == false, login == false) from window LatestAuth
+        $total: Number(intValue > 4) from accumulate(
+            $ip2: AuthInfoWithClientIP(
+                ip.equals($ip)
+            ) from window TimeAuth,
+            count($ip2)
+        )
+    then
+        System.out.println("Too many registration attempts from same machine - forbid further registrations");
+        $srd.setMessage("Too many registration attempts from same machine - forbid further registrations");
+        $srd.setCode(502);
         modify($ip1) {setChecked(true);}
     end

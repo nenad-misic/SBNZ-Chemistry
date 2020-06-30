@@ -7,7 +7,10 @@ name
 
 template "substances"
 rule "@{name}"
+salience $previous
     when
+        countPreviousOfName("@{name}", $previous;)
+
         $s : ResponseDTO();
         Color(answer == "@{color}")
         Structure(answer == "@{structure}")

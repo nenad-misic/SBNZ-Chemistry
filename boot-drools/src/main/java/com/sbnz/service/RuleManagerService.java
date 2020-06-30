@@ -130,17 +130,18 @@ public class RuleManagerService {
                 "import com.sbnz.model.Cation\n" +
                 "import com.sbnz.model.CationGroup\n" +
                 "import com.sbnz.model.Anion\n" +
+                "import com.sbnz.model.PreviousSubstance\n" +
                 "import java.util.List\n" +
                 "import java.util.Arrays\n" +
-                "\n\n//-------------- GROUPS --------------" +
+                "\n\n//-------------- GROUPS --------------\n" +
                 groups +
-                "\n\n//---------- CATIONS -------------" +
+                "\n\n//---------- CATIONS -------------\n" +
                 cations +
-                "\n\n//---------- ANIONS -------------" +
+                "\n\n//---------- ANIONS -------------\n" +
                 anions +
-                "\n\n//---------- SUBSTANCES -------------" +
+                "\n\n//---------- SUBSTANCES -------------\n" +
                 substances +
-                "\n\n//---------- USER DEFINED RULES -------------" +
+                "\n\n//---------- USER DEFINED RULES -------------\n" +
                 userRules +
                 "\n\n//------------------ QUERIES --------------------------\n" +
                 "query \"allNeededExperimentsPresent\"  (List experiments)\n" +
@@ -151,6 +152,15 @@ public class RuleManagerService {
                 "            init(int count = 0;),\n" +
                 "            action(count += 1;)\n" +
                 "            result(count)\n" +
+                "    )\n" +
+                "end\n" +
+                "\n" +
+                "query \"countPreviousOfName\"  (String substanceName, Number $occurrences )\n" +
+                "    $allPreviousQuestions : List() from collect(PreviousSubstance())\n" +
+                "    $occurrences:= Number() from accumulate (\n" +
+                "            PreviousSubstance(name.equals(substanceName), $var: this)\n" +
+                "            from $allPreviousQuestions,\n" +
+                "            count($var)\n" +
                 "    )\n" +
                 "end"
                 ;

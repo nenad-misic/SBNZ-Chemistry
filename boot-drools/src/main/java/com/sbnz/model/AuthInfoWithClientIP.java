@@ -9,12 +9,16 @@ public class AuthInfoWithClientIP {
     private String password;
     private String ip;
     private boolean checked;
+    private boolean login;
+    private boolean captcha;
 
-    public AuthInfoWithClientIP(String email, String password, String ip) {
+    public AuthInfoWithClientIP(String email, String password, String ip, boolean login, boolean captcha) {
         this.email = email;
         this.password = password;
         this.ip = ip;
+        this.login = login;
         this.checked = false;
+        this.captcha = captcha;
     }
 
     public AuthInfoWithClientIP() {
@@ -46,6 +50,22 @@ public class AuthInfoWithClientIP {
 
     public boolean isChecked() {
         return checked;
+    }
+
+    public boolean isLogin() {
+        return login;
+    }
+
+    public void setLogin(boolean login) {
+        this.login = login;
+    }
+
+    public boolean isCaptcha() {
+        return captcha;
+    }
+
+    public void setCaptcha(boolean captcha) {
+        this.captcha = captcha;
     }
 
     public void setChecked(boolean analysed) {

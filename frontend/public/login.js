@@ -18,7 +18,14 @@ document.querySelector('#submitinput').addEventListener('click', (e) => {
             localStorage.setItem('auth', res.data.token);
             window.location.href = '/index.html'
         }).catch((err) => {
-            alert('Wrong credentials')
+            if (err.response.data.srd.code == 400 || err.response.data.srd.code == 401) {
+                document.querySelector('#submitinput').disabled = true;
+                document.querySelector('#errmessagecontent').innerHTML = err.response.data.srd.message;
+                document.querySelector('#errmessage').style.display = 'block';
+            } else {
+                document.querySelector('#errmessagecontent').innerHTML = "Invalid credentials";
+                document.querySelector('#errmessage').style.display = 'block';
+            }
         });
     }
 }) 

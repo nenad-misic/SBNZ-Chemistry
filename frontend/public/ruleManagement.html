@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"href="ruleManagement.css">
+    <title>Upravljanje pravilima</title>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
@@ -27,8 +28,36 @@
                         <tbody id="groups">
                         </tbody>
                     </table>
-                    <button class="mb-4 btn btn-success">Dodaj novu grupu</button>
-
+                    <button class="mb-4 btn btn-success"  data-toggle="modal" data-target="#newGroupModal">Dodaj novu grupu</button>
+                    
+                    <div class="modal fade" id="newGroupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Dodavanje nove grupe</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="form-group">
+                                <label for="groupNameInput">Naziv pravila</label>
+                                <input id="groupNameInput" type="number" class="form-control" aria-describedby="emailHelp" placeholder="Unesi broj grupe">
+                              </div>
+                              <div class="form-group">
+                                <label for="groupExperimentInput">Eksperimenti</label>
+                                <textarea id="groupExperimentInput" type="text" class="form-control" placeholder="Unesi eksperimente odvojene zarezom"></textarea>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Zatvori</button>
+                            <button type="button" id="addGroupBtn" class="btn btn-success">Dodaj grupu</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     
                     <hr class="bg-light">
                     <h3>Katjoni:</h3>
@@ -44,8 +73,39 @@
                         <tbody id="cations">
                         </tbody>
                     </table>
-                    <button class="mb-4 btn btn-success">Dodaj novi katjon</button>
-
+                    <button class="mb-4 btn btn-success" data-toggle="modal" data-target="#newCationModal">Dodaj novi katjon</button>
+                    <div class="modal fade" id="newCationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Dodavanje novog katjona</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="form-group">
+                                <label for="cationNameInput">Naziv pravila</label>
+                                <input id="cationNameInput" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Unesi naziv pravila">
+                              </div>
+                              <div class="form-group">
+                                <label for="cationGroupInput">Grupa</label>
+                                <input id="cationGroupInput" type="number" class="form-control" aria-describedby="emailHelp" placeholder="Unesi broj grupe kojoj katjon pripada">
+                              </div>
+                              <div class="form-group">
+                                <label for="cationExperimentInput">Eksperimenti</label>
+                                <textarea id="cationExperimentInput" type="text" class="form-control" id="exampleInputPassword1" placeholder="Unesi eksperimente odvojene zarezom"></textarea>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Zatvori</button>
+                            <button type="button" id="addCationBtn" class="btn btn-success">Dodaj katjon</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     
                     <hr class="bg-light">
                     <h3>Anjoni:</h3>
@@ -60,8 +120,36 @@
                         <tbody id="anions">
                         </tbody>
                     </table>
-                    <button class="mb-4 btn btn-success">Dodaj novi anjon</button>
-
+                    <button class="mb-4 btn btn-success" data-toggle="modal" data-target="#newAnionModal">Dodaj novi anjon</button>
+                    
+                    <div class="modal fade" id="newAnionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Dodavanje novog anjona</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="form-group">
+                                <label for="anionNameInput">Naziv pravila</label>
+                                <input id="anionNameInput" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Unesi naziv pravila">
+                              </div>
+                              <div class="form-group">
+                                <label for="anionExperimentInput">Eksperimenti</label>
+                                <textarea id="anionExperimentInput" type="text" class="form-control" placeholder="Unesi eksperimente odvojene zarezom"></textarea>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Zatvori</button>
+                            <button type="button" id="addAnionBtn" class="btn btn-success">Dodaj anjon</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <hr class="bg-light">
                     <h3>Supstance:</h3>
                     <table class="table table-striped table-dark">
@@ -78,7 +166,48 @@
                         <tbody id="substances">
                         </tbody>
                     </table>
-                    <button class="mb-4 btn btn-success">Dodaj novu supstancu</button>
+                    <button class="mb-4 btn btn-success" data-toggle="modal" data-target="#newSubstanceModal">Dodaj novu supstancu</button>
+                    
+                    <div class="modal fade" id="newSubstanceModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Dodavanje nove supstance</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="form-group">
+                                <label for="substanceNameInput">Naziv pravila</label>
+                                <input id="substanceNameInput" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Unesi naziv pravila">
+                              </div>
+                              <div class="form-group">
+                                <label for="substanceColorInput">Boja</label>
+                                <input id="substanceColorInput" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Unesi boju supstance">
+                              </div>
+                              <div class="form-group">
+                                <label for="substanceStructureInput">Struktura</label>
+                                <input id="substanceStructureInput" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Unesi strukturu supstance">
+                              </div>
+                              <div class="form-group">
+                                <label for="substanceCationInput">Katjon</label>
+                                <input id="substanceCationInput" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Unesi katjon koji se nalazi u supstanci">
+                              </div>
+                              <div class="form-group">
+                                <label for="substanceAnionInput">Anjon</label>
+                                <input id="substanceAnionInput" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Unesi anjon koji se nalazi u supstanci">
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Zatvori</button>
+                            <button type="button" id="addSubstanceBtn" class="btn btn-success">Dodaj supstancu</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                 </div>
                 <div class="bg-primary moveright col-6 border border-light">
                     <h2 class="my-4">Korisnička pravila:</h2>

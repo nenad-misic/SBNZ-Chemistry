@@ -15,6 +15,7 @@ import java.util.Arrays
 
 
 //-------------- GROUPS --------------
+
 rule "Group4"
     lock-on-active true
     when
@@ -55,6 +56,18 @@ rule "Group1"
 
 
 //---------- CATIONS -------------
+
+rule "Nenadium"
+    no-loop
+    when
+        $s : ResponseDTO();
+        exists CationGroup(code == "5");
+        allNeededExperimentsPresent(Arrays.asList("warmWaterInsoluble");)
+    then
+        System.out.println("Nenadium");
+        insert(new Cation("Nenadium"));
+    end
+
 rule "Calcium"
     no-loop
     when
@@ -169,6 +182,7 @@ rule "Silver"
 
 
 //---------- ANIONS -------------
+
 rule "CH3COO"
     lock-on-active true
     when
@@ -243,11 +257,655 @@ rule "SO4"
 
 
 //---------- SUBSTANCES -------------
+
+rule "Calcium nitrate - Ca(NO3)2"
+salience $previous
+    when
+        countPreviousOfName("Calcium nitrate - Ca(NO3)2", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Calcium")
+        exists Anion(element == "NO3")
+    then
+        System.out.println("Calcium nitrate - Ca(NO3)2");
+        $s.addSolution("Calcium nitrate - Ca(NO3)2");
+    end
+
+rule "Calcium chloride - CaCl2"
+salience $previous
+    when
+        countPreviousOfName("Calcium chloride - CaCl2", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Calcium")
+        exists Anion(element == "Cl")
+    then
+        System.out.println("Calcium chloride - CaCl2");
+        $s.addSolution("Calcium chloride - CaCl2");
+    end
+
+rule "Calcium oxalate - CaC2O4"
+salience $previous
+    when
+        countPreviousOfName("Calcium oxalate - CaC2O4", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Calcium")
+        exists Anion(element == "C2O4")
+    then
+        System.out.println("Calcium oxalate - CaC2O4");
+        $s.addSolution("Calcium oxalate - CaC2O4");
+    end
+
+rule "Calcium carbonate - CaCO3"
+salience $previous
+    when
+        countPreviousOfName("Calcium carbonate - CaCO3", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Calcium")
+        exists Anion(element == "CO3")
+    then
+        System.out.println("Calcium carbonate - CaCO3");
+        $s.addSolution("Calcium carbonate - CaCO3");
+    end
+
+rule "Tricalcium phosphate - Ca3(PO4)2"
+salience $previous
+    when
+        countPreviousOfName("Tricalcium phosphate - Ca3(PO4)2", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Calcium")
+        exists Anion(element == "PO4")
+    then
+        System.out.println("Tricalcium phosphate - Ca3(PO4)2");
+        $s.addSolution("Tricalcium phosphate - Ca3(PO4)2");
+    end
+
+rule "Calcium sulfate - CaSO4"
+salience $previous
+    when
+        countPreviousOfName("Calcium sulfate - CaSO4", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Calcium")
+        exists Anion(element == "SO4")
+    then
+        System.out.println("Calcium sulfate - CaSO4");
+        $s.addSolution("Calcium sulfate - CaSO4");
+    end
+
+rule "Barium nitrate - Ba(NO3)2"
+salience $previous
+    when
+        countPreviousOfName("Barium nitrate - Ba(NO3)2", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "crystals")
+        exists Cation(element == "Barium")
+        exists Anion(element == "NO3")
+    then
+        System.out.println("Barium nitrate - Ba(NO3)2");
+        $s.addSolution("Barium nitrate - Ba(NO3)2");
+    end
+
+rule "Barium chloride - BaCl2"
+salience $previous
+    when
+        countPreviousOfName("Barium chloride - BaCl2", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Barium")
+        exists Anion(element == "CO3")
+    then
+        System.out.println("Barium chloride - BaCl2");
+        $s.addSolution("Barium chloride - BaCl2");
+    end
+
+rule "Barium oxalate - BaC2O4"
+salience $previous
+    when
+        countPreviousOfName("Barium oxalate - BaC2O4", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Barium")
+        exists Anion(element == "CO3")
+    then
+        System.out.println("Barium oxalate - BaC2O4");
+        $s.addSolution("Barium oxalate - BaC2O4");
+    end
+
+rule "Barium carbonate - BaCO3"
+salience $previous
+    when
+        countPreviousOfName("Barium carbonate - BaCO3", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "crystals")
+        exists Cation(element == "Barium")
+        exists Anion(element == "CO3")
+    then
+        System.out.println("Barium carbonate - BaCO3");
+        $s.addSolution("Barium carbonate - BaCO3");
+    end
+
+rule "Zinc acetate - Zn(CH3COO)2"
+salience $previous
+    when
+        countPreviousOfName("Zinc acetate - Zn(CH3COO)2", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Zinc")
+        exists Anion(element == "CH3COO")
+    then
+        System.out.println("Zinc acetate - Zn(CH3COO)2");
+        $s.addSolution("Zinc acetate - Zn(CH3COO)2");
+    end
+
+rule "Zinc nitrate - Zn(NO3)2"
+salience $previous
+    when
+        countPreviousOfName("Zinc nitrate - Zn(NO3)2", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "colorless")
+        Structure(answer == "crystals")
+        exists Cation(element == "Zinc")
+        exists Anion(element == "NO3")
+    then
+        System.out.println("Zinc nitrate - Zn(NO3)2");
+        $s.addSolution("Zinc nitrate - Zn(NO3)2");
+    end
+
+rule "Zinc chloride - ZnCl2"
+salience $previous
+    when
+        countPreviousOfName("Zinc chloride - ZnCl2", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Zinc")
+        exists Anion(element == "Cl")
+    then
+        System.out.println("Zinc chloride - ZnCl2");
+        $s.addSolution("Zinc chloride - ZnCl2");
+    end
+
+rule "Smithsonite - ZnCO3"
+salience $previous
+    when
+        countPreviousOfName("Smithsonite - ZnCO3", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "colorless")
+        Structure(answer == "crystal")
+        exists Cation(element == "Zinc")
+        exists Anion(element == "CO3")
+    then
+        System.out.println("Smithsonite - ZnCO3");
+        $s.addSolution("Smithsonite - ZnCO3");
+    end
+
+rule "Zinc phosphate - Zn3(PO4)2"
+salience $previous
+    when
+        countPreviousOfName("Zinc phosphate - Zn3(PO4)2", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Zinc")
+        exists Anion(element == "PO4")
+    then
+        System.out.println("Zinc phosphate - Zn3(PO4)2");
+        $s.addSolution("Zinc phosphate - Zn3(PO4)2");
+    end
+
+rule "Zinc sulfate - ZnSO4"
+salience $previous
+    when
+        countPreviousOfName("Zinc sulfate - ZnSO4", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Zinc")
+        exists Anion(element == "SO4")
+    then
+        System.out.println("Zinc sulfate - ZnSO4");
+        $s.addSolution("Zinc sulfate - ZnSO4");
+    end
+
+rule "Manganese(II) acetate - Mn(CH3COO)2"
+salience $previous
+    when
+        countPreviousOfName("Manganese(II) acetate - Mn(CH3COO)2", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "crystals")
+        exists Cation(element == "Manganese")
+        exists Anion(element == "CH3COO")
+    then
+        System.out.println("Manganese(II) acetate - Mn(CH3COO)2");
+        $s.addSolution("Manganese(II) acetate - Mn(CH3COO)2");
+    end
+
+rule "Manganese(II) nitrate - Mn(NO3)2"
+salience $previous
+    when
+        countPreviousOfName("Manganese(II) nitrate - Mn(NO3)2", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Manganese")
+        exists Anion(element == "NO3")
+    then
+        System.out.println("Manganese(II) nitrate - Mn(NO3)2");
+        $s.addSolution("Manganese(II) nitrate - Mn(NO3)2");
+    end
+
+rule "Manganese(II) chloride - MnCl2"
+salience $previous
+    when
+        countPreviousOfName("Manganese(II) chloride - MnCl2", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "pink")
+        Structure(answer == "solid")
+        exists Cation(element == "Manganese")
+        exists Anion(element == "Cl")
+    then
+        System.out.println("Manganese(II) chloride - MnCl2");
+        $s.addSolution("Manganese(II) chloride - MnCl2");
+    end
+
+rule "Manganese(II) carbonate - MnCO3"
+salience $previous
+    when
+        countPreviousOfName("Manganese(II) carbonate - MnCO3", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Manganese")
+        exists Anion(element == "CO3")
+    then
+        System.out.println("Manganese(II) carbonate - MnCO3");
+        $s.addSolution("Manganese(II) carbonate - MnCO3");
+    end
+
+rule "Manganese(II) sulfate - MnSO4"
+salience $previous
+    when
+        countPreviousOfName("Manganese(II) sulfate - MnSO4", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Manganese")
+        exists Anion(element == "SO4")
+    then
+        System.out.println("Manganese(II) sulfate - MnSO4");
+        $s.addSolution("Manganese(II) sulfate - MnSO4");
+    end
+
+rule "Chromium(III) chloride - CrCl3"
+salience $previous
+    when
+        countPreviousOfName("Chromium(III) chloride - CrCl3", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "purple")
+        Structure(answer == "crystals")
+        exists Cation(element == "Chromium")
+        exists Anion(element == "Cl")
+    then
+        System.out.println("Chromium(III) chloride - CrCl3");
+        $s.addSolution("Chromium(III) chloride - CrCl3");
+    end
+
+rule "Chromium(III) sulfate - Cr2(SO4)3"
+salience $previous
+    when
+        countPreviousOfName("Chromium(III) sulfate - Cr2(SO4)3", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "reddish-brown")
+        Structure(answer == "crystals")
+        exists Cation(element == "Chromium")
+        exists Anion(element == "SO4")
+    then
+        System.out.println("Chromium(III) sulfate - Cr2(SO4)3");
+        $s.addSolution("Chromium(III) sulfate - Cr2(SO4)3");
+    end
+
+rule "Aluminium nitrate - Al(NO3)3"
+salience $previous
+    when
+        countPreviousOfName("Aluminium nitrate - Al(NO3)3", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "crystals")
+        exists Cation(element == "Aluminium")
+        exists Anion(element == "NO3")
+    then
+        System.out.println("Aluminium nitrate - Al(NO3)3");
+        $s.addSolution("Aluminium nitrate - Al(NO3)3");
+    end
+
+rule "Aluminium chloride - AlCl3"
+salience $previous
+    when
+        countPreviousOfName("Aluminium chloride - AlCl3", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Aluminium")
+        exists Anion(element == "Cl")
+    then
+        System.out.println("Aluminium chloride - AlCl3");
+        $s.addSolution("Aluminium chloride - AlCl3");
+    end
+
+rule "Aluminium phosphate - AlPO4"
+salience $previous
+    when
+        countPreviousOfName("Aluminium phosphate - AlPO4", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Aluminium")
+        exists Anion(element == "PO4")
+    then
+        System.out.println("Aluminium phosphate - AlPO4");
+        $s.addSolution("Aluminium phosphate - AlPO4");
+    end
+
+rule "Aluminium sulfate - Al2(SO4)3"
+salience $previous
+    when
+        countPreviousOfName("Aluminium sulfate - Al2(SO4)3", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "crystals")
+        exists Cation(element == "Aluminium")
+        exists Anion(element == "SO4")
+    then
+        System.out.println("Aluminium sulfate - Al2(SO4)3");
+        $s.addSolution("Aluminium sulfate - Al2(SO4)3");
+    end
+
+rule "Iron(III) nitrate - Fe(NO3)3"
+salience $previous
+    when
+        countPreviousOfName("Iron(III) nitrate - Fe(NO3)3", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "yellow")
+        Structure(answer == "crystals")
+        exists Cation(element == "Iron")
+        exists Anion(element == "NO3")
+    then
+        System.out.println("Iron(III) nitrate - Fe(NO3)3");
+        $s.addSolution("Iron(III) nitrate - Fe(NO3)3");
+    end
+
+rule "Iron(III) chloride - FeCl3"
+salience $previous
+    when
+        countPreviousOfName("Iron(III) chloride - FeCl3", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "brown")
+        Structure(answer == "solution")
+        exists Cation(element == "Iron")
+        exists Anion(element == "Cl")
+    then
+        System.out.println("Iron(III) chloride - FeCl3");
+        $s.addSolution("Iron(III) chloride - FeCl3");
+    end
+
+rule "Iron(III) phosphate - FePO4"
+salience $previous
+    when
+        countPreviousOfName("Iron(III) phosphate - FePO4", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "yellow-brown")
+        Structure(answer == "solid")
+        exists Cation(element == "Iron")
+        exists Anion(element == "PO4")
+    then
+        System.out.println("Iron(III) phosphate - FePO4");
+        $s.addSolution("Iron(III) phosphate - FePO4");
+    end
+
+rule "Iron(III) sulfate - Fe2(SO4)3"
+salience $previous
+    when
+        countPreviousOfName("Iron(III) sulfate - Fe2(SO4)3", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "grayish-white")
+        Structure(answer == "crystals")
+        exists Cation(element == "Iron")
+        exists Anion(element == "SO4")
+    then
+        System.out.println("Iron(III) sulfate - Fe2(SO4)3");
+        $s.addSolution("Iron(III) sulfate - Fe2(SO4)3");
+    end
+
+rule "Mercury(II) acetate - Hg(CH3COO)2"
+salience $previous
+    when
+        countPreviousOfName("Mercury(II) acetate - Hg(CH3COO)2", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "pale yellow")
+        Structure(answer == "crystals")
+        exists Cation(element == "Mercury")
+        exists Anion(element == "CH3COO")
+    then
+        System.out.println("Mercury(II) acetate - Hg(CH3COO)2");
+        $s.addSolution("Mercury(II) acetate - Hg(CH3COO)2");
+    end
+
+rule "Mercury(II) nitrate - Hg(NO3)2"
+salience $previous
+    when
+        countPreviousOfName("Mercury(II) nitrate - Hg(NO3)2", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "colorless")
+        Structure(answer == "crystals")
+        exists Cation(element == "Mercury")
+        exists Anion(element == "NO3")
+    then
+        System.out.println("Mercury(II) nitrate - Hg(NO3)2");
+        $s.addSolution("Mercury(II) nitrate - Hg(NO3)2");
+    end
+
+rule "Mercury(II) chloride - HgCl2"
+salience $previous
+    when
+        countPreviousOfName("Mercury(II) chloride - HgCl2", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Mercury")
+        exists Anion(element == "Cl")
+    then
+        System.out.println("Mercury(II) chloride - HgCl2");
+        $s.addSolution("Mercury(II) chloride - HgCl2");
+    end
+
+rule "Mercury(II) sulfate - HgSO4"
+salience $previous
+    when
+        countPreviousOfName("Mercury(II) sulfate - HgSO4", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "crystals")
+        exists Cation(element == "Mercury")
+        exists Anion(element == "SO4")
+    then
+        System.out.println("Mercury(II) sulfate - HgSO4");
+        $s.addSolution("Mercury(II) sulfate - HgSO4");
+    end
+
+rule "Lead(II) acetate - Pb(CH3COO)2"
+salience $previous
+    when
+        countPreviousOfName("Lead(II) acetate - Pb(CH3COO)2", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Lead")
+        exists Anion(element == "CH3COO")
+    then
+        System.out.println("Lead(II) acetate - Pb(CH3COO)2");
+        $s.addSolution("Lead(II) acetate - Pb(CH3COO)2");
+    end
+
+rule "Lead(II) nitrate - Pb(NO3)2"
+salience $previous
+    when
+        countPreviousOfName("Lead(II) nitrate - Pb(NO3)2", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Lead")
+        exists Anion(element == "NO3")
+    then
+        System.out.println("Lead(II) nitrate - Pb(NO3)2");
+        $s.addSolution("Lead(II) nitrate - Pb(NO3)2");
+    end
+
+rule "Lead(II) chloride - PbCl2"
+salience $previous
+    when
+        countPreviousOfName("Lead(II) chloride - PbCl2", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Lead")
+        exists Anion(element == "Cl")
+    then
+        System.out.println("Lead(II) chloride - PbCl2");
+        $s.addSolution("Lead(II) chloride - PbCl2");
+    end
+
+rule "Cerussite - PbCO3"
+salience $previous
+    when
+        countPreviousOfName("Cerussite - PbCO3", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "colorless")
+        Structure(answer == "crystals")
+        exists Cation(element == "Lead")
+        exists Anion(element == "CO3")
+    then
+        System.out.println("Cerussite - PbCO3");
+        $s.addSolution("Cerussite - PbCO3");
+    end
+
+rule "Lead(II) phosphate - Pb3(PO4)2"
+salience $previous
+    when
+        countPreviousOfName("Lead(II) phosphate - Pb3(PO4)2", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Lead")
+        exists Anion(element == "PO4")
+    then
+        System.out.println("Lead(II) phosphate - Pb3(PO4)2");
+        $s.addSolution("Lead(II) phosphate - Pb3(PO4)2");
+    end
+
+rule "Lead(II) sulfate - PbSO4"
+salience $previous
+    when
+        countPreviousOfName("Lead(II) sulfate - PbSO4", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Lead")
+        exists Anion(element == "SO4")
+    then
+        System.out.println("Lead(II) sulfate - PbSO4");
+        $s.addSolution("Lead(II) sulfate - PbSO4");
+    end
+
+rule "Silver nitrate - AgNO3"
+salience $previous
+    when
+        countPreviousOfName("Silver nitrate - AgNO3", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "colorless")
+        Structure(answer == "solid")
+        exists Cation(element == "Silver")
+        exists Anion(element == "NO3")
+    then
+        System.out.println("Silver nitrate - AgNO3");
+        $s.addSolution("Silver nitrate - AgNO3");
+    end
+
+rule "Silver chloride - AgCl"
+salience $previous
+    when
+        countPreviousOfName("Silver chloride - AgCl", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "solid")
+        exists Cation(element == "Silver")
+        exists Anion(element == "Cl")
+    then
+        System.out.println("Silver chloride - AgCl");
+        $s.addSolution("Silver chloride - AgCl");
+    end
+
+rule "Silver oxalate - Ag2C2O4"
+salience $previous
+    when
+        countPreviousOfName("Silver oxalate - Ag2C2O4", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "white")
+        Structure(answer == "powder")
+        exists Cation(element == "Silver")
+        exists Anion(element == "C2O4")
+    then
+        System.out.println("Silver oxalate - Ag2C2O4");
+        $s.addSolution("Silver oxalate - Ag2C2O4");
+    end
+
+rule "Silver carbonate - Ag2CO3"
+salience $previous
+    when
+        countPreviousOfName("Silver carbonate - Ag2CO3", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "pale yellow")
+        Structure(answer == "crystals")
+        exists Cation(element == "Silver")
+        exists Anion(element == "CO3")
+    then
+        System.out.println("Silver carbonate - Ag2CO3");
+        $s.addSolution("Silver carbonate - Ag2CO3");
+    end
+
+rule "Silver phosphate - Ag3PO4"
+salience $previous
+    when
+        countPreviousOfName("Silver phosphate - Ag3PO4", $previous;)
+        $s : ResponseDTO();
+        Color(answer == "brown")
+        Structure(answer == "powder")
+        exists Cation(element == "Silver")
+        exists Anion(element == "PO4")
+    then
+        System.out.println("Silver phosphate - Ag3PO4");
+        $s.addSolution("Silver phosphate - Ag3PO4");
+    end
+
 rule "Silver sulfate - Ag2SO4"
 salience $previous
     when
-        countPreviousOfName( "Silver sulfate - Ag2SO4", $previous;)
-
+        countPreviousOfName("Silver sulfate - Ag2SO4", $previous;)
         $s : ResponseDTO();
         Color(answer == "colorless")
         Structure(answer == "crystals")
@@ -260,766 +918,9 @@ salience $previous
 
 
 
-rule "Silver phosphate - Ag3PO4"
-salience $previous
-    when
-        countPreviousOfName( "Silver phosphate - Ag3PO4", $previous;)
-
-        $s : ResponseDTO();
-        exists Cation(element == "Silver")
-        exists Anion(element == "PO4")
-    then
-        System.out.println("Silver phosphate - Ag3PO4");
-        $s.addSolution("Silver phosphate - Ag3PO4");
-    end
-
-
-
-rule "Silver carbonate - Ag2CO3"
-salience $previous
-    when
-        countPreviousOfName( "Silver carbonate - Ag2CO3", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "pale yellow")
-        Structure(answer == "crystals")
-        exists Cation(element == "Silver")
-        exists Anion(element == "CO3")
-    then
-        System.out.println("Silver carbonate - Ag2CO3");
-        $s.addSolution("Silver carbonate - Ag2CO3");
-    end
-
-
-
-rule "Silver oxalate - Ag2C2O4"
-salience $previous
-    when
-        countPreviousOfName( "Silver oxalate - Ag2C2O4", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "powder")
-        exists Cation(element == "Silver")
-        exists Anion(element == "C2O4")
-    then
-        System.out.println("Silver oxalate - Ag2C2O4");
-        $s.addSolution("Silver oxalate - Ag2C2O4");
-    end
-
-
-
-rule "Silver chloride - AgCl"
-salience $previous
-    when
-        countPreviousOfName( "Silver chloride - AgCl", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "solid")
-        exists Cation(element == "Silver")
-        exists Anion(element == "Cl")
-    then
-        System.out.println("Silver chloride - AgCl");
-        $s.addSolution("Silver chloride - AgCl");
-    end
-
-
-
-rule "Silver nitrate - AgNO3"
-salience $previous
-    when
-        countPreviousOfName( "Silver nitrate - AgNO3", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "colorless")
-        Structure(answer == "solid")
-        exists Cation(element == "Silver")
-        exists Anion(element == "NO3")
-    then
-        System.out.println("Silver nitrate - AgNO3");
-        $s.addSolution("Silver nitrate - AgNO3");
-    end
-
-
-
-rule "Lead(II) sulfate - PbSO4"
-salience $previous
-    when
-        countPreviousOfName( "Lead(II) sulfate - PbSO4", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "solid")
-        exists Cation(element == "Lead")
-        exists Anion(element == "SO4")
-    then
-        System.out.println("Lead(II) sulfate - PbSO4");
-        $s.addSolution("Lead(II) sulfate - PbSO4");
-    end
-
-
-
-rule "Lead(II) phosphate - Pb3(PO4)2"
-salience $previous
-    when
-        countPreviousOfName( "Lead(II) phosphate - Pb3(PO4)2", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "powder")
-        exists Cation(element == "Lead")
-        exists Anion(element == "PO4")
-    then
-        System.out.println("Lead(II) phosphate - Pb3(PO4)2");
-        $s.addSolution("Lead(II) phosphate - Pb3(PO4)2");
-    end
-
-
-
-rule "Cerussite - PbCO3"
-salience $previous
-    when
-        countPreviousOfName( "Cerussite - PbCO3", $previous;)
-
-        $s : ResponseDTO();
-        exists Cation(element == "Lead")
-        exists Anion(element == "CO3")
-    then
-        System.out.println("Cerussite - PbCO3");
-        $s.addSolution("Cerussite - PbCO3");
-    end
-
-
-
-rule "Lead(II) chloride - PbCl2"
-salience $previous
-    when
-        countPreviousOfName( "Lead(II) chloride - PbCl2", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "solid")
-        exists Cation(element == "Lead")
-        exists Anion(element == "Cl")
-    then
-        System.out.println("Lead(II) chloride - PbCl2");
-        $s.addSolution("Lead(II) chloride - PbCl2");
-    end
-
-
-
-rule "Lead(II) nitrate - Pb(NO3)2"
-salience $previous
-    when
-        countPreviousOfName( "Lead(II) nitrate - Pb(NO3)2", $previous;)
-
-        $s : ResponseDTO();
-        exists Cation(element == "Lead")
-        exists Anion(element == "NO3")
-    then
-        System.out.println("Lead(II) nitrate - Pb(NO3)2");
-        $s.addSolution("Lead(II) nitrate - Pb(NO3)2");
-    end
-
-
-
-rule "Lead(II) acetate - Pb(CH3COO)2"
-salience $previous
-    when
-        countPreviousOfName( "Lead(II) acetate - Pb(CH3COO)2", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "powder")
-        exists Cation(element == "Lead")
-        exists Anion(element == "CH3COO")
-    then
-        System.out.println("Lead(II) acetate - Pb(CH3COO)2");
-        $s.addSolution("Lead(II) acetate - Pb(CH3COO)2");
-    end
-
-
-
-rule "Mercury(II) sulfate - HgSO4"
-salience $previous
-    when
-        countPreviousOfName( "Mercury(II) sulfate - HgSO4", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "crystals")
-        exists Cation(element == "Mercury")
-        exists Anion(element == "SO4")
-    then
-        System.out.println("Mercury(II) sulfate - HgSO4");
-        $s.addSolution("Mercury(II) sulfate - HgSO4");
-    end
-
-
-
-rule "Mercury(II) chloride - HgCl2"
-salience $previous
-    when
-        countPreviousOfName( "Mercury(II) chloride - HgCl2", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "solid")
-        exists Cation(element == "Mercury")
-        exists Anion(element == "Cl")
-    then
-        System.out.println("Mercury(II) chloride - HgCl2");
-        $s.addSolution("Mercury(II) chloride - HgCl2");
-    end
-
-
-
-rule "Mercury(II) nitrate - Hg(NO3)2"
-salience $previous
-    when
-        countPreviousOfName( "Mercury(II) nitrate - Hg(NO3)2", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "colorless")
-        Structure(answer == "crystals")
-        exists Cation(element == "Mercury")
-        exists Anion(element == "NO3")
-    then
-        System.out.println("Mercury(II) nitrate - Hg(NO3)2");
-        $s.addSolution("Mercury(II) nitrate - Hg(NO3)2");
-    end
-
-
-
-rule "Mercury(II) acetate - Hg(CH3COO)2"
-salience $previous
-    when
-        countPreviousOfName( "Mercury(II) acetate - Hg(CH3COO)2", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "pale yellow")
-        Structure(answer == "crystals")
-        exists Cation(element == "Mercury")
-        exists Anion(element == "CH3COO")
-    then
-        System.out.println("Mercury(II) acetate - Hg(CH3COO)2");
-        $s.addSolution("Mercury(II) acetate - Hg(CH3COO)2");
-    end
-
-
-
-rule "Iron(III) sulfate - Fe2(SO4)3"
-salience $previous
-    when
-        countPreviousOfName( "Iron(III) sulfate - Fe2(SO4)3", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "grayish-white")
-        Structure(answer == "crystals")
-        exists Cation(element == "Iron")
-        exists Anion(element == "SO4")
-    then
-        System.out.println("Iron(III) sulfate - Fe2(SO4)3");
-        $s.addSolution("Iron(III) sulfate - Fe2(SO4)3");
-    end
-
-
-
-rule "Iron(III) phosphate - FePO4"
-salience $previous
-    when
-        countPreviousOfName( "Iron(III) phosphate - FePO4", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "yellow-brown")
-        Structure(answer == "solid")
-        exists Cation(element == "Iron")
-        exists Anion(element == "PO4")
-    then
-        System.out.println("Iron(III) phosphate - FePO4");
-        $s.addSolution("Iron(III) phosphate - FePO4");
-    end
-
-
-
-rule "Iron(III) chloride - FeCl3"
-salience $previous
-    when
-        countPreviousOfName( "Iron(III) chloride - FeCl3", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "brown")
-        Structure(answer == "solution")
-        exists Cation(element == "Iron")
-        exists Anion(element == "Cl")
-    then
-        System.out.println("Iron(III) chloride - FeCl3");
-        $s.addSolution("Iron(III) chloride - FeCl3");
-    end
-
-
-
-rule "Iron(III) nitrate - Fe(NO3)3"
-salience $previous
-    when
-        countPreviousOfName( "Iron(III) nitrate - Fe(NO3)3", $previous;)
-
-        $s : ResponseDTO();
-        exists Cation(element == "Iron")
-        exists Anion(element == "NO3")
-    then
-        System.out.println("Iron(III) nitrate - Fe(NO3)3");
-        $s.addSolution("Iron(III) nitrate - Fe(NO3)3");
-    end
-
-
-
-rule "Aluminium sulfate - Al2(SO4)3"
-salience $previous
-    when
-        countPreviousOfName( "Aluminium sulfate - Al2(SO4)3", $previous;)
-
-        $s : ResponseDTO();
-        exists Cation(element == "Aluminium")
-        exists Anion(element == "SO4")
-    then
-        System.out.println("Aluminium sulfate - Al2(SO4)3");
-        $s.addSolution("Aluminium sulfate - Al2(SO4)3");
-    end
-
-
-
-rule "Aluminium phosphate - AlPO4"
-salience $previous
-    when
-        countPreviousOfName( "Aluminium phosphate - AlPO4", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "powder")
-        exists Cation(element == "Aluminium")
-        exists Anion(element == "PO4")
-    then
-        System.out.println("Aluminium phosphate - AlPO4");
-        $s.addSolution("Aluminium phosphate - AlPO4");
-    end
-
-
-
-rule "Aluminium chloride - AlCl3"
-salience $previous
-    when
-        countPreviousOfName( "Aluminium chloride - AlCl3", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "solid")
-        exists Cation(element == "Aluminium")
-        exists Anion(element == "Cl")
-    then
-        System.out.println("Aluminium chloride - AlCl3");
-        $s.addSolution("Aluminium chloride - AlCl3");
-    end
-
-
-
-rule "Aluminium nitrate - Al(NO3)3"
-salience $previous
-    when
-        countPreviousOfName( "Aluminium nitrate - Al(NO3)3", $previous;)
-
-        $s : ResponseDTO();
-        exists Cation(element == "Aluminium")
-        exists Anion(element == "NO3")
-    then
-        System.out.println("Aluminium nitrate - Al(NO3)3");
-        $s.addSolution("Aluminium nitrate - Al(NO3)3");
-    end
-
-
-
-rule "Chromium(III) sulfate - Cr2(SO4)3"
-salience $previous
-    when
-        countPreviousOfName( "Chromium(III) sulfate - Cr2(SO4)3", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "reddish-brown")
-        Structure(answer == "crystals")
-        exists Cation(element == "Chromium")
-        exists Anion(element == "SO4")
-    then
-        System.out.println("Chromium(III) sulfate - Cr2(SO4)3");
-        $s.addSolution("Chromium(III) sulfate - Cr2(SO4)3");
-    end
-
-
-
-rule "Chromium(III) chloride - CrCl3"
-salience $previous
-    when
-        countPreviousOfName( "Chromium(III) chloride - CrCl3", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "purple")
-        Structure(answer == "crystals")
-        exists Cation(element == "Chromium")
-        exists Anion(element == "Cl")
-    then
-        System.out.println("Chromium(III) chloride - CrCl3");
-        $s.addSolution("Chromium(III) chloride - CrCl3");
-    end
-
-
-
-rule "Manganese(II) sulfate - MnSO4"
-salience $previous
-    when
-        countPreviousOfName( "Manganese(II) sulfate - MnSO4", $previous;)
-
-        $s : ResponseDTO();
-        exists Cation(element == "Manganese")
-        exists Anion(element == "SO4")
-    then
-        System.out.println("Manganese(II) sulfate - MnSO4");
-        $s.addSolution("Manganese(II) sulfate - MnSO4");
-    end
-
-
-
-rule "Manganese(II) carbonate - MnCO3"
-salience $previous
-    when
-        countPreviousOfName( "Manganese(II) carbonate - MnCO3", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "solid")
-        exists Cation(element == "Manganese")
-        exists Anion(element == "CO3")
-    then
-        System.out.println("Manganese(II) carbonate - MnCO3");
-        $s.addSolution("Manganese(II) carbonate - MnCO3");
-    end
-
-
-
-rule "Manganese(II) chloride - MnCl2"
-salience $previous
-    when
-        countPreviousOfName( "Manganese(II) chloride - MnCl2", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "pink")
-        Structure(answer == "solid")
-        exists Cation(element == "Manganese")
-        exists Anion(element == "Cl")
-    then
-        System.out.println("Manganese(II) chloride - MnCl2");
-        $s.addSolution("Manganese(II) chloride - MnCl2");
-    end
-
-
-
-rule "Manganese(II) nitrate - Mn(NO3)2"
-salience $previous
-    when
-        countPreviousOfName( "Manganese(II) nitrate - Mn(NO3)2", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "powder")
-        exists Cation(element == "Manganese")
-        exists Anion(element == "NO3")
-    then
-        System.out.println("Manganese(II) nitrate - Mn(NO3)2");
-        $s.addSolution("Manganese(II) nitrate - Mn(NO3)2");
-    end
-
-
-
-rule "Manganese(II) acetate - Mn(CH3COO)2"
-salience $previous
-    when
-        countPreviousOfName( "Manganese(II) acetate - Mn(CH3COO)2", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "crystals")
-        exists Cation(element == "Manganese")
-        exists Anion(element == "CH3COO")
-    then
-        System.out.println("Manganese(II) acetate - Mn(CH3COO)2");
-        $s.addSolution("Manganese(II) acetate - Mn(CH3COO)2");
-    end
-
-
-
-rule "Zinc sulfate - ZnSO4"
-salience $previous
-    when
-        countPreviousOfName( "Zinc sulfate - ZnSO4", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "powder")
-        exists Cation(element == "Zinc")
-        exists Anion(element == "SO4")
-    then
-        System.out.println("Zinc sulfate - ZnSO4");
-        $s.addSolution("Zinc sulfate - ZnSO4");
-    end
-
-
-
-rule "Zinc phosphate - Zn3(PO4)2"
-salience $previous
-    when
-        countPreviousOfName( "Zinc phosphate - Zn3(PO4)2", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "solid")
-        exists Cation(element == "Zinc")
-        exists Anion(element == "PO4")
-    then
-        System.out.println("Zinc phosphate - Zn3(PO4)2");
-        $s.addSolution("Zinc phosphate - Zn3(PO4)2");
-    end
-
-
-
-rule "Smithsonite - ZnCO3"
-salience $previous
-    when
-        countPreviousOfName( "Smithsonite - ZnCO3", $previous;)
-
-        $s : ResponseDTO();
-        exists Cation(element == "Zinc")
-        exists Anion(element == "CO3")
-    then
-        System.out.println("Smithsonite - ZnCO3");
-        $s.addSolution("Smithsonite - ZnCO3");
-    end
-
-
-
-rule "Zinc chloride - ZnCl2"
-salience $previous
-    when
-        countPreviousOfName( "Zinc chloride - ZnCl2", $previous;)
-
-        $s : ResponseDTO();
-        exists Cation(element == "Zinc")
-        exists Anion(element == "Cl")
-    then
-        System.out.println("Zinc chloride - ZnCl2");
-        $s.addSolution("Zinc chloride - ZnCl2");
-    end
-
-
-
-rule "Zinc nitrate - Zn(NO3)2"
-salience $previous
-    when
-        countPreviousOfName( "Zinc nitrate - Zn(NO3)2", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "colorless")
-        Structure(answer == "crystals")
-        exists Cation(element == "Zinc")
-        exists Anion(element == "NO3")
-    then
-        System.out.println("Zinc nitrate - Zn(NO3)2");
-        $s.addSolution("Zinc nitrate - Zn(NO3)2");
-    end
-
-
-
-rule "Zinc acetate - Zn(CH3COO)2"
-salience $previous
-    when
-        countPreviousOfName( "Zinc acetate - Zn(CH3COO)2", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "solid")
-        exists Cation(element == "Zinc")
-        exists Anion(element == "CH3COO")
-    then
-        System.out.println("Zinc acetate - Zn(CH3COO)2");
-        $s.addSolution("Zinc acetate - Zn(CH3COO)2");
-    end
-
-
-
-rule "Barium carbonate - BaCO3"
-salience $previous
-    when
-        countPreviousOfName( "Barium carbonate - BaCO3", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "crystals")
-        exists Cation(element == "Barium")
-        exists Anion(element == "CO3")
-    then
-        System.out.println("Barium carbonate - BaCO3");
-        $s.addSolution("Barium carbonate - BaCO3");
-    end
-
-
-
-rule "Barium oxalate - BaC2O4"
-salience $previous
-    when
-        countPreviousOfName( "Barium oxalate - BaC2O4", $previous;)
-
-        $s : ResponseDTO();
-        exists Cation(element == "Barium")
-        exists Anion(element == "CO3")
-    then
-        System.out.println("Barium oxalate - BaC2O4");
-        $s.addSolution("Barium oxalate - BaC2O4");
-    end
-
-
-
-rule "Barium chloride - BaCl2"
-salience $previous
-    when
-        countPreviousOfName( "Barium chloride - BaCl2", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "solid")
-        exists Cation(element == "Barium")
-        exists Anion(element == "CO3")
-    then
-        System.out.println("Barium chloride - BaCl2");
-        $s.addSolution("Barium chloride - BaCl2");
-    end
-
-
-
-rule "Barium nitrate - Ba(NO3)2"
-salience $previous
-    when
-        countPreviousOfName( "Barium nitrate - Ba(NO3)2", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "crystals")
-        exists Cation(element == "Barium")
-        exists Anion(element == "NO3")
-    then
-        System.out.println("Barium nitrate - Ba(NO3)2");
-        $s.addSolution("Barium nitrate - Ba(NO3)2");
-    end
-
-
-
-rule "Calcium sulfate - CaSO4"
-salience $previous
-    when
-        countPreviousOfName( "Calcium sulfate - CaSO4", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "solid")
-        exists Cation(element == "Calcium")
-        exists Anion(element == "SO4")
-    then
-        System.out.println("Calcium sulfate - CaSO4");
-        $s.addSolution("Calcium sulfate - CaSO4");
-    end
-
-
-
-rule "Tricalcium phosphate - Ca3(PO4)2"
-salience $previous
-    when
-        countPreviousOfName( "Tricalcium phosphate - Ca3(PO4)2", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "powder")
-        exists Cation(element == "Calcium")
-        exists Anion(element == "PO4")
-    then
-        System.out.println("Tricalcium phosphate - Ca3(PO4)2");
-        $s.addSolution("Tricalcium phosphate - Ca3(PO4)2");
-    end
-
-
-
-rule "Calcium carbonate - CaCO3"
-salience $previous
-    when
-        countPreviousOfName( "Calcium carbonate - CaCO3", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "powder")
-        exists Cation(element == "Calcium")
-        exists Anion(element == "CO3")
-    then
-        System.out.println("Calcium carbonate - CaCO3");
-        $s.addSolution("Calcium carbonate - CaCO3");
-    end
-
-
-
-rule "Calcium oxalate - CaC2O4"
-salience $previous
-    when
-        countPreviousOfName( "Calcium oxalate - CaC2O4", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "solid")
-        exists Cation(element == "Calcium")
-        exists Anion(element == "C2O4")
-    then
-        System.out.println("Calcium oxalate - CaC2O4");
-        $s.addSolution("Calcium oxalate - CaC2O4");
-    end
-
-
-
-rule "Calcium chloride - CaCl2"
-salience $previous
-    when
-        countPreviousOfName( "Calcium chloride - CaCl2", $previous;)
-
-        $s : ResponseDTO();
-        Color(answer == "white")
-        Structure(answer == "powder")
-        exists Cation(element == "Calcium")
-        exists Anion(element == "Cl")
-    then
-        System.out.println("Calcium chloride - CaCl2");
-        $s.addSolution("Calcium chloride - CaCl2");
-    end
-
-
-
-rule "Calcium nitrate - Ca(NO3)2"
-salience $previous
-    when
-        countPreviousOfName( "Calcium nitrate - Ca(NO3)2", $previous;)
-
-        $s : ResponseDTO();
-        exists Cation(element == "Calcium")
-        exists Anion(element == "NO3")
-    then
-        System.out.println("Calcium nitrate - Ca(NO3)2");
-        $s.addSolution("Calcium nitrate - Ca(NO3)2");
-    end
-
 
 //---------- USER DEFINED RULES -------------
+
 
 //------------------ QUERIES --------------------------
 query "allNeededExperimentsPresent"  (List experiments)

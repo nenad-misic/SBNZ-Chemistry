@@ -47,22 +47,22 @@ public class SecurityController {
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/login", method = RequestMethod.POST, produces = "application/json")
     public ResponseEntity<AuthenticationDTO> login(@RequestBody AuthInfo authInfo) {
-        try {
-//            UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(
-//                    authInfo.getEmail(), authInfo.getPassword());
-//            Authentication authentication = authenticationManager.authenticate(token);
-//            UserDetails details = (userService).loadUserByUsername(authInfo.getEmail());
+        AuthInfoWithClientIP aiwcip = new AuthInfoWithClientIP(authInfo.getEmail(), authInfo.getPassword(), HttpReqRespUtils.getClientIpAddressIfServletRequestExist(), true, authInfo.isCaptcha());
+        SecurityResponseDTO ruleActivation = service.detectSuspiciousBehavior(aiwcip);
 
+        if(ruleActivation.getCode() != 200) {
+            return new ResponseEntity<>(new AuthenticationDTO(ruleActivation, ("Suspicious behaviour detected")), HttpStatus.BAD_REQUEST);
+        }
+
+        try {
             User user = this.userRepository.getUserByEmail(authInfo.getEmail());
             if (user==null || !user.getPassword().equals(authInfo.getPassword())){
                 throw new Exception("Invalid credentials");
             }
-            AuthInfoWithClientIP aiwcip = new AuthInfoWithClientIP(authInfo.getEmail(), authInfo.getPassword(), HttpReqRespUtils.getClientIpAddressIfServletRequestExist());
-            return new ResponseEntity<>(new AuthenticationDTO(service.detectSuspiciousBehavior(aiwcip), tokenUtils.generateToken(user)), HttpStatus.OK);
+            return new ResponseEntity<>(new AuthenticationDTO(ruleActivation, tokenUtils.generateToken(user)), HttpStatus.OK);
 
         } catch (Exception ex) {
-            AuthInfoWithClientIP aiwcip = new AuthInfoWithClientIP(authInfo.getEmail(), authInfo.getPassword(), HttpReqRespUtils.getClientIpAddressIfServletRequestExist());
-            return new ResponseEntity<>(new AuthenticationDTO(service.detectSuspiciousBehavior(aiwcip), ("Invalid username/password")), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(new AuthenticationDTO(ruleActivation, ("Invalid username/password")), HttpStatus.BAD_REQUEST);
 
         }
     }
@@ -70,6 +70,11 @@ public class SecurityController {
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public ResponseEntity<SecurityResponseDTO> register(@RequestBody AuthInfo authInfo) {
+        AuthInfoWithClientIP aiwcip = new AuthInfoWithClientIP(authInfo.getEmail(), authInfo.getPassword(), HttpReqRespUtils.getClientIpAddressIfServletRequestExist(), false, authInfo.isCaptcha());
+        SecurityResponseDTO ruleActivation = service.detectSuspiciousBehavior(aiwcip);
+        if(ruleActivation.getCode() != 200){
+            return new ResponseEntity<>(new SecurityResponseDTO(ruleActivation.getMessage(), ruleActivation.getCode()), HttpStatus.BAD_REQUEST);
+        }
         try{
             userService.register(authInfo);
             return new ResponseEntity<>(new SecurityResponseDTO("Success", 200), HttpStatus.OK);

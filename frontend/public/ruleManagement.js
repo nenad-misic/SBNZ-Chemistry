@@ -1,9 +1,13 @@
-axios.get('http://localhost:8080/config').then(data=>{
-    let groups = data.data.groups;
-    let cations = data.data.cations;
-    let anions = data.data.anions;
-    let substances = data.data.substances;
+let getHeaders = () => {
+    let token = localStorage.getItem('auth')?localStorage.getItem('auth'):''
+    return {headers: {"X-Auth-Token": token}};
+}
 
+let rerenderTable = (groups, cations, anions, substances) => {
+    document.getElementById('groups').innerHTML = ``
+    document.getElementById('cations').innerHTML = ``
+    document.getElementById('anions').innerHTML = ``
+    document.getElementById('substances').innerHTML = ``
     groups.forEach(e => {
         document.getElementById('groups').innerHTML += `
         <tr>
@@ -83,11 +87,64 @@ axios.get('http://localhost:8080/config').then(data=>{
             })
         })
     })
+}
+
+axios.get('http://localhost:8080/config', getHeaders()).then(data=>{
+    let groups = data.data.groups;
+    let cations = data.data.cations;
+    let anions = data.data.anions;
+    let substances = data.data.substances;
+    
+    rerenderTable(groups, cations, anions, substances);
+    
+
+    document.querySelector('#addGroupBtn').addEventListener('click', (e) => { 
+        e.preventDefault();
+        let groupName = document.querySelector('#groupNameInput').value;
+        let experiments = document.querySelector('#groupExperimentInput').value;
+        groups.push({enabled: true,number: groupName, allNeededExperiments: experiments.split(',').map(e => `"${e.trim()}"`).join(',')})
+        rerenderTable(groups, cations, anions, substances);
+        $('#newGroupModal').modal('toggle'); 
+    });
+
+    document.querySelector('#addCationBtn').addEventListener('click', (e) => { 
+        e.preventDefault();
+        let catName = document.querySelector('#cationNameInput').value;
+        let catGrp = document.querySelector('#cationGroupInput').value;
+        let catexperiments = document.querySelector('#cationExperimentInput').value;
+        cations.push({enabled: true,number: catGrp, name: catName, allNeededExperiments: catexperiments.split(',').map(e => `"${e.trim()}"`).join(',')})
+        rerenderTable(groups, cations, anions, substances);
+        $('#newCationModal').modal('toggle'); 
+        
+    });
+
+    document.querySelector('#addAnionBtn').addEventListener('click', (e) => { 
+        e.preventDefault();
+        let anionName = document.querySelector('#anionNameInput').value;
+        let experiments = document.querySelector('#anionExperimentInput').value;
+        anions.push({enabled: true,name: anionName, allNeededExperiments: experiments.split(',').map(e => `"${e.trim()}"`).join(',')})
+        rerenderTable(groups, cations, anions, substances);
+        $('#newAnionModal').modal('toggle'); 
+    });
+
+    document.querySelector('#addSubstanceBtn').addEventListener('click', (e) => { 
+        e.preventDefault();
+        let color = document.querySelector('#substanceColorInput').value;
+        let structure = document.querySelector('#substanceStructureInput').value;
+        let cation = document.querySelector('#substanceCationInput').value;
+        let anion = document.querySelector('#substanceAnionInput').value;
+        let name = document.querySelector('#substanceNameInput').value;
+        substances.push({enabled: true,name, color, structure, cation, anion})
+        rerenderTable(groups, cations, anions, substances);
+        $('#newSubstanceModal').modal('toggle'); 
+        
+    });
+    
     document.getElementById('save').addEventListener('click', () => {
      let config = JSON.parse(JSON.stringify(data.data));
      config.userRules = window.editor.getValue();
      config.userRules=config.userRules=='// Write your drl rules here...'?'':config.userRules;
-     axios.post('http://localhost:8080/config', config).then(data => { window.location.href = 'index.html'}).catch(err => alert('error'));
+     axios.post('http://localhost:8080/config', config, getHeaders()).then(data => { window.location.href = 'index.html'}).catch(err => alert('error'));
     })
 });
 
