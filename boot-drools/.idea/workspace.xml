@@ -5,23 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/db/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/db/users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sbnz/controller/SecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/controller/SecurityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfoWithClientIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfoWithClientIP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sbnz/service/RuleManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sbnz/service/RuleManagerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templateSubstance.drt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templateSubstance.drt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/ruleManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/ruleManagement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/ruleManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/ruleManagement.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/public/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../kjar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kjar/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kjar/src/main/resources/META-INF/kmodule.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kjar/src/main/resources/META-INF/kmodule.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../kjar/src/main/resources/substanceRules/substanceRules.drl" beforeDir="false" afterPath="$PROJECT_DIR$/../kjar/src/main/resources/substanceRules/substanceRules.drl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kjar/src/main/resources/suspiciousBehaviourCEP/suspiciousBehaviourCEP.drl" beforeDir="false" afterPath="$PROJECT_DIR$/../kjar/src/main/resources/suspiciousBehaviourCEP/suspiciousBehaviourCEP.drl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,24 +16,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/controller/SecurityController.java">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/users.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1335#1336#0" expanded="true" />
-                <element signature="e#1388#1389#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db/config.json">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -122,7 +97,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/model/TemplateSubstance.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/model/Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/model/MessageDTO.java" />
-        <option value="$PROJECT_DIR$/db/config.json" />
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/repository/ConfigRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/templateGroup.drt" />
@@ -148,10 +122,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/service/SecurityService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfoWithClientIP.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/model/AuthInfo.java" />
-        <option value="$PROJECT_DIR$/db/users.json" />
         <option value="$PROJECT_DIR$/src/main/resources/templateSubstance.drt" />
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/service/RuleManagerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sbnz/controller/SecurityController.java" />
+        <option value="$PROJECT_DIR$/db/config.json" />
+        <option value="$PROJECT_DIR$/db/users.json" />
       </list>
     </option>
   </component>
@@ -177,10 +152,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -202,104 +177,6 @@
               <item name="chemistry" type="b2602c69:ProjectViewProjectNode" />
               <item name="boot-drools" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chemistry" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boot-drools" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chemistry" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boot-drools" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chemistry" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boot-drools" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chemistry" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boot-drools" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sbnz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chemistry" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boot-drools" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sbnz" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chemistry" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boot-drools" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sbnz" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chemistry" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boot-drools" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sbnz" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chemistry" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boot-drools" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sbnz" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chemistry" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boot-drools" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chemistry" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boot-drools" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chemistry" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boot-drools" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chemistry" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boot-drools" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chemistry" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boot-drools" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -458,6 +335,9 @@
       <workItem from="1591710332726" duration="26347000" />
       <workItem from="1593450890705" duration="18438000" />
       <workItem from="1593524718932" duration="7690000" />
+      <workItem from="1593700367068" duration="518000" />
+      <workItem from="1593900625217" duration="663000" />
+      <workItem from="1593902032110" duration="455000" />
     </task>
     <servers />
   </component>
@@ -494,10 +374,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91764000" />
+    <option name="totallyTimeSpent" value="93400000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22291666" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -510,7 +391,7 @@
       <window_info anchor="bottom" id="Duplicate detector" order="0" weight="0.32984293" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32565445" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49479166" weight="0.3277487" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49375" visible="true" weight="0.3277487" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.496875" weight="0.39790577" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -518,7 +399,7 @@
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49947917" weight="0.32984293" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5052083" side_tool="true" visible="true" weight="0.3277487" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50625" side_tool="true" visible="true" weight="0.3277487" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49947917" weight="0.3277487" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
@@ -526,7 +407,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.2484375" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.115625" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="CDI" order="6" />
@@ -569,20 +450,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templateCation.drt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/config-default.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" selection-end-line="500" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/model/Config.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -976,26 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/service/RuleManagerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="122" column="32" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/controller/AnalisysController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/repository/ConfigRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
@@ -1006,16 +853,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/users.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="101" selection-start-column="101" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/controller/SecurityController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
+        <state relative-caret-position="544">
           <caret line="51" selection-start-line="51" selection-end-line="51" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1025,8 +865,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templateCation.drt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="72" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/controller/AnalisysController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sbnz/service/RuleManagerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="51" column="70" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/config-default.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="23" selection-end-line="500" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db/config.json">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="471" column="11" selection-start-line="471" selection-start-column="11" selection-end-line="471" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/users.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

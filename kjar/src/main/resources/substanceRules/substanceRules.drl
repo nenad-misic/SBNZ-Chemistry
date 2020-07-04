@@ -57,17 +57,6 @@ rule "Group1"
 
 //---------- CATIONS -------------
 
-rule "Nenadium"
-    no-loop
-    when
-        $s : ResponseDTO();
-        exists CationGroup(code == "5");
-        allNeededExperimentsPresent(Arrays.asList("warmWaterInsoluble");)
-    then
-        System.out.println("Nenadium");
-        insert(new Cation("Nenadium"));
-    end
-
 rule "Calcium"
     no-loop
     when

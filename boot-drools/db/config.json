@@ -1,1 +1,501 @@
-{"groups":[{"number":1,"allNeededExperiments":"\"colorlessSolutionWithWater\", \"reactionWithHCl\"","enabled":true},{"number":2,"allNeededExperiments":"\"insolubleRawInNH4OH\", \"noReactionWithHCl\"","enabled":true},{"number":3,"allNeededExperiments":"\"noReactionWithHCl\", \"solubleRawInNH4OH\", \"solubleRawIn(NH4)2S\"","enabled":true},{"number":4,"allNeededExperiments":"\"insolubleRawIn(NH4)2CO3\", \"insolubleRawIn(NH4)2CO3butSolubleInCH3COOH\", \"noReactionWithHCl\", \"solubleRawInNH4OH\"","enabled":true},{"number":5,"allNeededExperiments":"\"colorlessSolutionWithWater\",\"reactionWithHCl\",\"noReactionWithHCl\"","enabled":false}],"cations":[{"number":1,"name":"Silver","allNeededExperiments":"\"warmWaterInsoluble\", \"solubleInNH4OH\", \"whiteWithHNO3\"","enabled":true},{"number":1,"name":"Lead","allNeededExperiments":"\"warmWaterSoluble\", \"yellowWithK2CrO4\"","enabled":true},{"number":1,"name":"Mercury","allNeededExperiments":"\"warmWaterInsoluble\", \"greyWithNH4OH\"","enabled":true},{"number":2,"name":"Iron","allNeededExperiments":"\"darkRedSedimentFromNH4OH\"","enabled":true},{"number":2,"name":"Aluminium","allNeededExperiments":"\"whiteSedimentFromNH4OH\"","enabled":true},{"number":2,"name":"Chromium","allNeededExperiments":"\"GrayishGreenSedimentFromNH4OH\"","enabled":true},{"number":3,"name":"Manganese","allNeededExperiments":"\"insolubleRawIn(NH4)2SmeatColoredSediment\"","enabled":true},{"number":3,"name":"Zinc","allNeededExperiments":"\"insolubleRawIn(NH4)2SwhiteSediment\"","enabled":true},{"number":4,"name":"Barium","allNeededExperiments":"\"insolubleRawIn(NH4)2CO3butSolubleInCH3COOHYellowWithK2Cr\"","enabled":true},{"number":4,"name":"Calcium","allNeededExperiments":"\"insolubleRawIn(NH4)2CO3butSolubleInCH3COOHNotYellowWithK2Cr\"","enabled":true},{"number":5,"name":"Nenadium","allNeededExperiments":"\"warmWaterInsoluble\"","enabled":true}],"anions":[{"name":"SO4","allNeededExperiments":"\"noYellowSedimentInNH42MoO4\", \"noGasInBaOH2\", \"noCrystalSedimentInCaCl2\", \"whiteSedimentInBaCl2\", \"noRingInH2SO4\", \"noVinegarSmellInH2SO4\"","enabled":true},{"name":"PO4","allNeededExperiments":"\"noWhiteSedimentInBaCl2\", \"noGasInBaOH2\", \"noCrystalSedimentInCaCl2\", \"yellowSedimentInNH42MoO4\", \"noRingInH2SO4\", \"noVinegarSmellInH2SO4\"","enabled":true},{"name":"CO3","allNeededExperiments":"\"noWhiteSedimentInBaCl2\", \"noYellowSedimentInNH42MoO4\", \"noCrystalSedimentInCaCl2\", \"gasInBaOH2\", \"noRingInH2SO4\", \"noVinegarSmellInH2SO4\"","enabled":true},{"name":"C2O4","allNeededExperiments":"\"noWhiteSedimentInBaCl2\", \"noYellowSedimentInNH42MoO4\", \"noGasInBaOH2\", \"crystalSedimentInCaCl2\", \"noRingInH2SO4\", \"noVinegarSmellInH2SO4\"","enabled":true},{"name":"Cl","allNeededExperiments":"\"cheesySedimentInNH4OH\", \"noRingInH2SO4\", \"noVinegarSmellInH2SO4\", \"noYellowSedimentInNH42MoO4\", \"noGasInBaOH2\", \"noCrystalSedimentInCaCl2\", \"noWhiteSedimentInBaCl2\"","enabled":true},{"name":"NO3","allNeededExperiments":"\"noCheesySedimentInNH4OH\", \"noVinegarSmellInH2SO4\", \"ringInH2SO4\", \"noYellowSedimentInNH42MoO4\", \"noGasInBaOH2\", \"noCrystalSedimentInCaCl2\", \"noWhiteSedimentInBaCl2\"","enabled":true},{"name":"CH3COO","allNeededExperiments":"\"noCheesySedimentInNH4OH\", \"vinegarSmellInH2SO4\", \"noRingInH2SO4\", \"noYellowSedimentInNH42MoO4\", \"noGasInBaOH2\", \"noCrystalSedimentInCaCl2\", \"noWhiteSedimentInBaCl2\"","enabled":true},{"name":"SKR","allNeededExperiments":"\"noYellowSedimentInNH42MoO4\",\"noGasInBaOH2\",\"noCrystalSedimentInCaCl2\",\"whiteSedimentInBaCl2\",\"noWhiteSedimentInBaCl2\",\"noRingInH2SO4\",\"noVinegarSmellInH2SO4\"","enabled":false}],"substances":[{"color":"colorless","structure":"crystals","cation":"Silver","anion":"SO4","name":"Silver sulfate - Ag2SO4","enabled":true},{"color":"brown","structure":"powder","cation":"Silver","anion":"PO4","name":"Silver phosphate - Ag3PO4","enabled":true},{"color":"pale yellow","structure":"crystals","cation":"Silver","anion":"CO3","name":"Silver carbonate - Ag2CO3","enabled":true},{"color":"white","structure":"powder","cation":"Silver","anion":"C2O4","name":"Silver oxalate - Ag2C2O4","enabled":true},{"color":"white","structure":"solid","cation":"Silver","anion":"Cl","name":"Silver chloride - AgCl","enabled":true},{"color":"colorless","structure":"solid","cation":"Silver","anion":"NO3","name":"Silver nitrate - AgNO3","enabled":true},{"color":"white","structure":"solid","cation":"Lead","anion":"SO4","name":"Lead(II) sulfate - PbSO4","enabled":true},{"color":"white","structure":"powder","cation":"Lead","anion":"PO4","name":"Lead(II) phosphate - Pb3(PO4)2","enabled":true},{"color":"colorless","structure":"crystals","cation":"Lead","anion":"CO3","name":"Cerussite - PbCO3","enabled":true},{"color":"white","structure":"solid","cation":"Lead","anion":"Cl","name":"Lead(II) chloride - PbCl2","enabled":true},{"color":"white","structure":"powder","cation":"Lead","anion":"NO3","name":"Lead(II) nitrate - Pb(NO3)2","enabled":true},{"color":"white","structure":"powder","cation":"Lead","anion":"CH3COO","name":"Lead(II) acetate - Pb(CH3COO)2","enabled":true},{"color":"white","structure":"crystals","cation":"Mercury","anion":"SO4","name":"Mercury(II) sulfate - HgSO4","enabled":true},{"color":"white","structure":"solid","cation":"Mercury","anion":"Cl","name":"Mercury(II) chloride - HgCl2","enabled":true},{"color":"colorless","structure":"crystals","cation":"Mercury","anion":"NO3","name":"Mercury(II) nitrate - Hg(NO3)2","enabled":true},{"color":"pale yellow","structure":"crystals","cation":"Mercury","anion":"CH3COO","name":"Mercury(II) acetate - Hg(CH3COO)2","enabled":true},{"color":"grayish-white","structure":"crystals","cation":"Iron","anion":"SO4","name":"Iron(III) sulfate - Fe2(SO4)3","enabled":true},{"color":"yellow-brown","structure":"solid","cation":"Iron","anion":"PO4","name":"Iron(III) phosphate - FePO4","enabled":true},{"color":"brown","structure":"solution","cation":"Iron","anion":"Cl","name":"Iron(III) chloride - FeCl3","enabled":true},{"color":"yellow","structure":"crystals","cation":"Iron","anion":"NO3","name":"Iron(III) nitrate - Fe(NO3)3","enabled":true},{"color":"white","structure":"crystals","cation":"Aluminium","anion":"SO4","name":"Aluminium sulfate - Al2(SO4)3","enabled":true},{"color":"white","structure":"powder","cation":"Aluminium","anion":"PO4","name":"Aluminium phosphate - AlPO4","enabled":true},{"color":"white","structure":"solid","cation":"Aluminium","anion":"Cl","name":"Aluminium chloride - AlCl3","enabled":true},{"color":"white","structure":"crystals","cation":"Aluminium","anion":"NO3","name":"Aluminium nitrate - Al(NO3)3","enabled":true},{"color":"reddish-brown","structure":"crystals","cation":"Chromium","anion":"SO4","name":"Chromium(III) sulfate - Cr2(SO4)3","enabled":true},{"color":"purple","structure":"crystals","cation":"Chromium","anion":"Cl","name":"Chromium(III) chloride - CrCl3","enabled":true},{"color":"white","structure":"powder","cation":"Manganese","anion":"SO4","name":"Manganese(II) sulfate - MnSO4","enabled":true},{"color":"white","structure":"solid","cation":"Manganese","anion":"CO3","name":"Manganese(II) carbonate - MnCO3","enabled":true},{"color":"pink","structure":"solid","cation":"Manganese","anion":"Cl","name":"Manganese(II) chloride - MnCl2","enabled":true},{"color":"white","structure":"powder","cation":"Manganese","anion":"NO3","name":"Manganese(II) nitrate - Mn(NO3)2","enabled":true},{"color":"white","structure":"crystals","cation":"Manganese","anion":"CH3COO","name":"Manganese(II) acetate - Mn(CH3COO)2","enabled":true},{"color":"white","structure":"powder","cation":"Zinc","anion":"SO4","name":"Zinc sulfate - ZnSO4","enabled":true},{"color":"white","structure":"solid","cation":"Zinc","anion":"PO4","name":"Zinc phosphate - Zn3(PO4)2","enabled":true},{"color":"colorless","structure":"crystal","cation":"Zinc","anion":"CO3","name":"Smithsonite - ZnCO3","enabled":true},{"color":"white","structure":"powder","cation":"Zinc","anion":"Cl","name":"Zinc chloride - ZnCl2","enabled":true},{"color":"colorless","structure":"crystals","cation":"Zinc","anion":"NO3","name":"Zinc nitrate - Zn(NO3)2","enabled":true},{"color":"white","structure":"solid","cation":"Zinc","anion":"CH3COO","name":"Zinc acetate - Zn(CH3COO)2","enabled":true},{"color":"white","structure":"crystals","cation":"Barium","anion":"CO3","name":"Barium carbonate - BaCO3","enabled":true},{"color":"white","structure":"powder","cation":"Barium","anion":"CO3","name":"Barium oxalate - BaC2O4","enabled":true},{"color":"white","structure":"solid","cation":"Barium","anion":"CO3","name":"Barium chloride - BaCl2","enabled":true},{"color":"white","structure":"crystals","cation":"Barium","anion":"NO3","name":"Barium nitrate - Ba(NO3)2","enabled":true},{"color":"white","structure":"solid","cation":"Calcium","anion":"SO4","name":"Calcium sulfate - CaSO4","enabled":true},{"color":"white","structure":"powder","cation":"Calcium","anion":"PO4","name":"Tricalcium phosphate - Ca3(PO4)2","enabled":true},{"color":"white","structure":"powder","cation":"Calcium","anion":"CO3","name":"Calcium carbonate - CaCO3","enabled":true},{"color":"white","structure":"solid","cation":"Calcium","anion":"C2O4","name":"Calcium oxalate - CaC2O4","enabled":true},{"color":"white","structure":"powder","cation":"Calcium","anion":"Cl","name":"Calcium chloride - CaCl2","enabled":true},{"color":"white","structure":"powder","cation":"Calcium","anion":"NO3","name":"Calcium nitrate - Ca(NO3)2","enabled":true},{"color":"white","structure":"powder","cation":"Nenadium","anion":"SKR","name":"Nenadium SKRRRRRA","enabled":false}],"userRules":""}
+{
+  "groups": [
+    {
+      "allNeededExperiments": "\"colorlessSolutionWithWater\", \"reactionWithHCl\"",
+      "number": "1",
+      "enabled": true
+    },
+    {
+      "allNeededExperiments": "\"insolubleRawInNH4OH\", \"noReactionWithHCl\"",
+      "number": "2",
+      "enabled": true
+    },
+    {
+      "allNeededExperiments": "\"noReactionWithHCl\", \"solubleRawInNH4OH\", \"solubleRawIn(NH4)2S\"",
+      "number": "3",
+      "enabled": true
+    },
+    {
+      "allNeededExperiments": "\"insolubleRawIn(NH4)2CO3\", \"insolubleRawIn(NH4)2CO3butSolubleInCH3COOH\", \"noReactionWithHCl\", \"solubleRawInNH4OH\"",
+      "number": "4",
+      "enabled": true
+    }
+  ],
+  "cations": [
+    {
+      "allNeededExperiments": "\"warmWaterInsoluble\", \"solubleInNH4OH\", \"whiteWithHNO3\"",
+      "number": "1",
+      "name": "Silver",
+      "enabled": true
+    },
+    {
+      "allNeededExperiments": "\"warmWaterSoluble\", \"yellowWithK2CrO4\"",
+      "number": "1",
+      "name": "Lead",
+      "enabled": true
+    },
+    {
+      "allNeededExperiments": "\"warmWaterInsoluble\", \"greyWithNH4OH\"",
+      "number": "1",
+      "name": "Mercury",
+      "enabled": true
+    },
+    {
+      "allNeededExperiments": "\"darkRedSedimentFromNH4OH\"",
+      "number": "2",
+      "name": "Iron",
+      "enabled": true
+    },
+    {
+      "allNeededExperiments": "\"whiteSedimentFromNH4OH\"",
+      "number": "2",
+      "name": "Aluminium",
+      "enabled": true
+    },
+    {
+      "allNeededExperiments": "\"GrayishGreenSedimentFromNH4OH\"",
+      "number": "2",
+      "name": "Chromium",
+      "enabled": true
+    },
+    {
+      "allNeededExperiments": "\"insolubleRawIn(NH4)2SmeatColoredSediment\"",
+      "number": "3",
+      "name": "Manganese",
+      "enabled": true
+    },
+    {
+      "allNeededExperiments": "\"insolubleRawIn(NH4)2SwhiteSediment\"",
+      "number": "3",
+      "name": "Zinc",
+      "enabled": true
+    },
+    {
+      "allNeededExperiments": "\"insolubleRawIn(NH4)2CO3butSolubleInCH3COOHYellowWithK2Cr\"",
+      "number": "4",
+      "name": "Barium",
+      "enabled": true
+    },
+    {
+      "allNeededExperiments": "\"insolubleRawIn(NH4)2CO3butSolubleInCH3COOHNotYellowWithK2Cr\"",
+      "number": "4",
+      "name": "Calcium",
+      "enabled": true
+    }
+  ],
+  "anions": [
+    {
+      "allNeededExperiments": "\"noYellowSedimentInNH42MoO4\", \"noGasInBaOH2\", \"noCrystalSedimentInCaCl2\", \"whiteSedimentInBaCl2\", \"noRingInH2SO4\", \"noVinegarSmellInH2SO4\"",
+      "name": "SO4",
+      "enabled": true
+    },
+    {
+      "allNeededExperiments": "\"noWhiteSedimentInBaCl2\", \"noGasInBaOH2\", \"noCrystalSedimentInCaCl2\", \"yellowSedimentInNH42MoO4\", \"noRingInH2SO4\", \"noVinegarSmellInH2SO4\"",
+      "name": "PO4",
+      "enabled": true
+    },
+    {
+      "allNeededExperiments": "\"noWhiteSedimentInBaCl2\", \"noYellowSedimentInNH42MoO4\", \"noCrystalSedimentInCaCl2\", \"gasInBaOH2\", \"noRingInH2SO4\", \"noVinegarSmellInH2SO4\"",
+      "name": "CO3",
+      "enabled": true
+    },
+    {
+      "allNeededExperiments": "\"noWhiteSedimentInBaCl2\", \"noYellowSedimentInNH42MoO4\", \"noGasInBaOH2\", \"crystalSedimentInCaCl2\", \"noRingInH2SO4\", \"noVinegarSmellInH2SO4\"",
+      "name": "C2O4",
+      "enabled": true
+    },
+    {
+      "allNeededExperiments": "\"cheesySedimentInNH4OH\", \"noRingInH2SO4\", \"noVinegarSmellInH2SO4\", \"noYellowSedimentInNH42MoO4\", \"noGasInBaOH2\", \"noCrystalSedimentInCaCl2\", \"noWhiteSedimentInBaCl2\"",
+      "name": "Cl",
+      "enabled": true
+    },
+    {
+      "allNeededExperiments": "\"noCheesySedimentInNH4OH\", \"noVinegarSmellInH2SO4\", \"ringInH2SO4\", \"noYellowSedimentInNH42MoO4\", \"noGasInBaOH2\", \"noCrystalSedimentInCaCl2\", \"noWhiteSedimentInBaCl2\"",
+      "name": "NO3",
+      "enabled": true
+    },
+    {
+      "allNeededExperiments": "\"noCheesySedimentInNH4OH\", \"vinegarSmellInH2SO4\", \"noRingInH2SO4\", \"noYellowSedimentInNH42MoO4\", \"noGasInBaOH2\", \"noCrystalSedimentInCaCl2\", \"noWhiteSedimentInBaCl2\"",
+      "name": "CH3COO",
+      "enabled": true
+    }
+  ],
+  "substances": [
+    {
+      "color": "colorless",
+      "structure": "crystals",
+      "cation": "Silver",
+      "anion": "SO4",
+      "name": "Silver sulfate - Ag2SO4",
+      "enabled": true
+    },
+    {
+      "color": "brown",
+      "structure": "powder",
+      "cation": "Silver",
+      "anion": "PO4",
+      "name": "Silver phosphate - Ag3PO4",
+      "enabled": true
+    },
+    {
+      "color": "pale yellow",
+      "structure": "crystals",
+      "cation": "Silver",
+      "anion": "CO3",
+      "name": "Silver carbonate - Ag2CO3",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "powder",
+      "cation": "Silver",
+      "anion": "C2O4",
+      "name": "Silver oxalate - Ag2C2O4",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "solid",
+      "cation": "Silver",
+      "anion": "Cl",
+      "name": "Silver chloride - AgCl",
+      "enabled": true
+    },
+    {
+      "color": "colorless",
+      "structure": "solid",
+      "cation": "Silver",
+      "anion": "NO3",
+      "name": "Silver nitrate - AgNO3",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "solid",
+      "cation": "Lead",
+      "anion": "SO4",
+      "name": "Lead(II) sulfate - PbSO4",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "powder",
+      "cation": "Lead",
+      "anion": "PO4",
+      "name": "Lead(II) phosphate - Pb3(PO4)2",
+      "enabled": true
+    },
+    {
+      "color": "colorless",
+      "structure": "crystals",
+      "cation": "Lead",
+      "anion": "CO3",
+      "name": "Cerussite - PbCO3",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "solid",
+      "cation": "Lead",
+      "anion": "Cl",
+      "name": "Lead(II) chloride - PbCl2",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "powder",
+      "cation": "Lead",
+      "anion": "NO3",
+      "name": "Lead(II) nitrate - Pb(NO3)2",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "powder",
+      "cation": "Lead",
+      "anion": "CH3COO",
+      "name": "Lead(II) acetate - Pb(CH3COO)2",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "crystals",
+      "cation": "Mercury",
+      "anion": "SO4",
+      "name": "Mercury(II) sulfate - HgSO4",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "solid",
+      "cation": "Mercury",
+      "anion": "Cl",
+      "name": "Mercury(II) chloride - HgCl2",
+      "enabled": true
+    },
+    {
+      "color": "colorless",
+      "structure": "crystals",
+      "cation": "Mercury",
+      "anion": "NO3",
+      "name": "Mercury(II) nitrate - Hg(NO3)2",
+      "enabled": true
+    },
+    {
+      "color": "pale yellow",
+      "structure": "crystals",
+      "cation": "Mercury",
+      "anion": "CH3COO",
+      "name": "Mercury(II) acetate - Hg(CH3COO)2",
+      "enabled": true
+    },
+    {
+      "color": "grayish-white",
+      "structure": "crystals",
+      "cation": "Iron",
+      "anion": "SO4",
+      "name": "Iron(III) sulfate - Fe2(SO4)3",
+      "enabled": true
+    },
+    {
+      "color": "yellow-brown",
+      "structure": "solid",
+      "cation": "Iron",
+      "anion": "PO4",
+      "name": "Iron(III) phosphate - FePO4",
+      "enabled": true
+    },
+    {
+      "color": "brown",
+      "structure": "solution",
+      "cation": "Iron",
+      "anion": "Cl",
+      "name": "Iron(III) chloride - FeCl3",
+      "enabled": true
+    },
+    {
+      "color": "yellow",
+      "structure": "crystals",
+      "cation": "Iron",
+      "anion": "NO3",
+      "name": "Iron(III) nitrate - Fe(NO3)3",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "crystals",
+      "cation": "Aluminium",
+      "anion": "SO4",
+      "name": "Aluminium sulfate - Al2(SO4)3",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "powder",
+      "cation": "Aluminium",
+      "anion": "PO4",
+      "name": "Aluminium phosphate - AlPO4",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "solid",
+      "cation": "Aluminium",
+      "anion": "Cl",
+      "name": "Aluminium chloride - AlCl3",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "crystals",
+      "cation": "Aluminium",
+      "anion": "NO3",
+      "name": "Aluminium nitrate - Al(NO3)3",
+      "enabled": true
+    },
+    {
+      "color": "reddish-brown",
+      "structure": "crystals",
+      "cation": "Chromium",
+      "anion": "SO4",
+      "name": "Chromium(III) sulfate - Cr2(SO4)3",
+      "enabled": true
+    },
+    {
+      "color": "purple",
+      "structure": "crystals",
+      "cation": "Chromium",
+      "anion": "Cl",
+      "name": "Chromium(III) chloride - CrCl3",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "powder",
+      "cation": "Manganese",
+      "anion": "SO4",
+      "name": "Manganese(II) sulfate - MnSO4",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "solid",
+      "cation": "Manganese",
+      "anion": "CO3",
+      "name": "Manganese(II) carbonate - MnCO3",
+      "enabled": true
+    },
+    {
+      "color": "pink",
+      "structure": "solid",
+      "cation": "Manganese",
+      "anion": "Cl",
+      "name": "Manganese(II) chloride - MnCl2",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "powder",
+      "cation": "Manganese",
+      "anion": "NO3",
+      "name": "Manganese(II) nitrate - Mn(NO3)2",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "crystals",
+      "cation": "Manganese",
+      "anion": "CH3COO",
+      "name": "Manganese(II) acetate - Mn(CH3COO)2",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "powder",
+      "cation": "Zinc",
+      "anion": "SO4",
+      "name": "Zinc sulfate - ZnSO4",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "solid",
+      "cation": "Zinc",
+      "anion": "PO4",
+      "name": "Zinc phosphate - Zn3(PO4)2",
+      "enabled": true
+    },
+    {
+      "color": "colorless",
+      "structure": "crystal",
+      "cation": "Zinc",
+      "anion": "CO3",
+      "name": "Smithsonite - ZnCO3",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "powder",
+      "cation": "Zinc",
+      "anion": "Cl",
+      "name": "Zinc chloride - ZnCl2",
+      "enabled": true
+    },
+    {
+      "color": "colorless",
+      "structure": "crystals",
+      "cation": "Zinc",
+      "anion": "NO3",
+      "name": "Zinc nitrate - Zn(NO3)2",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "solid",
+      "cation": "Zinc",
+      "anion": "CH3COO",
+      "name": "Zinc acetate - Zn(CH3COO)2",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "crystals",
+      "cation": "Barium",
+      "anion": "CO3",
+      "name": "Barium carbonate - BaCO3",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "powder",
+      "cation": "Barium",
+      "anion": "CO3",
+      "name": "Barium oxalate - BaC2O4",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "solid",
+      "cation": "Barium",
+      "anion": "CO3",
+      "name": "Barium chloride - BaCl2",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "crystals",
+      "cation": "Barium",
+      "anion": "NO3",
+      "name": "Barium nitrate - Ba(NO3)2",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "solid",
+      "cation": "Calcium",
+      "anion": "SO4",
+      "name": "Calcium sulfate - CaSO4",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "powder",
+      "cation": "Calcium",
+      "anion": "PO4",
+      "name": "Tricalcium phosphate - Ca3(PO4)2",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "powder",
+      "cation": "Calcium",
+      "anion": "CO3",
+      "name": "Calcium carbonate - CaCO3",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "solid",
+      "cation": "Calcium",
+      "anion": "C2O4",
+      "name": "Calcium oxalate - CaC2O4",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "powder",
+      "cation": "Calcium",
+      "anion": "Cl",
+      "name": "Calcium chloride - CaCl2",
+      "enabled": true
+    },
+    {
+      "color": "white",
+      "structure": "powder",
+      "cation": "Calcium",
+      "anion": "NO3",
+      "name": "Calcium nitrate - Ca(NO3)2",
+      "enabled": true
+    }
+  ]
+}
